@@ -1,0 +1,415 @@
+
+/*
+ *  File:         demo_table_jui.css
+ *  CVS:          $Id$
+ *  Description:  CSS descriptions for DataTables demo pages
+ *  Author:       Allan Jardine
+ *  Created:      Tue May 12 06:47:22 BST 2009
+ *  Modified:     $Date$ by $Author$
+ *  Language:     CSS
+ *  Project:      DataTables
+ *
+ *  Copyright 2009 Allan Jardine. All Rights Reserved.
+ *
+ * ***************************************************************************
+ * DESCRIPTION
+ 
+ */
+
+/* This one is not working - underline. and not workign on hover */
+
+.dataTables_wrapper .ui-toolbar { padding: 5px; }
+
+.dataTables_paginate {
+	min-width:250px;
+	width: auto;
+	margin: 20px 0;
+	text-align:right;
+}
+tr.rowSelected {
+/*	outline: thin dotted #333;*/
+  	outline: 5px auto rgba(82, 168, 236, 0.8);
+  	outline-offset: -5px;
+}
+
+.dataTables_info { margin: 20px 0; }
+
+table.display th, table.display td { font-size:.875em; }
+
+ table.display td .secondary_button { font-size:1em;}
+
+table.display thead th {
+	padding: 20px 7px;
+	cursor: pointer;
+ * cursor: hand;
+	background-color:#fff;
+	line-height:1em;
+	text-align:left;
+	vertical-align:bottom;
+	color:#333;
+	line-height:1.125em;
+	font-weight:bold;
+}
+
+table.display thead th a { color:#333; }
+
+div.dataTables_wrapper .ui-widget-header { font-weight: normal; }
+
+/*
+ * Sort arrow icon positioning
+ */
+
+table.display thead th div.DataTables_sort_wrapper {
+	position: relative;
+	padding-right: 20px;
+}
+
+table.display thead th div.DataTables_sort_wrapper span {
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
+	right: 0;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ * Everything below this line is the same as demo_table.css. This file is
+ * required for 'cleanliness' of the markup
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables features
+ */
+ 
+ .headerSortIcon {
+	margin-left: 5px;
+	vertical-align: bottom;
+}
+
+.dataTables_wrapper {
+	background:#f9f9f9;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	position: relative;
+	clear: both;
+}
+
+.dataTables_processing {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	width: 250px;
+	margin-left: -125px;
+	border: 1px solid #ddd;
+	text-align: center;
+	color: #999;
+	font-size: 11px;
+	padding: 2px 0;
+}
+
+.DTTT_container {
+	float: right;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+.DTTT_button {
+	font-family: Open Sans, Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	color: #ffffff;
+	padding: 6px 20px;
+	margin-left:15px;
+	background: -webkit-linear-gradient(top, #60be41 0%, #2d8611 70%);
+	background: -moz-linear-gradient(top, #60be41 0%, #2d8611 70%);
+	background: -o-linear-gradient(top, #60be41 0%, #2d8611 70%);
+	background: -ms-linear-gradient(top, #60be41 0%, #2d8611 70%);
+	background: linear-gradient(top, #60be41 0%, #2d8611 70%);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: 0px solid #000000;
+	-webkit-box-shadow: 0px 1px 2px rgba(51, 51, 51, 0.6);
+	box-shadow: 0px 1px 2px rgba(51, 51, 51, 0.6);
+	text-shadow: 1px 1px 2px rgba(000, 000, 000, 0.3), 0px 0px 0px rgba(255, 255, 255, 0);
+}
+
+.DTTT_button:hover, .DTTT_button:focus {
+	background: -webkit-linear-gradient(top, #2d8611 30%, #60be41 100%);
+	background: -moz-linear-gradient(top, #2d8611 30%, #60be41 100%);
+	background: -o-linear-gradient(top, #2d8611 30%, #60be41 100%);
+	background: -ms-linear-gradient(top, #2d8611 30%, #60be41 100%);
+	background: linear-gradient(top, #2d8611 30%, #60be41 100%);
+}
+
+.dataTables_length {
+	min-width: 5.5em;
+	padding: 10px;
+	float: left;
+}
+
+.dataTables_length select { min-width:5em; }
+
+.dataTables_filter {
+	min-width: 5.5em;
+	padding: 10px;
+	float: left;
+	text-align: left;
+}
+
+.dataTables_filter input[type=text] { min-width:5em; }
+
+.dataTables_info {
+	float: right;
+	margin-right:20px;
+}
+
+.dataTables_paginate {
+	float: right;
+	text-align: left;
+}
+
+/* Pagination nested */
+
+.paginate_disabled_previous, .paginate_enabled_previous, .paginate_disabled_next, .paginate_enabled_next {
+	height: 19px;
+	width: auto;
+	margin-left: 3px;
+	float: left;
+}
+
+
+/* HH: These images don't exist at the moment and are not used, commenting these out to void 404's*/
+
+/*
+.paginate_disabled_previous {
+
+    background-image: url('../../images/back_disabled.jpg');
+
+}
+
+.paginate_enabled_previous {
+
+    background-image: url('../../images/back_enabled.jpg');
+
+}
+
+.paginate_disabled_next {
+
+    background-image: url('../../images/forward_disabled.jpg');
+
+}
+
+.paginate_enabled_next {
+
+    background-image: url('../../images/forward_enabled.jpg');
+
+}
+*/
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables display
+ */
+
+table.display {
+	margin: 0 auto;
+	width: 100%;
+	clear: both;
+	border:none;
+	/* Fix NVDA issue (NVDA does not announce table headers properly when borde-collapse is set to collapse) */
+	border-collapse: separate;
+	padding:0;
+}
+
+table.display tfoot th {
+	padding: 3px 0px 3px 10px;
+	font-weight: bold;
+	font-weight: normal;
+}
+
+table.display tr.heading2 td { border-bottom: 1px solid #fff; }
+
+table.display td {
+	padding:7px;
+	vertical-align:middle;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+table.vertAlignTop td {
+	vertical-align: top;
+}
+
+table.display td.details, table.display td table.layoutTables td {
+	padding:0;
+	font-size:1em;
+}
+
+table.display td.center { text-align: center; }
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables sorting
+ */
+
+/* Commenting out because these are replaced with background images */
+
+/*
+.sorting_asc {
+
+    background: url('../../images/sort_asc.png') no-repeat center right;
+
+}
+
+.sorting_desc {
+
+    background: url('../../images/sort_desc.png') no-repeat center right;
+
+}
+
+.sorting {
+
+    background: url('../../images/sort_both.png') no-repeat center right;
+
+}
+
+
+.sorting_asc_disabled { background: url('../../images/sort_asc_disabled.png') no-repeat center right; }
+
+.sorting_desc_disabled { background: url('../../images/sort_desc_disabled.png') no-repeat center right; }
+*/
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables row classes
+ */
+
+tr.odd {
+	background-color: #d1f2fd;
+	min-height:35px;
+}
+
+tr.even {
+	background-color: white;
+	min-height:35px;
+}
+
+tr.row_selected { background-color:#d1f2fd; }
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Misc
+ */
+
+.dataTables_scroll { clear: both; }
+
+.top, .bottom {
+	padding: 15px;
+	background-color: #F5F5F5;
+	border: 1px solid #CCCCCC;
+}
+
+.top .dataTables_info { float: none; }
+
+.clear { clear: both; }
+
+.dataTables_empty { text-align: center; }
+
+tfoot input {
+	margin: 0.5em 0;
+	width: 100%;
+	color: #444;
+}
+
+tfoot input.search_init { color: #999; }
+
+td.group {
+	background-color: #d1cfd0;
+	border-bottom: 2px solid #A19B9E;
+	border-top: 2px solid #A19B9E;
+}
+
+td.details { background-color: #fff; }
+
+.paging_full_numbers a.paginate_button, .paging_full_numbers a.paginate_active {
+	font-size: 0.9em;
+	padding: 2px 5px;
+	margin: 0 3px;
+	cursor: pointer;
+ *cursor: hand;
+}
+
+.paging_full_numbers a.paginate_button {
+	color:#666666;
+	border:1px solid #e7e7e7;
+}
+
+.paging_full_numbers a.paginate_active { color: #FFFFFF; }
+
+.paging_full_numbers a.paginate_button:hover { text-decoration:underline; }
+
+.paging_full_numbers a.paginate_button_text {
+	font-size: 1em;
+	color:#029dd3;
+	border:none;
+}
+
+.paging_full_numbers a.paginate_active { background-color: #207b9e; }
+
+table.display tr.row_selected {
+	background-color: #073347;
+	color:#fff;
+}
+
+/*
+ * Sorting classes for columns
+ */
+
+/* For the standard odd/even */
+
+td.sorting_1 { background-color: rgba(213, 236, 250, .3); }
+
+tr.odd td.sorting_2 { background-color: #DADCFF; }
+
+tr.odd td.sorting_3 { background-color: #E0E2FF; }
+
+td.sorting_1 { background-color: rgba(213, 236, 250, .3); }
+
+tr.even td.sorting_2 { background-color: #F2F3FF; }
+
+tr.even td.sorting_3 { background-color: #F9F9FF; }
+
+/*
+ * Row highlighting example
+ */
+
+.ex_highlight tbody tr.even:hover, tbody tr.even td.highlighted { background-color: #ECFFB3; }
+
+.ex_highlight tbody tr.odd:hover, tbody tr.odd td.highlighted { background-color: #E6FF99; }
+
+/* Unique Cell styles */
+
+.actionsTableCell {border-left: 4px solid #fff;
+
+}
+
+.display p {
+	margin: 0;
+}
+
+
+/*** overrides ***/
+table td .btn-xmini {
+	font-size: 0.925em;
+}
+table td .btn-mini {
+	font-size: 1em;
+}
+/* Icons inside the table */
+
+table .icon-circle_exclamation_mark {
+	color: #D44116;
+    font-size: 1.25em;
+    margin: 0 0.8em 0 0.3em;
+	}

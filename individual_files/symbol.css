@@ -1,0 +1,559 @@
+/*!
+ *  Font Awesome 3.0.2
+ *  the iconCustomic font designed for use with Twitter Bootstrap
+ *  -------------------------------------------------------
+ *  The full suite of pictographic iconCustoms, examples, and documentation
+ *  can be found at: http://fortawesome.github.com/Font-Awesome/
+ *
+ *  License
+ *  -------------------------------------------------------
+ *  - The Font Awesome font is licensed under the SIL Open Font License - http://scripts.sil.org/OFL
+ *  - Font Awesome CSS, LESS, and SASS files are licensed under the MIT License -
+ *    http://opensource.org/licenses/mit-license.html
+ *  - The Font Awesome pictograms are licensed under the CC BY 3.0 License - http://creativecommons.org/licenses/by/3.0/
+ *  - Attribution is no longer required in Font Awesome 3.0, but much appreciated:
+ *    "Font Awesome by Dave Gandy - http://fortawesome.github.com/Font-Awesome"
+
+ *  Contact
+ *  -------------------------------------------------------
+ *  Email: dave@davegandy.com
+ *  Twitter: http://twitter.com/fortaweso_me
+ *  Work: Lead Product Designer @ http://kyruus.com
+ */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('fonts/fontawesome-webfont.eot?v=3.0.1');
+  src: url('fonts/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
+    url('fonts/fontawesome-webfont.woff?v=3.0.1') format('woff'),
+    url('fonts/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*  Font Awesome styles
+    ------------------------------------------------------- */
+[class^="iconCustom-"],
+[class*=" iconCustom-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+
+  /* sprites.less reset */
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+}
+/* more sprites.less reset */
+.iconCustom-white,
+.nav-pills > .active > a > [class^="iconCustom-"],
+.nav-pills > .active > a > [class*=" iconCustom-"],
+.nav-list > .active > a > [class^="iconCustom-"],
+.nav-list > .active > a > [class*=" iconCustom-"],
+.navbar-inverse .nav > .active > a > [class^="iconCustom-"],
+.navbar-inverse .nav > .active > a > [class*=" iconCustom-"],
+.dropdown-menu > li > a:hover > [class^="iconCustom-"],
+.dropdown-menu > li > a:hover > [class*=" iconCustom-"],
+.dropdown-menu > .active > a > [class^="iconCustom-"],
+.dropdown-menu > .active > a > [class*=" iconCustom-"],
+.dropdown-submenu:hover > a > [class^="iconCustom-"],
+.dropdown-submenu:hover > a > [class*=" iconCustom-"] {
+  background-image: none;
+}
+[class^="iconCustom-"]:before,
+[class*=" iconCustom-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+/* makes sure iconCustoms active on rollover in links */
+a [class^="iconCustom-"],
+a [class*=" iconCustom-"] {
+  display: inline-block;
+}
+/* makes the font 33% larger relative to the iconCustom container */
+.iconCustom-large:before {
+  vertical-align: -10%;
+  font-size: 1.3333333333333333em;
+}
+.btn [class^="iconCustom-"],
+.nav [class^="iconCustom-"],
+.btn [class*=" iconCustom-"],
+.nav [class*=" iconCustom-"] {
+  display: inline;
+  /* keeps button heights with and without iconCustoms the same */
+
+}
+.btn [class^="iconCustom-"].iconCustom-large,
+.nav [class^="iconCustom-"].iconCustom-large,
+.btn [class*=" iconCustom-"].iconCustom-large,
+.nav [class*=" iconCustom-"].iconCustom-large {
+  line-height: .9em;
+}
+.btn [class^="iconCustom-"].iconCustom-spin,
+.nav [class^="iconCustom-"].iconCustom-spin,
+.btn [class*=" iconCustom-"].iconCustom-spin,
+.nav [class*=" iconCustom-"].iconCustom-spin {
+  display: inline-block;
+}
+.nav-tabs [class^="iconCustom-"],
+.nav-pills [class^="iconCustom-"],
+.nav-tabs [class*=" iconCustom-"],
+.nav-pills [class*=" iconCustom-"] {
+  /* keeps button heights with and without iconCustoms the same */
+
+}
+.nav-tabs [class^="iconCustom-"],
+.nav-pills [class^="iconCustom-"],
+.nav-tabs [class*=" iconCustom-"],
+.nav-pills [class*=" iconCustom-"],
+.nav-tabs [class^="iconCustom-"].iconCustom-large,
+.nav-pills [class^="iconCustom-"].iconCustom-large,
+.nav-tabs [class*=" iconCustom-"].iconCustom-large,
+.nav-pills [class*=" iconCustom-"].iconCustom-large {
+  line-height: .9em;
+}
+li [class^="iconCustom-"],
+.nav li [class^="iconCustom-"],
+li [class*=" iconCustom-"],
+.nav li [class*=" iconCustom-"] {
+  display: inline-block;
+  /*width: 1.25em;*/
+  text-align: center;
+}
+li [class^="iconCustom-"].iconCustom-large,
+.nav li [class^="iconCustom-"].iconCustom-large,
+li [class*=" iconCustom-"].iconCustom-large,
+.nav li [class*=" iconCustom-"].iconCustom-large {
+  /* increased font size for iconCustom-large */
+
+  width: 1.5625em;
+}
+ul.iconCustoms {
+  list-style-type: none;
+  text-indent: -0.75em;
+}
+ul.iconCustoms li [class^="iconCustom-"],
+ul.iconCustoms li [class*=" iconCustom-"] {
+  width: .75em;
+}
+.iconCustom-muted {
+  color: #eeeeee;
+}
+.iconCustom-border {
+  border: solid 1px #eeeeee;
+  padding: .2em .25em .15em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.iconCustom-2x {
+  font-size: 2em;
+}
+.iconCustom-2x.iconCustom-border {
+  border-width: 2px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.iconCustom-3x {
+  font-size: 3em;
+}
+.iconCustom-3x.iconCustom-border {
+  border-width: 3px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.iconCustom-4x {
+  font-size: 4em;
+}
+.iconCustom-4x.iconCustom-border {
+  border-width: 4px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+[class^="iconCustom-"].pull-left,
+[class*=" iconCustom-"].pull-left {
+  margin-right: .3em;
+}
+[class^="iconCustom-"].pull-right,
+[class*=" iconCustom-"].pull-right {
+  margin-left: .3em;
+}
+.btn [class^="iconCustom-"].pull-left.iconCustom-2x,
+.btn [class*=" iconCustom-"].pull-left.iconCustom-2x,
+.btn [class^="iconCustom-"].pull-right.iconCustom-2x,
+.btn [class*=" iconCustom-"].pull-right.iconCustom-2x {
+  margin-top: .18em;
+}
+.btn [class^="iconCustom-"].iconCustom-spin.iconCustom-large,
+.btn [class*=" iconCustom-"].iconCustom-spin.iconCustom-large {
+  line-height: .8em;
+}
+.btn.btn-small [class^="iconCustom-"].pull-left.iconCustom-2x,
+.btn.btn-small [class*=" iconCustom-"].pull-left.iconCustom-2x,
+.btn.btn-small [class^="iconCustom-"].pull-right.iconCustom-2x,
+.btn.btn-small [class*=" iconCustom-"].pull-right.iconCustom-2x {
+  margin-top: .25em;
+}
+.btn.btn-small .iconCustom-circle-arrow-left {
+  margin-right: .3em;
+}
+.btn.btn-small .iconCustom-circle-arrow-right {
+  margin-left: .3em;
+}
+.btn.btn-large [class^="iconCustom-"],
+.btn.btn-large [class*=" iconCustom-"] {
+  margin-top: 0;
+}
+.btn.btn-large [class^="iconCustom-"].pull-left.iconCustom-2x,
+.btn.btn-large [class*=" iconCustom-"].pull-left.iconCustom-2x,
+.btn.btn-large [class^="iconCustom-"].pull-right.iconCustom-2x,
+.btn.btn-large [class*=" iconCustom-"].pull-right.iconCustom-2x {
+  margin-top: .05em;
+}
+.btn.btn-large [class^="iconCustom-"].pull-left.iconCustom-2x,
+.btn.btn-large [class*=" iconCustom-"].pull-left.iconCustom-2x {
+  margin-right: .2em;
+}
+.btn.btn-large [class^="iconCustom-"].pull-right.iconCustom-2x,
+.btn.btn-large [class*=" iconCustom-"].pull-right.iconCustom-2x {
+  margin-left: .2em;
+}
+.iconCustom-spin {
+  display: inline-block;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+.iconCustom-stack {
+    display: inline-block;
+    position: relative;
+    vertical-align: -35%;    
+}
+.iconCustom-stack [class^="iconCustom-"], .iconCustom-stack [class*=" iconCustom-"] {
+    display: block;
+    line-height: inherit;
+    position: absolute;
+    text-align: center;    
+}
+
+@-moz-keyframes spin {
+  0% { -moz-transform: rotate(0deg); }
+  100% { -moz-transform: rotate(359deg); }
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(359deg); }
+}
+@-o-keyframes spin {
+  0% { -o-transform: rotate(0deg); }
+  100% { -o-transform: rotate(359deg); }
+}
+@-ms-keyframes spin {
+  0% { -ms-transform: rotate(0deg); }
+  100% { -ms-transform: rotate(359deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+@-moz-document url-prefix() {
+  .iconCustom-spin {
+    height: .9em;
+  }
+  .btn .iconCustom-spin {
+    height: auto;
+  }
+  .iconCustom-spin.iconCustom-large {
+    height: 1.25em;
+  }
+  .btn .iconCustom-spin.iconCustom-large {
+    height: .75em;
+  }
+}
+/*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+    readers do not read off random characters that represent iconCustoms */
+.iconCustom-glass:before                { content: "\f000"; }
+.iconCustom-music:before                { content: "\f001"; }
+.iconCustom-search:before               { content: "\f002"; }
+.iconCustom-envelope:before             { content: "\f003"; }
+.iconCustom-heart:before                { content: "\f004"; }
+.iconCustom-star:before                 { content: "\f005"; }
+.iconCustom-star-empty:before           { content: "\f006"; }
+.iconCustom-user:before                 { content: "\f007"; }
+.iconCustom-film:before                 { content: "\f008"; }
+.iconCustom-th-large:before             { content: "\f009"; }
+.iconCustom-th:before                   { content: "\f00a"; }
+.iconCustom-th-list:before              { content: "\f00b"; }
+.iconCustom-ok:before                   { content: "\f00c"; }
+.iconCustom-remove:before               { content: "\f00d"; }
+.iconCustom-zoom-in:before              { content: "\f00e"; }
+
+.iconCustom-zoom-out:before             { content: "\f010"; }
+.iconCustom-off:before                  { content: "\f011"; }
+.iconCustom-signal:before               { content: "\f012"; }
+.iconCustom-cog:before                  { content: "\f013"; }
+.iconCustom-trash:before                { content: "\f014"; }
+.iconCustom-home:before                 { content: "\f015"; }
+.iconCustom-file:before                 { content: "\f016"; }
+.iconCustom-time:before                 { content: "\f017"; }
+.iconCustom-road:before                 { content: "\f018"; }
+.iconCustom-download-alt:before         { content: "\f019"; }
+.iconCustom-download:before             { content: "\f01a"; }
+.iconCustom-upload:before               { content: "\f01b"; }
+.iconCustom-inbox:before                { content: "\f01c"; }
+.iconCustom-play-circle:before          { content: "\f01d"; }
+.iconCustom-repeat:before               { content: "\f01e"; }
+
+/* \f020 doesn't work in Safari. all shifted one down */
+.iconCustom-refresh:before              { content: "\f021"; }
+.iconCustom-list-alt:before             { content: "\f022"; }
+.iconCustom-lock:before                 { content: "\f023"; }
+.iconCustom-flag:before                 { content: "\f024"; }
+.iconCustom-headphones:before           { content: "\f025"; }
+.iconCustom-volume-off:before           { content: "\f026"; }
+.iconCustom-volume-down:before          { content: "\f027"; }
+.iconCustom-volume-up:before            { content: "\f028"; }
+.iconCustom-qrcode:before               { content: "\f029"; }
+.iconCustom-barcode:before              { content: "\f02a"; }
+.iconCustom-tag:before                  { content: "\f02b"; }
+.iconCustom-tags:before                 { content: "\f02c"; }
+.iconCustom-book:before                 { content: "\f02d"; }
+.iconCustom-bookmark:before             { content: "\f02e"; }
+.iconCustom-print:before                { content: "\f02f"; }
+
+.iconCustom-camera:before               { content: "\f030"; }
+.iconCustom-font:before                 { content: "\f031"; }
+.iconCustom-bold:before                 { content: "\f032"; }
+.iconCustom-italic:before               { content: "\f033"; }
+.iconCustom-text-height:before          { content: "\f034"; }
+.iconCustom-text-width:before           { content: "\f035"; }
+.iconCustom-align-left:before           { content: "\f036"; }
+.iconCustom-align-center:before         { content: "\f037"; }
+.iconCustom-align-right:before          { content: "\f038"; }
+.iconCustom-align-justify:before        { content: "\f039"; }
+.iconCustom-list:before                 { content: "\f03a"; }
+.iconCustom-indent-left:before          { content: "\f03b"; }
+.iconCustom-indent-right:before         { content: "\f03c"; }
+.iconCustom-facetime-video:before       { content: "\f03d"; }
+.iconCustom-picture:before              { content: "\f03e"; }
+
+.iconCustom-pencil:before               { content: "\f040"; }
+.iconCustom-map-marker:before           { content: "\f041"; }
+.iconCustom-adjust:before               { content: "\f042"; }
+.iconCustom-tint:before                 { content: "\f043"; }
+.iconCustom-edit:before                 { content: "\f044"; }
+.iconCustom-share:before                { content: "\f045"; }
+.iconCustom-check:before                { content: "\f046"; }
+.iconCustom-move:before                 { content: "\f047"; }
+.iconCustom-step-backward:before        { content: "\f048"; }
+.iconCustom-fast-backward:before        { content: "\f049"; }
+.iconCustom-backward:before             { content: "\f04a"; }
+.iconCustom-play:before                 { content: "\f04b"; }
+.iconCustom-pause:before                { content: "\f04c"; }
+.iconCustom-stop:before                 { content: "\f04d"; }
+.iconCustom-forward:before              { content: "\f04e"; }
+
+.iconCustom-fast-forward:before         { content: "\f050"; }
+.iconCustom-step-forward:before         { content: "\f051"; }
+.iconCustom-eject:before                { content: "\f052"; }
+.iconCustom-chevron-left:before         { content: "\f053"; }
+.iconCustom-chevron-right:before        { content: "\f054"; }
+.iconCustom-plus-sign:before            { content: "\f055"; }
+.iconCustom-minus-sign:before           { content: "\f056"; }
+.iconCustom-remove-sign:before          { content: "\f057"; }
+.iconCustom-ok-sign:before              { content: "\f058"; }
+.iconCustom-question-sign:before        { content: "\f059"; }
+.iconCustom-info-sign:before            { content: "\f05a"; }
+.iconCustom-screenshot:before           { content: "\f05b"; }
+.iconCustom-remove-circle:before        { content: "\f05c"; }
+.iconCustom-ok-circle:before            { content: "\f05d"; }
+.iconCustom-ban-circle:before           { content: "\f05e"; }
+
+.iconCustom-arrow-left:before           { content: "\f060"; }
+.iconCustom-arrow-right:before          { content: "\f061"; }
+.iconCustom-arrow-up:before             { content: "\f062"; }
+.iconCustom-arrow-down:before           { content: "\f063"; }
+.iconCustom-share-alt:before            { content: "\f064"; }
+.iconCustom-resize-full:before          { content: "\f065"; }
+.iconCustom-resize-small:before         { content: "\f066"; }
+.iconCustom-plus:before                 { content: "\f067"; }
+.iconCustom-minus:before                { content: "\f068"; }
+.iconCustom-asterisk:before             { content: "\f069"; }
+.iconCustom-exclamation-sign:before     { content: "\f06a"; }
+.iconCustom-gift:before                 { content: "\f06b"; }
+.iconCustom-leaf:before                 { content: "\f06c"; }
+.iconCustom-fire:before                 { content: "\f06d"; }
+.iconCustom-eye-open:before             { content: "\f06e"; }
+
+.iconCustom-eye-close:before            { content: "\f070"; }
+.iconCustom-warning-sign:before         { content: "\f071"; }
+.iconCustom-plane:before                { content: "\f072"; }
+.iconCustom-calendar:before             { content: "\f073"; }
+.iconCustom-random:before               { content: "\f074"; }
+.iconCustom-comment:before              { content: "\f075"; }
+.iconCustom-magnet:before               { content: "\f076"; }
+.iconCustom-chevron-up:before           { content: "\f077"; }
+.iconCustom-chevron-down:before         { content: "\f078"; }
+.iconCustom-retweet:before              { content: "\f079"; }
+.iconCustom-shopping-cart:before        { content: "\f07a"; }
+.iconCustom-folder-close:before         { content: "\f07b"; }
+.iconCustom-folder-open:before          { content: "\f07c"; }
+.iconCustom-resize-vertical:before      { content: "\f07d"; }
+.iconCustom-resize-horizontal:before    { content: "\f07e"; }
+
+.iconCustom-bar-chart:before            { content: "\f080"; }
+.iconCustom-twitter-sign:before         { content: "\f081"; }
+.iconCustom-facebook-sign:before        { content: "\f082"; }
+.iconCustom-camera-retro:before         { content: "\f083"; }
+.iconCustom-key:before                  { content: "\f084"; }
+.iconCustom-cogs:before                 { content: "\f085"; }
+.iconCustom-comments:before             { content: "\f086"; }
+.iconCustom-thumbs-up:before            { content: "\f087"; }
+.iconCustom-thumbs-down:before          { content: "\f088"; }
+.iconCustom-star-half:before            { content: "\f089"; }
+.iconCustom-heart-empty:before          { content: "\f08a"; }
+.iconCustom-signout:before              { content: "\f08b"; }
+.iconCustom-linkedin-sign:before        { content: "\f08c"; }
+.iconCustom-pushpin:before              { content: "\f08d"; }
+.iconCustom-external-link:before        { content: "\f08e"; }
+
+.iconCustom-signin:before               { content: "\f090"; }
+.iconCustom-trophy:before               { content: "\f091"; }
+.iconCustom-github-sign:before          { content: "\f092"; }
+.iconCustom-upload-alt:before           { content: "\f093"; }
+.iconCustom-lemon:before                { content: "\f094"; }
+.iconCustom-phone:before                { content: "\f095"; }
+.iconCustom-check-empty:before          { content: "\f096"; }
+.iconCustom-bookmark-empty:before       { content: "\f097"; }
+.iconCustom-phone-sign:before           { content: "\f098"; }
+.iconCustom-twitter:before              { content: "\f099"; }
+.iconCustom-facebook:before             { content: "\f09a"; }
+.iconCustom-github:before               { content: "\f09b"; }
+.iconCustom-unlock:before               { content: "\f09c"; }
+.iconCustom-credit-card:before          { content: "\f09d"; }
+.iconCustom-rss:before                  { content: "\f09e"; }
+
+.iconCustom-hdd:before                  { content: "\f0a0"; }
+.iconCustom-bullhorn:before             { content: "\f0a1"; }
+.iconCustom-bell:before                 { content: "\f0a2"; }
+.iconCustom-certificate:before          { content: "\f0a3"; }
+.iconCustom-hand-right:before           { content: "\f0a4"; }
+.iconCustom-hand-left:before            { content: "\f0a5"; }
+.iconCustom-hand-up:before              { content: "\f0a6"; }
+.iconCustom-hand-down:before            { content: "\f0a7"; }
+.iconCustom-circle-arrow-left:before    { content: "\f0a8"; }
+.iconCustom-circle-arrow-right:before   { content: "\f0a9"; }
+.iconCustom-circle-arrow-up:before      { content: "\f0aa"; }
+.iconCustom-circle-arrow-down:before    { content: "\f0ab"; }
+.iconCustom-globe:before                { content: "\f0ac"; }
+.iconCustom-wrench:before               { content: "\f0ad"; }
+.iconCustom-tasks:before                { content: "\f0ae"; }
+
+.iconCustom-filter:before               { content: "\f0b0"; }
+.iconCustom-briefcase:before            { content: "\f0b1"; }
+.iconCustom-fullscreen:before           { content: "\f0b2"; }
+
+.iconCustom-group:before                { content: "\f0c0"; }
+.iconCustom-link:before                 { content: "\f0c1"; }
+.iconCustom-cloud:before                { content: "\f0c2"; }
+.iconCustom-beaker:before               { content: "\f0c3"; }
+.iconCustom-cut:before                  { content: "\f0c4"; }
+.iconCustom-copy:before                 { content: "\f0c5"; }
+.iconCustom-paper-clip:before           { content: "\f0c6"; }
+.iconCustom-save:before                 { content: "\f0c7"; }
+.iconCustom-sign-blank:before           { content: "\f0c8"; }
+.iconCustom-reorder:before              { content: "\f0c9"; }
+.iconCustom-list-ul:before              { content: "\f0ca"; }
+.iconCustom-list-ol:before              { content: "\f0cb"; }
+.iconCustom-strikethrough:before        { content: "\f0cc"; }
+.iconCustom-underline:before            { content: "\f0cd"; }
+.iconCustom-table:before                { content: "\f0ce"; }
+
+.iconCustom-magic:before                { content: "\f0d0"; }
+.iconCustom-truck:before                { content: "\f0d1"; }
+.iconCustom-pinterest:before            { content: "\f0d2"; }
+.iconCustom-pinterest-sign:before       { content: "\f0d3"; }
+.iconCustom-google-plus-sign:before     { content: "\f0d4"; }
+.iconCustom-google-plus:before          { content: "\f0d5"; }
+.iconCustom-money:before                { content: "\f0d6"; }
+.iconCustom-caret-down:before           { content: "\f0d7"; }
+.iconCustom-caret-up:before             { content: "\f0d8"; }
+.iconCustom-caret-left:before           { content: "\f0d9"; }
+.iconCustom-caret-right:before          { content: "\f0da"; }
+.iconCustom-columns:before              { content: "\f0db"; }
+.iconCustom-sort:before                 { content: "\f0dc"; }
+.iconCustom-sort-down:before            { content: "\f0dd"; }
+.iconCustom-sort-up:before              { content: "\f0de"; }
+
+.iconCustom-envelope-alt:before         { content: "\f0e0"; }
+.iconCustom-linkedin:before             { content: "\f0e1"; }
+.iconCustom-undo:before                 { content: "\f0e2"; }
+.iconCustom-legal:before                { content: "\f0e3"; }
+.iconCustom-dashboard:before            { content: "\f0e4"; }
+.iconCustom-comment-alt:before          { content: "\f0e5"; }
+.iconCustom-comments-alt:before         { content: "\f0e6"; }
+.iconCustom-bolt:before                 { content: "\f0e7"; }
+.iconCustom-sitemap:before              { content: "\f0e8"; }
+.iconCustom-umbrella:before             { content: "\f0e9"; }
+.iconCustom-paste:before                { content: "\f0ea"; }
+.iconCustom-lightbulb:before            { content: "\f0eb"; }
+.iconCustom-exchange:before             { content: "\f0ec"; }
+.iconCustom-cloud-download:before       { content: "\f0ed"; }
+.iconCustom-cloud-upload:before         { content: "\f0ee"; }
+
+.iconCustom-user-md:before              { content: "\f0f0"; }
+.iconCustom-stethoscope:before          { content: "\f0f1"; }
+.iconCustom-suitcase:before             { content: "\f0f2"; }
+.iconCustom-bell-alt:before             { content: "\f0f3"; }
+.iconCustom-coffee:before               { content: "\f0f4"; }
+.iconCustom-food:before                 { content: "\f0f5"; }
+.iconCustom-file-alt:before             { content: "\f0f6"; }
+.iconCustom-building:before             { content: "\f0f7"; }
+.iconCustom-hospital:before             { content: "\f0f8"; }
+.iconCustom-ambulance:before            { content: "\f0f9"; }
+.iconCustom-medkit:before               { content: "\f0fa"; }
+.iconCustom-fighter-jet:before          { content: "\f0fb"; }
+.iconCustom-beer:before                 { content: "\f0fc"; }
+.iconCustom-h-sign:before               { content: "\f0fd"; }
+.iconCustom-plus-sign-alt:before        { content: "\f0fe"; }
+
+.iconCustom-double-angle-left:before    { content: "\f100"; }
+.iconCustom-double-angle-right:before   { content: "\f101"; }
+.iconCustom-double-angle-up:before      { content: "\f102"; }
+.iconCustom-double-angle-down:before    { content: "\f103"; }
+.iconCustom-angle-left:before           { content: "\f104"; }
+.iconCustom-angle-right:before          { content: "\f105"; }
+.iconCustom-angle-up:before             { content: "\f106"; }
+.iconCustom-angle-down:before           { content: "\f107"; }
+.iconCustom-desktop:before              { content: "\f108"; }
+.iconCustom-laptop:before               { content: "\f109"; }
+.iconCustom-tablet:before               { content: "\f10a"; }
+.iconCustom-mobile-phone:before         { content: "\f10b"; }
+.iconCustom-circle-blank:before         { content: "\f10c"; }
+.iconCustom-quote-left:before           { content: "\f10d"; }
+.iconCustom-quote-right:before          { content: "\f10e"; }
+
+.iconCustom-spinner:before              { content: "\f110"; }
+.iconCustom-circle-filled:before        { content: "\f111"; }
+.iconCustom-reply:before                { content: "\f112"; }
+.iconCustom-github-alt:before           { content: "\f113"; }
+.iconCustom-folder-close-alt:before     { content: "\f114"; }
+.iconCustom-folder-open-alt:before      { content: "\f115"; }
+.iconCustom-sort-by-alphabet:before 	{ content: "\f15d"; }

@@ -1,0 +1,197 @@
+/* CSS Document */
+
+/****************HEADER*************************/
+.nav > li > a {
+	display: table-cell;
+}
+.IE7 .nav > li > a {
+	display: inline-block;
+}
+header{
+	background: none repeat scroll 0 0 #FFFFFF;
+	height:60px;
+}
+.navbar-inner .left {
+	/*width: 50%;
+	z-index: 1000;*/
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.navbar-inner .center {
+	width: 430px;
+	margin: 0 auto;
+	position: relative;
+	top: 0;
+	/*z-index: 2200;*/
+}
+.IE7 .navbar-inner .center, 
+.IE8 .navbar-inner .center {
+	width: 440px;
+}
+.navbar-inner .right {
+	min-width: 20%;
+	z-index: 1500;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.IE7 .navbar-inner .right {
+	width: auto;
+}
+.headerLink {
+	color: #063346;
+	font-size: 1.313em;
+	font-weight: 700;
+	line-height: 1.5em;
+	padding: 16px 30px 12px;
+}
+.headerLink:focus {
+	outline-offset: -2px;
+}
+
+.ui-helper-highcontrast .headerLink .HiddenText {
+    clip: auto;
+    width:auto;
+    height: auto;
+    position: inherit;
+    overflow: inherit;       
+}
+
+.CHRM .headerLink, .IE7 .headerLink, .IE8 .headerLink, .IE9 .headerLink {
+	padding: 16px 30px 13px;
+}
+
+.userActionList li {
+	margin-top: 20px;
+	padding-left: 10px;
+	vertical-align: middle;
+	padding-right: 0;
+}
+.userActionList li:last-child button {
+	text-transform: none;
+	margin-bottom: 3px;
+	padding: 2px 6px;
+}
+.loginLink, .messageLink, .logoutLink {
+	font-size: .875em;
+	color: #333;
+	vertical-align:middle;
+	font-weight: 600;
+}
+.logoutLink { 
+	padding-right: 30px;
+}
+
+.nav > li > a:hover.logoutLink, .nav > li >  a:active.logoutLink, .nav > li > .logoutLink:focus {
+	text-decoration: underline;
+	
+}
+
+.messageLink .icon-envelope {
+    background: none;
+    color: #666;
+    font-size: 24px;
+    margin-top: 5px;
+    padding: 0 !important;
+}
+/* Used in header*/
+.userActionList .user-item {
+	height: 1em;
+	margin-top: 27px;
+	border-right: 1px solid #ccc;
+}
+.userActionList .icon-user {
+	line-height: 1em;
+	margin-top: 0;
+	color: #666;
+}
+.open .icon-user {
+	color: #2d8611
+}
+.loginLink .user-firstname {
+	position: relative;
+	text-transform: capitalize;
+	top: -1px;
+}
+.loginLink .icon-user {
+	font-size: 22px;
+	margin-top: -6px;
+	margin-left: 8px;
+	margin-right: 0;
+	padding-right: 14px;
+	font-weight: normal;
+}
+/****************FOOTER*************************/
+.footerSection {
+    margin-top: 100px; 
+}
+.footerContainer {
+	-moz-box-sizing: border-box;
+	margin: 0 auto;
+	width: 1000px;
+	min-height:140px;
+}
+.footer-bottom {
+	width: 1000px;
+}
+.footer-row {
+	border-top: 1px solid #D3D3D3;
+	padding: 14px 0;
+	font-size: .65em;
+}
+.footer-row a {
+	color:#333;
+	margin: 0 6px;
+	font-weight: 600;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.footer-row a:hover, .footer-row a:focus, .footer-row a:active {
+	color:#063346;
+}
+.footer-row .descriptionText {
+	line-height: 14px;
+}
+.footer-row .logo_HHS {
+	padding-right:15px;
+	float:left;
+}
+.footer-row .logo_usagov {
+	padding-top:10px;
+}
+.footer-row .logo_whitehouse {
+	padding-top:4px;
+}
+
+.footer-row .span8.pull-right{
+	text-align: right;
+}
+
+.footerContainer .links ul {
+	list-style: none;
+	margin: 7px 0;
+}
+
+.footerContainer .links li {
+	line-height: .9em;
+	border-right: 1px solid #333;
+	padding: 0;
+	float: left;
+}
+
+.footerContainer .links li:last-child {
+	border: 0;
+}
+
+.footerContainer .links a {
+	margin: 0 11px;
+}
+
+.footerContainer .links:first-child li:first-child a {
+	margin: 0 11px 0 7px;
+}
+
+.footerContainer .links li:last-child a {
+	margin: 0 7px 0 11px;
+}

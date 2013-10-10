@@ -1,0 +1,29 @@
+/* Print view specific overrides */
+
+@charset "UTF-8";
+
+/* CSS Document */
+
+
+/* makes .HiddenText content visible in print view. Use this to show fallback content for background images when printing */
+body .showInPrintView {
+	clip: auto;
+	width:auto;
+	height: auto;
+	position: inherit;
+	overflow: inherit;
+}
+
+body .rating-option input {
+	position: relative;
+	left: auto;
+	top: auto;
+}
+
+body .rating-option label {
+	text-indent: 0;
+	width: auto;
+	height: auto;
+	margin-right: 15px;
+	background: none;
+}
