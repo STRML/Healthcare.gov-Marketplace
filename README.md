@@ -1,7 +1,7 @@
 What This Is
 ------------
 
-This repository served as an unofficial bug tracker and pull request target for fixes
+This repository is an unofficial bug tracker and pull request target for fixes
 to [healthcare.gov/marketplace](https://healthcare.gov/marketplace/global/en_US/registration),
 the latest boondoggle from HHS & CGI Federal.
 
