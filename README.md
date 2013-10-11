@@ -24,12 +24,12 @@ How To Run
 ----------
 
 ```
-git@github.com:STRML/Healthcare.gov-Marketplace.git
-cd healthcare.gov-Marketplace
+git clone git@github.com:STRML/Healthcare.gov-Marketplace.git
+cd Healthcare.gov-Marketplace
 npm install -g grunt
 npm install
 grunt build # concat/minification step
-grunt connect # runs a webserver to view results
+node app.js # runs a webserver to view results & proxy the API. Go to http://localhost:8080
 ```
 
 Tests
