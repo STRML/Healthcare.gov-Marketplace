@@ -41,7 +41,7 @@ There are no actual tests at this time.
 TODO
 ----
 
-* Redirect API calls to their actual destination so this fork works
+* ~~Redirect API calls to their actual destination so this fork works~~
 * Add any missing JS/CSS from other sections of the site
 * Add unit tests and TravisCI integration
 * Pass JSHint (good luck)

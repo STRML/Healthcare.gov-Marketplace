@@ -32,13 +32,10 @@ function proxyToHealthcareGov(req, res) {
     rejectUnauthorized: false
   };
 
-  console.dir(options);
-
+  // Spoof normal host & origin headers. Without this 'security', the APIs will 400.
   options.headers.host = 'www.healthcare.gov';
   options.headers.origin = 'https://www.healthcare.gov';
   options.headers.referer = 'https://www.healthcare.gov/marketplace/global/en_US/registration';
-
-  // options.headers['x-forwarded-for'] = req.ips;
 
   // pipe it right through
   var request = https.request(options, function(response){
