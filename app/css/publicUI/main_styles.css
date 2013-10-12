@@ -20,6 +20,7 @@
 }
 /************************ GLOBAL STYLES ************************/
 body {
+	background: #ebebeb;
 	background: url(../../images/bg.png);
 }
 .subHeading {
