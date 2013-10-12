@@ -2,7 +2,6 @@
   "browser": true,
   "node": true,
   "bitwise": true,
-  "camelcase": true,
   "curly": false,
   "eqeqeq": true,
   "immed": true,
