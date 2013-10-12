@@ -28,8 +28,7 @@ git clone git@github.com:STRML/Healthcare.gov-Marketplace.git
 cd Healthcare.gov-Marketplace
 npm install -g grunt
 npm install
-grunt build # concat/minification step
-node app.js # runs a webserver to view results & proxy the API. Go to http://localhost:8080
+npm start
 ```
 
 Tests
@@ -60,3 +59,8 @@ While the existing source does not pass jshint, please make sure that any contri
 Unit tests would be greatly appreciated. Please place them inside the `test/` folder, prefixed by unit test framework
 (qunit, jasmine). Please just make sure they pass, and feel free to use your favorite test framework. I will take care
 of wiring them into Grunt and TravisCI.
+
+Development
+-----------
+
+If you want to run without minification for development, use `grunt develop`.

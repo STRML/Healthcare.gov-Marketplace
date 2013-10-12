@@ -15,7 +15,10 @@
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-uglify": "~0.2.4",
-    "grunt-contrib-connect": "~0.5.0"
+    "grunt-open": "~0.2.2"
+  },
+  "scripts": {
+    "start": "grunt"
   },
   "author": "Samuel Reed",
   "website": "github.com/STRML",

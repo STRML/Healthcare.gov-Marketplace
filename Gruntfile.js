@@ -2,6 +2,7 @@
 
 module.exports = function(grunt){
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  var settings = require('./lib/settings');
 
   grunt.initConfig({
     clean: {
@@ -43,20 +44,40 @@ module.exports = function(grunt){
         }]
       }
     },
-    connect: {
-      server: {
-        options: {
-          port: 8080,
-          base: 'dist',
-          keepalive: true,
-          open: 'http://localhost:8080/individual.html'
-        }
+    open: {
+      dist: {
+        path: 'http://localhost:' + settings.port
       }
-    },
+    }
+  });
+
+  grunt.registerTask('launchServer', 'Launch the local proxy server', function(env) {
+    var args = [];
+    if (env === 'dev') args.push ('--dev');
+    var serverHandle = require('child_process').fork('./app', args);
+
+    // Open the page in your browser.
+    grunt.task.run('open', 'holdAfterLaunch');
+
+    // Cleanup
+    process.on('exit', function() {
+      serverHandle.kill();
+    });
+  });
+
+  grunt.registerTask('holdAfterLaunch', function() {
+    // Run in async mode so this never completes.
+    this.async();
+    console.log('\nRunning local proxy server on port ' + settings.port + '. Press CTRL-C to exit.\n');
   });
 
   grunt.registerTask('test', [
     // TODO
+  ]);
+
+  grunt.registerTask('develop', [
+    // watch task will go here soon
+    'launchServer:dev'
   ]);
 
   grunt.registerTask('build', [
@@ -72,6 +93,7 @@ module.exports = function(grunt){
   grunt.registerTask('default', [
     //'jshint', // re-enable this when the code gets a little more sane
     'test',
-    'build'
+    'build',
+    'launchServer:prod'
   ]);
 };
