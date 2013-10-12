@@ -4,6 +4,7 @@ var settings = require('./lib/settings');
 
 // Pass --dev for non-minified development mode.
 var devel = process.argv.indexOf('--dev') > -1;
+process.env.NODE_ENV = devel ? 'development' : 'production';
 
 // Initialize express. Serves static files & gzips.
 var app = express();
