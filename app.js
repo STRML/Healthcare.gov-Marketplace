@@ -1,54 +1,20 @@
 'use strict';
 var express = require('express');
 var settings = require('./lib/settings');
-var https = require('https');
 
+// Pass --dev for non-minified development mode.
+var devel = process.argv.indexOf('--dev') > -1;
+
+// Initialize express. Serves static files & gzips.
 var app = express();
 app.use(express.compress());
-app.use(express.static(__dirname + '/dist'));
+var staticPath = devel ? '/app' : '/dist';
+app.use(express.static(__dirname + staticPath));
+
+// Start
 app.listen(settings.port);
+if (devel) console.log('Running in development mode. Files will be served without minification.');
 console.log('Healthcare.gov Marketplace Emulation Server running on port', settings.port);
 
-// Redirect to individual.html for now.
-app.get('/', function(req, res){
-  res.redirect('/individual.html');
-});
-
-// Proxy /marketplace to the actual healthcare.gov server
-app.all('/marketplace/*', proxyToHealthcareGov);
-app.all('/ee-rest/*', proxyToHealthcareGov);
-
-function proxyToHealthcareGov(req, res) {
-  var api = settings.proxyTo;
-  // get request URL to pass onto API server
-
-  // send request to Identify API server
-  var options = {
-    host: api.host,
-    port: api.port,
-    method: req.method,
-    path: req.path,
-    headers: req.headers,
-    rejectUnauthorized: false
-  };
-
-  // Spoof normal host & origin headers. Without this 'security', the APIs will 400.
-  options.headers.host = 'www.healthcare.gov';
-  options.headers.origin = 'https://www.healthcare.gov';
-  options.headers.referer = 'https://www.healthcare.gov/marketplace/global/en_US/registration';
-
-  // pipe it right through
-  var request = https.request(options, function(response){
-    res.status(response.statusCode).set(response.headers);
-    response.pipe(res);
-  });
-
-  // Errors are ignored.
-  request.on('error', function(e) {
-    console.error('Error during request', e);
-    request.abort();
-  });
-
-  // pipe POST/PUT data to request body, if it exists
-  req.pipe(request);
-}
+// Init routes.
+require('./lib/routes')(app);
