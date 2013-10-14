@@ -2757,13 +2757,21 @@ $(function($) {
   resources['ffe.ee.oam.error.oam3'] = 'Theres a problem. Please try again.  ';
   resources['ffe.ee.oam.error.oam2'] = 'The information you entered isn&#39;t valid. Review this information. If you&#39;re having trouble, call the Marketplace Call Center at 1-800-318-2596. TTY users should call 1-855-889-4325.';
 
-
-  var oamServer = 'https://eidm.cms.gov/oam/server/authentication?type=english';
-  var oamSpanishServer = 'https://eidm.cms.gov/oam/server/authentication?type=spanish';
-  var oamSuccessURL = 'https://eidm.cms.gov/successffmeng.html';
-  var oamSpanishSuccessURL = 'https://eidm.cms.gov/successffmesp.html';
-  var oamLogoutURL = 'https://eidm.cms.gov/oam/server/logout?end_url=https://www.healthcare.gov/marketplace/global/en_US/registration';
-
+  // TODO global locations configuration file
+  var oamServer, oamSpanishServer, oamSuccessURL, oamSpanishSuccessURL, oamLogoutURL;
+  if (window.location.hostName === 'localhost') {
+    oamServer = 'https://eidm.cms.gov/oam/server/authentication?type=english';
+    oamSpanishServer = 'https://eidm.cms.gov/oam/server/authentication?type=spanish';
+    oamSuccessURL = 'https://eidm.cms.gov/successffmeng.html';
+    oamSpanishSuccessURL = 'https://eidm.cms.gov/successffmesp.html';
+    oamLogoutURL = 'https://eidm.cms.gov/oam/server/logout?end_url=https://www.healthcare.gov/marketplace/global/en_US/registration';
+  } else {
+    oamServer = 'https://eidm.cms.gov/oam/server/authentication?type=english';
+    oamSpanishServer = 'https://eidm.cms.gov/oam/server/authentication?type=spanish';
+    oamSuccessURL = 'https://eidm.cms.gov/successffmeng.html';
+    oamSpanishSuccessURL = 'https://eidm.cms.gov/successffmesp.html';
+    oamLogoutURL = 'https://eidm.cms.gov/oam/server/logout?end_url=' + window.location.href;
+  }
 
 
   //
