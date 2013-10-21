@@ -72,6 +72,10 @@ Unit tests would be greatly appreciated. Please place them inside the `test/` fo
 (qunit, jasmine). Please just make sure they pass, and feel free to use your favorite test framework. I will take care
 of wiring them into Grunt and TravisCI.
 
+See the [baseline](https://github.com/STRML/Healthcare.gov-Marketplace/tree/baseline) branch for unmodified
+upstream files. If you notice a change in the Healthcare.gov Marketplace, please commit it to that branch. Changes
+will be merged from baseline to master when possible.
+
 Development
 -----------
 
