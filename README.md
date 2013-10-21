@@ -6,7 +6,7 @@ to [healthcare.gov/marketplace](https://healthcare.gov/marketplace/global/en_US/
 the much-maligned backend piece created by CGI Federal. Please post issues you've been having
 with the marketplace here.
 
-This repository attempts to be a working clone of the marketplace. You should be able to run this
+This repository attempts to be a working fork of the marketplace. You should be able to run this
 on a local web server and access healthcare.gov in the same way.
 
 
