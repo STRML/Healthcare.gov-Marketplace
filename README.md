@@ -1,10 +1,22 @@
+**Note**: There has been some confusion between this and the late CMSGov/healthcare.gov repository.
+
+This is not the same content as the CMSGov repository, which was taken down in early October. That
+repository contained only the landing page of healthcare.gov, which functions like
+a blog, and did not contain Marketplace application files. 
+This repository contains the client files of the actual interactive application. 
+These files were pulled directly from the [healthcare.gov
+Marketplace](https://healthcare.gov/marketplace/global/en_US/registration). 
+
+As of this writing, this is **the only repository on GitHub with this data.**
+
 What This Is
 ------------
 
 This repository is an unofficial bug tracker and pull request target for fixes
 to [healthcare.gov/marketplace](https://healthcare.gov/marketplace/global/en_US/registration),
 the much-maligned backend piece created by CGI Federal. Please post issues you've been having
-with the marketplace here.
+with the marketplace here. As there is no other publicly available bugtracker, this is the place
+to post issues and bugs.
 
 This repository attempts to be a working fork of the marketplace. You should be able to run this
 on a local web server and access healthcare.gov in the same way.
@@ -15,13 +27,14 @@ What This Isn't
 
 This is not an *official* repository. For all we know, nobody is listening.
 
+This is not a clone of the CMSGov/healthcare.gov repository. That repository only contained static
+frontend files. This is the actual healthcare.gov application, bugs and all.
+
 I have created this in hopes that there are some concerned programmers at CGI Federal who want to see
 the project succeed. Sourcing fixes from the users of healthcare.gov is one way to achieve that goal.
 
-~~See [the pull request](https://github.com/CMSgov/healthcare.gov/pull/31) that started this idea.~~
-
-The CMSGov/healthcare.gov repository has been taken down. As far as I can tell, this repository now 
-serves as the only publicly available bugtracker.
+See [the pull request](http://webcache.googleusercontent.com/search?q=cache:Tqg9LB2D2aYJ:https://github.com/CMSgov/healthcare.gov/pull/31+&cd=3&hl=en&ct=clnk) that started this idea. 
+(Google Cache)
 
 See the [open issues](https://github.com/STRML/Healthcare.gov-Marketplace/issues) and 
 [closed issues](https://github.com/STRML/Healthcare.gov-Marketplace/issues?page=1&state=closed).
