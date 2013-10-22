@@ -1,11 +1,19 @@
 **Note**: There has been some confusion between this and the late CMSGov/healthcare.gov repository.
 
-This is not the same content as the CMSGov repository, which was taken down in early October. That
-repository contained only the landing page of healthcare.gov, which functions like
-a blog, and did not contain Marketplace application files. 
-This repository contains the client files of the actual interactive application. 
-These files were pulled directly from the [healthcare.gov
-Marketplace](https://healthcare.gov/marketplace/global/en_US/registration). 
+There were two contractors working on healthcare.gov, each with separate responsibilities. The CMSGov
+repository had one section. This repository contains the other.
+
+***CMSGov Repository***
+- Frontend Blog Files
+- No Marketplace application code
+- Relatively bug-free
+- Completed by [Development Seed](http://developmentseed.org/)
+
+***This repository***
+- Marketplace application code
+- Numerous bugs and poor coding practices
+- Completed by [CGI Federal](http://www.cgi.com/en/us-federal/services-solutions)
+- This is the code that has been on the news.
 
 As of this writing, this is **the only repository on GitHub with this data.**
 
@@ -27,8 +35,7 @@ What This Isn't
 
 This is not an *official* repository. For all we know, nobody is listening.
 
-This is not a clone of the CMSGov/healthcare.gov repository. That repository only contained static
-frontend files. This is the actual healthcare.gov application, bugs and all.
+This is not a clone of the CMSGov/healthcare.gov repository.
 
 I have created this in hopes that there are some concerned programmers at CGI Federal who want to see
 the project succeed. Sourcing fixes from the users of healthcare.gov is one way to achieve that goal.
