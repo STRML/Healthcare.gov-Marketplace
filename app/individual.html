@@ -137,268 +137,306 @@
   <link rel="P3Pv1" href="http://www.Healthcare.gov/w3c/p3p.xml">
 </head>
 <body>
-  <div class ="skipnav">
-    <span class="HiddenText">&nbsp;</span>
+  <div class="skipnav">
+      <span class="HiddenText">&nbsp;</span>
       <a id="skipNavLink" href="#main_content">Skip to Main Content</a>
-      </div>  
-    
-    <!--IE6 error must be directly under body-->
-    <!--[if lt IE 7]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'> 
-      <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" 
-      border="0" height="42" width="820" alt="You are using an outdated browser. 
-      For a faster, safer browsing experience, upgrade for free today." /></a></div> <![endif]-->
-  
+  </div>
+
+  <!--IE6 error must be directly under body-->
+  <!--[if lt IE 7]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'> 
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+        <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" 
+        border="0" height="42" width="820" alt="You are using an outdated browser. 
+        For a faster, safer browsing experience, upgrade for free today." /></a></div> <![endif]-->
+
   <!-- Google Tag Manager must be directly under body-->
-  <!--JSOFF error must be directly under body-->  
-      <noscript>
-    <iframe title='googletagmanager' src="//www.googletagmanager.com/ns.html?id=GTM-BZGHG" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  <!--JSOFF error must be directly under body-->
+  <noscript>
+      <iframe title='googletagmanager' src="//www.googletagmanager.com/ns.html?id=GTM-BZGHG" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
-  
-      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-BZGHG');</script>
-      
+
+  <script>
+  (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+          '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-BZGHG');
+  </script>
+
   <!-- End Google Tag Manager -->
   <!-- Start of application content-->
-    
 
+  <div class="wrapper">
+      <div class="overlayBox banner"></div>
+      <div class="container-fluid">
+          <!-- Start header -->
+          <header role="banner">
+              <div class="navbar">
+                  <div class="navbar-inner">
+                      <div class="left">
+                          <a class="brand" href="https://www.healthcare.gov/">
+                              <img src="images/logo.png" alt="HealthCare.gov" />
+                          </a>
+                      </div>
+                      <div class="center">
+                          <ul class="nav">
+                              <li><a href="/" class="headerLink">Learn<span class="HiddenText">, section</span></a> 
+                              </li>
+                              <li class="active"> <a href="/marketplace/individual" class="headerLink">Get Insurance<span class="HiddenText">, current section</span></a> 
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="right">
+                          <ul class="nav pull-right userActionList">
+                              <li class="user-item" id="headerUserItem">
+                                  <a id="dLabel1" class="dropdown-toggle loginLink" data-toggle="dropdown" role="button" href="#" aria-haspopup="true">
+                                      <span class="user-firstname" id="headerUserName">$ffeUserTool.getFFEUserPrincipal().getFirstName()</span>
+                                      <i class="icon-user" aria-hidden="true"></i>
+                                  </a>
+                                  <div class="dropdown-menu profile-dropdown">
+                                      <ul role="menu" aria-labelledby="dLabel1">
+                                          <li role="menuitem">
+                                              <a href="/marketplace/auth/global/en_US/myProfile#landingPage" id="landingPageMenuLink"><i class="iconCustom-medkit" aria-hidden="true"></i>My Applications &#38; Coverage</a>
+                                          </li>
+                                          <li role="menuitem">
+                                              <a href="/marketplace/auth/global/en_US/myProfile#settings" id="helpProfile"><i class="icon-cogwheel" aria-hidden="true"></i>My Profile</a>
+                                          </li>
 
+                                          <!-- <li role="menuitem">
+                        <a href="/marketplace/auth/logout" id="logout"><i class="icon-share" aria-hidden="true"></i>Logout</a>
+                     </li>-->
+                                      </ul>
+                                  </div>
+                              </li>
+                              <li id="headerEmail">
+                                  <a href="/marketplace/auth/logout" id="logout"><i class="icon-share" aria-hidden="true"></i>Logout</a> 
+                              </li>
+                              <!-- <li lang="ES">
+                              <button class="btn btn-info btn-xmini" onclick="toggleLanguageURL('');">Espa&ntilde;ol</button>
+                          </li>-->
+                          </ul>
+                      </div>
+                  </div>
+              </div>
 
-
-
-
-
-   
-<div class="wrapper">
-  <div class="overlayBox banner"></div>
-  <div class="container-fluid">
-      <!-- Start header -->
-    <header role="banner">
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="left"> <a class="brand" href="https://www.healthcare.gov/"> <img src="images/logo.png" alt="HealthCare.gov" /></a></div>
-                <div class="center">
-                    <ul class="nav">
-                        <li><a href="/" class="headerLink">Learn<span class="HiddenText">, section</span></a> </li>
-                        <li class="active"> <a href="/marketplace/individual" class="headerLink">Get Insurance<span class="HiddenText">, current section</span></a> </li>
-                    </ul>
-                </div>
-                <div class="right">       
-          <ul class="nav pull-right userActionList">
-                        <li class="user-item" id="headerUserItem">
-                          <a id="dLabel1" class="dropdown-toggle loginLink" data-toggle="dropdown" role="button" href="#" aria-haspopup="true">
-                              <span class="user-firstname" id="headerUserName">$ffeUserTool.getFFEUserPrincipal().getFirstName()</span>
-                              <i class="icon-user" aria-hidden="true"></i>
-                </a>
-                            <div class="dropdown-menu profile-dropdown">
-                                <ul role="menu" aria-labelledby="dLabel1">
-                                     <li role="menuitem">
-                    <a href="/marketplace/auth/global/en_US/myProfile#landingPage" id="landingPageMenuLink"><i class="iconCustom-medkit" aria-hidden="true"></i>My Applications &#38; Coverage</a>
-                  </li>
-                  <li role="menuitem">
-                    <a href="/marketplace/auth/global/en_US/myProfile#settings" id="helpProfile"><i class="icon-cogwheel" aria-hidden="true"></i>My Profile</a>
-                  </li>
-                                   
-                                   <!-- <li role="menuitem">
-                      <a href="/marketplace/auth/logout" id="logout"><i class="icon-share" aria-hidden="true"></i>Logout</a>
-                   </li>-->
-                                </ul>
-                            </div>
-                                    </li>
-            <li id="headerEmail"> 
-              <a href="/marketplace/auth/logout" id="logout"><i class="icon-share" aria-hidden="true"></i>Logout</a> 
-            </li>
-                        <!-- <li lang="ES">
-                            <button class="btn btn-info btn-xmini" onclick="toggleLanguageURL('');">Espa&ntilde;ol</button>
-                        </li>-->
-                    </ul>
-                </div>
-            </div>
-        </div>
- 
-    </header>
-<!-- end header --> 
-<noscript>
-  <p style="clear: both; background: none repeat scroll 0 0 #EC1C2D; border-radius: 6px 6px 6px 6px; color: #FFFFFF; font-size: 1.0em; font-weight: bold; padding: 10px;">
-     <strong>Alert</strong>: The page could not be loaded.  This page currently does not fully support browsers with &quot;JavaScript&quot; disabled.  Please note that if you choose to continue without enabling &quot;JavaScript&quot; certain functionalities on this website may not be available.
-        <a href="javascript:location.reload(true)" style="color:#00a;">Press to reload after enabling JavaScript</a>
-  </p>
-</noscript> </div>
-  <div id="agentBrokerStateBar" class="container-fluid" style="display:none;">
-        <div class="utilitySection">
-            <div class="row-fluid">
-                <div class="stateBar"></div>
-                <div class="statusBar"> </div>
-            </div>
-        </div>
-    </div>
-  <div class="container-fluid">
-    <div class="innerContainer">
-      <div id="agentBrokerSubNav" class="row-fluid subNav" style="display:none;">
-    <div class="span12">
-        <div class="subNavigationContainer ul-myaccount  my-plans">
-            <ul class="subNavigationSection">
-         <li class="subLink firstLink pull-left"> 
-          <a href="javascript:void(0);" class="subLink-inner" id="backToPortalLink">
-            <i class="icon-notes_2" aria-hidden="true"></i> 
-            <span class="headerLabel">Return to issuer website</span>
-          </a>
-        </li> 
-            </ul>
-        </div>
-    </div>
-</div>      <div class="contentContainer" role="main">
-        <div class="row-fluid">
-          <div class="span12">
-            <div id="myAccountContentSection">
-              <a id="main_content" tabindex="-1" name="main_content"></a>
-              <div id="registrationSignUp" style="display:none;"></div>
-              <div id="registrationSignUpOne" style="display:none;"></div>
-              <div id="registrationSignUpTwo" style="display:none;"></div>
-              <div id="registrationSignUpThree" style="display: none;"></div>
-              <div id="registrationSignUpResults" style="display:none;"></div>              
-              <div id="logInPage">
-   
-</div>              <div id="logInTermsAndConditionsPage" style="display:none;">
-    
-</div>              
-              <div id="forgotPasswordPage" style="display:none;">
-   
-</div>  
-              <div id="passwordChallengeQuestionsPage" style="display:none;">
-           
-</div>              <div id="forgotPasswordResultsPage" style="display:none;">
-          
-</div>              <div  id="expiredPasswordPage" style="display:none;">
-  
-</div>              <div id="resetPasswordPage" style="display:none;">
-      
-</div>
-              
-              
-              <div id="forgotUsernameDetails" style="display: none;"></div>             <div id="forgotUsernameResultsPage" style="display:none;"></div>
-              
-              <!--contains sections for different messages -->
-<div role="alert" id="saveBlocker" class="blocker" style="display:none;">
-  <div>
-        <h1> Please wait</h1>
-        <img role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-describedby="desc" aria-busy="true" src="images/pleaseWait.gif" alt="" >
-      <!--p id="desc">
-      Please wait while we save your application
-    </p-->
-    <p id="desc" class="HiddenText">
-    Please wait while we update your Marketplace account
-    </p>
-    </div>
-</div>
-
-<div role="alert" id="loginBlocker" class="blocker" style="display:none;">
-  <div>
-        <h1> Please wait</h1>
-        <img role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-describedby="desc" aria-busy="true" src="images/pleaseWait.gif" alt="" >
-      <!--p id="desc">
-      Please wait while we log you into your account
-    </p-->
-    <p id="desc" class="HiddenText">
-    Please wait while we update your Marketplace account
-    </p>
-    </div>
-</div>
-
-<div role="alert" id="emailValidationBlocker" class="blocker" style="display:none;">
-  <div>
-        <h1> Please wait</h1>
-        <img role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-describedby="desc" aria-busy="true" src="images/pleaseWait.gif" alt="" >
-      <!--p id="desc">
-      Please wait while we validate your email
-    </p-->
-    <p id="desc" class="HiddenText">
-    Please wait while we update your Marketplace account
-    </p>
-    </div>
-</div>
-
-<div role="alert" id="profileBlocker" class="blocker" style="display:none;">
-  <div>
-    <h1> Please wait</h1>
-    <img src="images/pleaseWait.gif" alt="" >
-      <p id="desc" class="HiddenText">
-    Please wait while we update your Marketplace account
-    </p>
-  </div>
-</div>
-
-            </div>
-          </div>
-        </div><!-- end content container-->
+          </header>
+          <!-- end header -->
+          <noscript>
+              <p style="clear: both; background: none repeat scroll 0 0 #EC1C2D; border-radius: 6px 6px 6px 6px; color: #FFFFFF; font-size: 1.0em; font-weight: bold; padding: 10px;">
+                  <strong>Alert</strong>: The page could not be loaded. This page currently does not fully support browsers with &quot;JavaScript&quot; disabled. Please note that if you choose to continue without enabling &quot;JavaScript&quot; certain functionalities on this website may not be available.
+                  <a href="javascript:location.reload(true)" style="color:#00a;">Press to reload after enabling JavaScript</a>
+              </p>
+          </noscript>
       </div>
-      <!--end inner container -->
-    </div>
-    <!-- begin footer -->
-<div class="footerSection">
-        <div role="contentinfo" id="footer" class="footerContainer">
-            <h2 class="HiddenText">Footer</h2>
-            <div class="footer-bottom">
-                <div class="footer-row">
-                    <div role="navigation" class="row-fluid">
-            <div class="span5 pull-left links">
-                            <ul class="clearfix">
-                                <li><a href="/sitemap/">SITEMAP<span class="HiddenText">opens in a new window</span></a></li>
-                                <li><a href="/glossary/">GLOSSARY<span class="HiddenText">opens in a new window</span></a></li>
-                                <li><a href="/help-center/">CONTACT US<span class="HiddenText">opens in a new window</span></a></li>
-                                <li><a href="/archive/">ARCHIVE <span class="HiddenText">opens in a new window</span></a></li>
-                            </ul>
-                        </div>
-            <div class="pagination-right pull-right links">
-                            <ul class="clearfix">
-                                <li><a href="/accessibility/">ACCESSIBILITY<span class="HiddenText">opens in a new window</span></a></li>
-                                <li><a href="/privacy/">PRIVACY POLICY<span class="HiddenText">opens in a new window</span></a></li>
-                                <li><a target="_blank" href="http://www.hhs.gov/open/recordsandreports/plainwritingact/index.html">PLAIN WRITING <span class="HiddenText">opens in a new window</span></a></li>
-                                <li><a target="_blank" href="http://www.cms.gov/About-CMS/Agency-Information/Aboutwebsite/Help.html">VIEWERS &#38; PLAYERS <span class="HiddenText">opens in a new window</span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-row">
-                    <div role="navigation" class="row-fluid">
-                        <div class="span4">
-                            <p class="descriptionText"> <a target="_blank" href="http://www.hhs.gov/" class="logo_HHS"><img src="images/logo_HHS.png" alt="HHS.gov Department of Health and Human Services USA - opens in a new window" /></a>A federal government website managed by the U.S. Centers for Medicare & Medicaid Services. 7500 Security Boulevard, Baltimore, MD 21244</p>
-                        </div>
-                        <div class="span8 pull-right"> <a target="_blank" href="http://www.whitehouse.gov/" class="logo_whitehouse"><img src="images/logo_WhiteHouse.png" alt="Whitehouse.gov The White House Washington - opens in a new window"/></a> <a target="_blank" href="http://www.usa.gov/" class="logo_usagov"><img src=" images/logo_USAgov.png" alt="USA.gov Government made easy - opens in a new window" /></a> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
- </div>
-<!-- end footer -->   </div>
-  <div class="container-fluid">
-    <div class="bottom-chat-link">
-    <a class="chatLink chat-launcher" id="webchat" role="complementary" href="#">Live Chat<i class="icon-resize_full" aria-hidden="true"></i>
-    </a> 
-  </div>
-</div>
-<div class="chat-iframe-container"> </div>
+      <div id="agentBrokerStateBar" class="container-fluid" style="display:none;">
+          <div class="utilitySection">
+              <div class="row-fluid">
+                  <div class="stateBar"></div>
+                  <div class="statusBar"></div>
+              </div>
+          </div>
+      </div>
+      <div class="container-fluid">
+          <div class="innerContainer">
+              <div id="agentBrokerSubNav" class="row-fluid subNav" style="display:none;">
+                  <div class="span12">
+                      <div class="subNavigationContainer ul-myaccount  my-plans">
+                          <ul class="subNavigationSection">
+                              <li class="subLink firstLink pull-left">
+                                  <a href="javascript:void(0);" class="subLink-inner" id="backToPortalLink">
+                                      <i class="icon-notes_2" aria-hidden="true"></i> 
+                                      <span class="headerLabel">Return to issuer website</span>
+                                  </a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="contentContainer" role="main">
+                  <div class="row-fluid">
+                      <div class="span12">
+                          <div id="myAccountContentSection">
+                              <a id="main_content" tabindex="-1" name="main_content"></a>
+                              <div id="registrationSignUp" style="display:none;"></div>
+                              <div id="registrationSignUpOne" style="display:none;"></div>
+                              <div id="registrationSignUpTwo" style="display:none;"></div>
+                              <div id="registrationSignUpThree" style="display: none;"></div>
+                              <div id="registrationSignUpResults" style="display:none;"></div>
+                              <div id="logInPage">
+
+                              </div>
+                              <div id="logInTermsAndConditionsPage" style="display:none;">
+
+                              </div>
+                              <div id="forgotPasswordPage" style="display:none;">
+
+                              </div>
+                              <div id="passwordChallengeQuestionsPage" style="display:none;">
+
+                              </div>
+                              <div id="forgotPasswordResultsPage" style="display:none;">
+
+                              </div>
+                              <div id="expiredPasswordPage" style="display:none;">
+
+                              </div>
+                              <div id="resetPasswordPage" style="display:none;">
+
+                              </div>
 
 
-<script type="text/javascript">
-var chatWindow = null;
-var windowFeatures = "width=465,height=452,menubar=0,location=0,resizable=0,scrollbars=0,status=0";
+                              <div id="forgotUsernameDetails" style="display: none;"></div>
+                              <div id="forgotUsernameResultsPage" style="display:none;"></div>
+
+                              <!--contains sections for different messages -->
+                              <div role="alert" id="saveBlocker" class="blocker" style="display:none;">
+                                  <div>
+                                      <h1>Please wait</h1>
+                                      <img role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-describedby="desc" aria-busy="true" src="images/pleaseWait.gif" alt="">
+                                      <!--p id="desc">
+        Please wait while we save your application
+      </p-->
+                                      <p id="desc" class="HiddenText">
+                                          Please wait while we update your Marketplace account
+                                      </p>
+                                  </div>
+                              </div>
+
+                              <div role="alert" id="loginBlocker" class="blocker" style="display:none;">
+                                  <div>
+                                      <h1>Please wait</h1>
+                                      <img role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-describedby="desc" aria-busy="true" src="images/pleaseWait.gif" alt="">
+                                      <!--p id="desc">
+        Please wait while we log you into your account
+      </p-->
+                                      <p id="desc" class="HiddenText">
+                                          Please wait while we update your Marketplace account
+                                      </p>
+                                  </div>
+                              </div>
+
+                              <div role="alert" id="emailValidationBlocker" class="blocker" style="display:none;">
+                                  <div>
+                                      <h1>Please wait</h1>
+                                      <img role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-describedby="desc" aria-busy="true" src="images/pleaseWait.gif" alt="">
+                                      <!--p id="desc">
+        Please wait while we validate your email
+      </p-->
+                                      <p id="desc" class="HiddenText">
+                                          Please wait while we update your Marketplace account
+                                      </p>
+                                  </div>
+                              </div>
+
+                              <div role="alert" id="profileBlocker" class="blocker" style="display:none;">
+                                  <div>
+                                      <h1>Please wait</h1>
+                                      <img src="images/pleaseWait.gif" alt="">
+                                      <p id="desc" class="HiddenText">
+                                          Please wait while we update your Marketplace account
+                                      </p>
+                                  </div>
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
+                  <!-- end content container-->
+              </div>
+              <!--end inner container -->
+          </div>
+          <!-- begin footer -->
+          <div class="footerSection">
+              <div role="contentinfo" id="footer" class="footerContainer">
+                  <h2 class="HiddenText">Footer</h2>
+                  <div class="footer-bottom">
+                      <div class="footer-row">
+                          <div role="navigation" class="row-fluid">
+                              <div class="span5 pull-left links">
+                                  <ul class="clearfix">
+                                      <li><a href="/sitemap/">SITEMAP<span class="HiddenText">opens in a new window</span></a>
+                                      </li>
+                                      <li><a href="/glossary/">GLOSSARY<span class="HiddenText">opens in a new window</span></a>
+                                      </li>
+                                      <li><a href="/help-center/">CONTACT US<span class="HiddenText">opens in a new window</span></a>
+                                      </li>
+                                      <li><a href="/archive/">ARCHIVE <span class="HiddenText">opens in a new window</span></a>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="pagination-right pull-right links">
+                                  <ul class="clearfix">
+                                      <li><a href="/accessibility/">ACCESSIBILITY<span class="HiddenText">opens in a new window</span></a>
+                                      </li>
+                                      <li><a href="/privacy/">PRIVACY POLICY<span class="HiddenText">opens in a new window</span></a>
+                                      </li>
+                                      <li><a target="_blank" href="http://www.hhs.gov/open/recordsandreports/plainwritingact/index.html">PLAIN WRITING <span class="HiddenText">opens in a new window</span></a>
+                                      </li>
+                                      <li><a target="_blank" href="http://www.cms.gov/About-CMS/Agency-Information/Aboutwebsite/Help.html">VIEWERS &#38; PLAYERS <span class="HiddenText">opens in a new window</span></a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="footer-row">
+                          <div role="navigation" class="row-fluid">
+                              <div class="span4">
+                                  <p class="descriptionText">
+                                      <a target="_blank" href="http://www.hhs.gov/" class="logo_HHS">
+                                          <img src="images/logo_HHS.png" alt="HHS.gov Department of Health and Human Services USA - opens in a new window" />
+                                      </a>A federal government website managed by the U.S. Centers for Medicare & Medicaid Services. 7500 Security Boulevard, Baltimore, MD 21244</p>
+                              </div>
+                              <div class="span8 pull-right">
+                                  <a target="_blank" href="http://www.whitehouse.gov/" class="logo_whitehouse">
+                                      <img src="images/logo_WhiteHouse.png" alt="Whitehouse.gov The White House Washington - opens in a new window" />
+                                  </a>
+                                  <a target="_blank" href="http://www.usa.gov/" class="logo_usagov">
+                                      <img src=" images/logo_USAgov.png" alt="USA.gov Government made easy - opens in a new window" />
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- end footer -->
+      </div>
+      <div class="container-fluid">
+          <div class="bottom-chat-link">
+              <a class="chatLink chat-launcher" id="webchat" role="complementary" href="#">Live Chat<i class="icon-resize_full" aria-hidden="true"></i>
+      </a> 
+          </div>
+      </div>
+      <div class="chat-iframe-container"></div>
 
 
-function startChat(el){
-    $(el).click(function(e){
-        e.preventDefault();
-        chatWindow = window.open('/chat','WebChat',windowFeatures);
-    })
-}
+  <script type="text/javascript">
+  var chatWindow = null;
+  var windowFeatures = "width=465,height=452,menubar=0,location=0,resizable=0,scrollbars=0,status=0";
 
-startChat('#webchat');
-startChat('#chatHelp');
 
-</script></div><!--END MAIN WRAPPER --> 
+  function startChat(el){
+      $(el).click(function(e){
+          e.preventDefault();
+          chatWindow = window.open('/chat','WebChat',windowFeatures);
+      })
+  }
+
+  startChat('#webchat');
+  startChat('#chatHelp');
+
+  </script>
+
+</div><!--END MAIN WRAPPER --> 
 
 <!--log in-->
 <script type="text/template" id="logInTemplate">
