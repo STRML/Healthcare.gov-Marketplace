@@ -98,4 +98,5 @@ will be merged from baseline to master when possible.
 Development
 -----------
 
-If you want to run without minification for development, use `grunt develop`.
+If you want to run without minification for development, use `grunt develop`. Be sure to install grunt globally
+if you haven't already, using `npm install -g grunt`.
