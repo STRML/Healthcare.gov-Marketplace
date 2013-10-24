@@ -5726,3 +5726,9 @@ input.inline-input {
 	width: 570px;
 }
 }
+
+
+/* Additional styles from OSS */
+#headerEmail, #headerUserItem{
+	display: none; /* Hide these until they are used */
+}

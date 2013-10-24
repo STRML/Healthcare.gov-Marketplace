@@ -1575,12 +1575,13 @@ function getTwoIndexesFromId (originalString, offset)
 
 //From UX team
 //affix function to apply on page load, or content update
+// Used for sidebars in browsing sections of the site
 function runAffix() {
 
     var targs = ['.utilitySection', '.subNav', '.overlayBox'];
 
     //run if affixloaded not defined
-    if(typeof affixloaded  === "undefined" ){
+    if(!affixloaded){
 
         //store number to append to leftNav class
         affixLength = 0;
@@ -1591,7 +1592,6 @@ function runAffix() {
             if($(value).length > 0 ){
                 $(value).affix({offset: {top: 60}});
                 affixLength++;
-
             }
 
         });
@@ -1655,6 +1655,12 @@ function runAffix() {
 		}
 	}
 }
+
+// Previous code would run this in a setInterval loop that had a broken check
+// for tpls to load
+// Will need to find a more central place to put this, but it seems to work here.
+// Will more when I can test more of the site - STRML
+setTimeout(runAffix, 100);
 
 
 /**
