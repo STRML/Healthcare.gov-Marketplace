@@ -55,7 +55,6 @@ Prerequisites: `node`.
 ```bash
 git clone git@github.com:STRML/Healthcare.gov-Marketplace.git # or download ZIP
 cd Healthcare.gov-Marketplace
-npm install -g grunt # Grunt is required for building
 npm install
 npm start # Starts local proxy server & launches browser
 ```

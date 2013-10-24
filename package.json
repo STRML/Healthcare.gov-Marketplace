@@ -6,6 +6,7 @@
     "express": "~3.4.0"
   },
   "devDependencies": {
+    "grunt-cli": "~0.1.9",
     "grunt": "~0.4.1",
     "grunt-usemin": "~0.1.12",
     "grunt-contrib-jshint": "~0.6.4",
