@@ -332,7 +332,7 @@ function checkDeleteSession(theLocale, env, url) {
 		error: function(response) {
 			directEnrollment();
 		},
-		async: false
+		async: true
 	});
 }
 

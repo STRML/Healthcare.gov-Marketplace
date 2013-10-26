@@ -2759,9 +2759,12 @@ $(function($) {
 
   // TODO global locations configuration file
   var oamServer, oamSpanishServer, oamSuccessURL, oamSpanishSuccessURL, oamLogoutURL;
-  if (window.location.hostName === 'localhost') {
-    oamServer = 'https://eidm.cms.gov/oam/server/authentication?type=english';
-    oamSpanishServer = 'https://eidm.cms.gov/oam/server/authentication?type=spanish';
+  if (window.location.hostname !== 'healthcare.gov') {
+    oamServer = '/login?type=english';
+    oamSpanishServer = '/login?type=spanish';
+    // This will actually send the login server the url to redirect us to after logging in.
+    // which just feeds us javascript with a window.location setter to bring us to the right page
+    // on healthcare.gov. Seriously?
     oamSuccessURL = 'https://eidm.cms.gov/successffmeng.html';
     oamSpanishSuccessURL = 'https://eidm.cms.gov/successffmesp.html';
     oamLogoutURL = 'https://eidm.cms.gov/oam/server/logout?end_url=https://www.healthcare.gov/marketplace/global/en_US/registration';

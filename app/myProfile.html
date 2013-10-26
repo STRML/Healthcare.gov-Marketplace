@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <!--Avoid Compatibility Mode-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+  <link rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon' />
+  
+  <title>My Profile</title>
+
+    
+  <!--note need to see if this affects the my account registration-->
+    
+    
+  <!-- build:css css/all.css -->
+  <link href="css/publicUI/reset.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/publicUI/bootstrap_ee.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/publicUI/bootstrap-responsive.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/publicUI/jquery-ui.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/publicUI/datepicker.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/publicUI/datatables.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/publicUI/print.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/publicUI/glyphicon.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/publicUI/globalHeaderFooter.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/publicUI/main_styles.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/publicUI/symbol.css" rel="stylesheet" type="text/css" media="all" />
+  <!-- endbuild -->
+
+  <!--HTML5 shim, for IE6-8 support of HTML5 elements must be after CSS-->
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 8]>
+      <script type="text/javascript" src="js/fonts-ie7.js"></script>
+  <![endif]-->
+  
+    
+  <!-- Browser Shims -->
+  <!-- build:js js/shims.js -->
+  <script type="text/javascript" src="js/shims/json2.js"></script>
+  <script type="text/javascript" src="js/shims/base64.js"></script>
+  <script type="text/javascript" src="js/shims/consoleShim.js"></script>
+  <!-- endbuild -->
+
+  <!-- Vendor JS -->
+  <!-- build:js js/vendor.js -->
+  <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+  <script type="text/javascript" src="js/vendor/underscore-1.3.1.full.js"></script>
+  <script type="text/javascript" src="js/vendor/backbone-0.9.2.full.js"></script> 
+  <script type="text/javascript" src="js/vendor/crypto-min.js"></script>
+  <script type="text/javascript" src="js/vendor/bootstrap.js"></script>  
+
+  <!-- jQuery plugins -->
+  <script type="text/javascript" src="js/vendor/plugins/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/vendor/plugins/jquery.alerts.js"></script>
+  <script type="text/javascript" src="js/vendor/plugins/jquery.blockUI.js"></script> 
+  <script type="text/javascript" src="js/vendor/plugins/jquery.browser.js"></script> <!-- this is actually jquery.cookie -->
+  <script type="text/javascript" src="js/vendor/plugins/jQuery.collapsible.js"></script>
+  <script type="text/javascript" src="js/vendor/plugins/custominput.js"></script> 
+  <script type="text/javascript" src="js/vendor/plugins/jquery.dataTables.js"></script>
+  <script type="text/javascript" src="js/vendor/plugins/jQuery.equalHeights.js"></script>
+  <script type="text/javascript" src="js/vendor/plugins/jQuery.fileinput.js"></script> 
+  <script type="text/javascript" src="js/vendor/plugins/jquery.formatCurrency-1.4.0.js"></script>
+  <script type="text/javascript" src="js/vendor/plugins/jquery.hcmode-detection.js"></script>
+  <script type="text/javascript" src="js/vendor/plugins/jquery.ui.widget.js"></script>
+  <script type="text/javascript" src="js/vendor/plugins/jquery.fileupload.js"></script>
+  <script type="text/javascript" src="js/vendor/plugins/jquery.iframe-transport.js"></script>
+  <script type="text/javascript" src="js/vendor/plugins/jquery.maskedinput-1.3.js"></script> 
+  <script type="text/javascript" src="js/vendor/plugins/tipsy.js"></script> 
+  <script type="text/javascript" src="js/vendor/plugins/xdr.js"></script>    
+
+  <!-- Backbone Plugins -->
+  <script type="text/javascript" src="js/vendor/plugins/backbone.validations-fork.js"></script> 
+  <script type="text/javascript" src="js/vendor/plugins/backbone-nested-1.1.2-fork.js"></script>
+
+  <!-- Misc Scripts / UI Plugins -->
+  <script type="text/javascript" src="js/vendor/plugins/wait.js"></script>
+  <script type="text/javascript" src="js/vendor/plugins/date.format.js"></script>
+  <!-- endbuild -->
+
+  <!-- Application Files -->
+  <!-- build:js js/myProfileApp.js -->
+  <script type="text/javascript" src="js/ee/cms-common.js"></script>
+  <script type="text/javascript" src="js/ee/datepicker.js"></script>
+  <script type="text/javascript" src="js/ee/eeBackbone.js"></script>
+  <script type="text/javascript" src="js/ee/eeCommon.js"></script>
+  <script type="text/javascript" src="js/ee/eeConstants.js"></script>
+  <script type="text/javascript" src="js/ee/eeState.js"></script>
+  <script type="text/javascript" src="js/ee/loginCommon.js"></script>
+  <script type="text/javascript" src="js/ee/eeCustomValidators.js"></script>
+  <script type="text/javascript" src="js/ee/dateUtil.js"></script>
+  <script type="text/javascript" src="js/ee/stateConfigurationManagement.js"></script>
+  <script type="text/javascript" src="js/ee/modalDialogCommon.js"></script>
+  <script type="text/javascript" src="js/ee/eeTransitionEffects.js"></script>
+  <script type="text/javascript" src="js/ee/508Utils.js"></script>
+  <script type="text/javascript" src="js/ee/eeReferenceData.js"></script>
+  <script type="text/javascript" src="js/ee/FFMForm/FFMFormValidatorConfig.js"></script>
+  <script type="text/javascript" src="js/ee/FFMForm/FFMFormValidator.js"></script>
+  <script type="text/javascript" src="js/ee/eeFormValidatorCommon.js"></script>
+  <script type="text/javascript" src="js/ee/eeCookies.js"></script>
+  <script type="text/javascript" src="js/ee/utilities.js"></script>
+  <script type="text/javascript" src="js/ee/sessionTimeout.js"></script>
+  <script type="text/javascript" src="js/ee/securityUtil.js"></script>
+  <script type="text/javascript" src="js/ee/documents.js"></script>
+  <script type="text/javascript" src="js/ee/directEnrollment.js"></script>
+  <script type="text/javascript" src="js/ee/eeIDProofing.js"></script>
+  <script type="text/javascript" src="js/ee/navigationCommon.js"></script>
+  <!-- My Profile Files -->    
+  <script type="text/javascript" src="js/ee/myProfile/myProfileModel.js"></script>
+  <script type="text/javascript" src="js/ee/myProfile/myProfileCommon.js"></script>
+  <script type="text/javascript" src="js/ee/myProfile.js"></script>
+  <!-- Pulled out inline scripts from the bottom of the page -->
+  <script type="text/javascript" src="js/ee/enrollmentKeepAlive.js"></script>
+  <!-- endbuild -->
+  
+  
+    
+  <script>
+  changeLanguage('en_US');
+  </script>
+  
+    
+  <!--Charbeat, pingdom, and p3p healthcare.gov code-->
+        <script>
+        var _prum = [['id', '51f026bdabe53d9e07000000'],
+                     ['mark', 'firstbyte', (new Date()).getTime()]];
+        (function() {
+            var s = document.getElementsByTagName('script')[0]
+              , p = document.createElement('script');
+            p.async = 'async';
+            p.src = '//rum-static.pingdom.net/prum.min.js';
+            s.parentNode.insertBefore(p, s);
+        })();
+        </script>
+    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+  <link rel="P3Pv1" href="http://www.Healthcare.gov/w3c/p3p.xml">
+  
+    
+<!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+mixpanel.init("d2445876dbbe322d83ad2c4a104692c7");</script><!-- end Mixpanel -->
+    
+    
+</head>
+    <body>
+    <div class ="skipnav">
+      <span class="HiddenText">&nbsp;</span>
+        <a id="skipNavLink" href="#main_content">Skip to Main Content</a>
+        </div>  
+      
+      <!--IE6 error must be directly under body-->
+      <!--[if lt IE 7]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'> 
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+        <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" 
+        border="0" height="42" width="820" alt="You are using an outdated browser. 
+        For a faster, safer browsing experience, upgrade for free today." /></a></div> <![endif]-->
+    
+    <!-- Google Tag Manager must be directly under body-->
+    <!--JSOFF error must be directly under body-->  
+        <noscript>
+      <iframe title='googletagmanager' src="//www.googletagmanager.com/ns.html?id=GTM-BZGHG" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    
+
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-BZGHG');</script>
+        
+    <!-- End Google Tag Manager -->
+    <!-- Start of application content-->
+    
+
+
+
+
+<div class="wrapper">
+  <div class="overlayBox" ></div>
+  <div class="container-fluid"> 
+    <!-- Start header -->
+    <!-- Start header -->
+    <header role="banner">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left"> <a class="brand" href="https://www.healthcare.gov/"> <img src="images/logo.png" alt="HealthCare.gov" /></a></div>
+                <div class="center">
+                    <ul class="nav">
+                        <li><a href="/" class="headerLink">Learn<span class="HiddenText">, section</span></a> </li>
+                        <li class="active"> <a href="/marketplace/individual" class="headerLink">Get Insurance<span class="HiddenText">, current section</span></a> </li>
+                    </ul>
+                </div>
+                <div class="right">       
+          <ul class="nav pull-right userActionList">
+                        <li class="user-item" id="headerUserItem">
+                          <a id="dLabel1" class="dropdown-toggle loginLink" data-toggle="dropdown" role="button" href="#" aria-haspopup="true">
+                              <span class="user-firstname" id="headerUserName">Samuel</span>
+                              <i class="icon-user" aria-hidden="true"></i>
+                </a>
+                            <div class="dropdown-menu profile-dropdown">
+                                <ul role="menu" aria-labelledby="dLabel1">
+                                     <li role="menuitem">
+                    <a href="/marketplace/auth/global/en_US/myProfile#landingPage" id="landingPageMenuLink"><i class="iconCustom-medkit" aria-hidden="true"></i>My Applications &#38; Coverage</a>
+                  </li>
+                  <li role="menuitem">
+                    <a href="/marketplace/auth/global/en_US/myProfile#settings" id="helpProfile"><i class="icon-cogwheel" aria-hidden="true"></i>My Profile</a>
+                  </li>
+                                   
+                                   <!-- <li role="menuitem">
+                      <a href="/marketplace/auth/logout" id="logout"><i class="icon-share" aria-hidden="true"></i>Logout</a>
+                   </li>-->
+                                </ul>
+                            </div>
+                                    </li>
+            <li id="headerEmail"> 
+              <a href="/marketplace/auth/logout" id="logout"><i class="icon-share" aria-hidden="true"></i>Logout</a> 
+            </li>
+                                                                </ul>
+                </div>
+            </div>
+        </div>
+ 
+    </header>
+<!-- end header --> 
+<noscript>
+  <p style="clear: both; background: none repeat scroll 0 0 #EC1C2D; border-radius: 6px 6px 6px 6px; color: #FFFFFF; font-size: 1.0em; font-weight: bold; padding: 10px;">
+     <strong>Alert</strong>: The page could not be loaded.  This page currently does not fully support browsers with &quot;JavaScript&quot; disabled.  Please note that if you choose to continue without enabling &quot;JavaScript&quot; certain functionalities on this website may not be available.
+        <a href="javascript:location.reload(true)" style="color:#00a;">Press to reload after enabling JavaScript</a>
+  </p>
+</noscript>   <!-- end header -->
+  </div>
+    
+  <div id="agentBrokerStateBar" class="container-fluid" style="display:none;">
+        <div class="utilitySection">
+            <div class="row-fluid">
+                <div class="stateBar"></div>
+                <div class="statusBar"> </div>
+            </div>
+        </div>
+    </div>
+
+  <div class="container-fluid">
+    <div class="innerContainer">
+        <div class="row-fluid subNav">
+                <div class="span12">
+          <div id="landingPageSubNav" style="display:none;">
+                    <div class="subNavigationContainer ul-myaccount">
+                      <div class="pull-left">
+                  <!--a href="#landingPage"><button id="backButton" class="nav-button" style="display:none;"> <i class="iconCustom-angle-left"></i> </button></a-->
+                        <ul class="subNavigationSection">
+                   <li class="subLink firstLink" role="presentation">
+                    <span class="subHeaderLink">
+                      <i class="icon-user"></i>
+                      <span class="usersName headerLabel">
+                        <strong>Samuel Reed</strong>
+                      </span>
+                    </span>
+                  </li>
+                        </ul> 
+                      </div>
+                    </div>
+          </div>
+          <div id="profilePageSubNav" style="display:none;">
+                    <div class="subNavigationContainer ul-myaccount">
+              <div class="pull-left">
+                
+                        <ul class="subNavigationSection">
+                    <button class="nav-button" id="profileBackButton" onclick="goToLandingPage('en_US');">
+                      <i class="iconCustom-angle-left"></i><span class="HiddenText">My Applications &amp; Coverage</span>
+                    </button>
+                           <li class="subLink firstLink">
+                      <a href="#landingPage">
+                        <i class="icon-user"></i>
+                              <span class="usersName headerLabel">
+                                <strong>Samuel Reed</strong>
+                              </span>
+                      </a>
+                    </li>
+                                </ul>
+                  
+                        </div>
+            </div>
+          </div>
+          <div id="agentBrokerSubNav" class="row-fluid subNav" style="display:none;">
+    <div class="span12">
+        <div class="subNavigationContainer ul-myaccount  my-plans">
+            <ul class="subNavigationSection">
+         <li class="subLink firstLink pull-left"> 
+          <a href="javascript:void(0);" class="subLink-inner" id="backToPortalLink">
+            <i class="icon-notes_2" aria-hidden="true"></i> 
+            <span class="headerLabel">Return to issuer website</span>
+          </a>
+        </li> 
+            </ul>
+        </div>
+    </div>
+</div>          <div id="CCRPageSubNav" style="display:none;">
+                    <div class="subNavigationContainer ul-myaccount">
+                      <div class="pull-left">
+                  
+                        <ul class="subNavigationSection">
+                                <li class="subLink firstLink" id="CCRLandingApplicationLink" role="presentation">
+                                    <h1> <a href="#"><i class="icon-notes_2" aria-hidden="true"></i> <span class="headerLabel" id="CCRLandingApplicationHeader"><strong><span class="membersName"></span>&#39;s <span class="appYear">0</span> application for individuals &amp; families</strong> (ID: <span class="currentAppId"></span> )</span></a></h1>
+                                </li>
+                              </ul>
+                      </div>
+                    </div>
+          </div>
+                </div>
+        </div>
+            <div id="startApplicationNav" class="utilitySection" style="display:none;">
+                <div class="row-fluid">
+                    <div class="stateBar" style="display:none;"> <span aria-hidden="true" class="stately-TX"></span> <span class="stateName">Texas</span> </div>
+                    <div class="statusBar">
+                        <ul class="breadcrumb">
+                            <li class="currentStep"><i class="iconCustom-ok" aria-hidden="true"></i>Apply <span class="HiddenText">, current section</span></li>
+                            <li class="futureStep"><i class="iconCustom-ok" aria-hidden="true"></i>Get Results <span class="HiddenText">, upcoming section</span></li>
+                            <li class="futureStep last"><i class="iconCustom-ok" aria-hidden="true"></i>Get Coverage <span class="HiddenText">, upcoming section</span></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown pull-right">
+  <a id="dLabel" class="dropdown-toggle helpLink" data-toggle="dropdown" role="button" href="#" aria-haspopup="true">
+    <span class="iconCustom-stack">
+      <i class="icon-circle_question_mark"></i>
+    </span>
+    HELP
+  </a>
+    <ul class="dropdown-menu help-dropdown" role="menu" aria-labelledby="dLabel">
+        <li role="menuitem"> <a href="/help/"  target="_blank" tabindex="-1" role=""><i class="icon-life_preserver"></i>Help Center</a> </li>
+                  <li role="menuitem"> <a href="https://localhelp.healthcare.gov/" target="_blank" tabindex="-1" role=""><i class="icon-google_maps" aria-hidden="true"></i>Find Local Help</a> </li>
+        <li role="menuitem"> <a id="chatHelp" href="#" tabindex="-1" role=""><i class="icon-conversation" aria-hidden="true"></i>Live Chat</a> </li>
+    <li role="menuitem"> <a href="/glossary/" target="_blank" tabindex="-1" role=""><i class="icon-book_open" aria-hidden="true"></i>Glossary</a> </li>
+    <li role="menuitem"> <a href="/contact-us/" target="_blank" tabindex="-1" ><i class="icon-phone_alt"></i>Call Customer Service</a> </li>
+    <li role="menuitem">
+            <div class="searchBox">     
+          <form role="search" class="noMarginBtm" name="gsearch" method="get" action="/help/search/">
+                    <label for="nav-search">Site Search</label>
+                    <div class="input-append ">
+              <input autocomplete="off" id="nav-search" class="small" name="q" type="search" placeholder="Search Help" title="Enter text to search">
+                        <!--googleoff: all-->
+                        <button class="btn btn-info btn-small" value="search" type="image"><i class="icon-search"></i><span class="hiddenText">Search</span></button>
+                        <input type="hidden" name="output" value="xml_no_dtd">
+                        <input type="hidden" name="site" value="help">
+                        <input type="hidden" name="proxystylesheet" value="json">
+                        <input type="hidden" name="client" value="json">
+                        <input type="hidden" name="lr" value="lang_en">
+                        <input type="hidden" name="ie" value="UTF-8">
+                        <input type="hidden" name="oe" value="UTF-8">
+                        <input type="hidden" name="access" value="p">
+                        <input type="hidden" name="sort" value="date:D:L:d1">
+                        <input type="hidden" name="start" value="0">
+                        <input type="hidden" name="num" value="6">
+                        <input type="hidden" name="getfields" value="search-title.content-type.topics">
+                        <input type="hidden" name="rc" value="1">
+                        <input type="hidden" name="filter" value="0">
+                        <!--googleon: all-->
+          </div>
+                </form> 
+            </div>
+        </li>
+    </ul>
+</div>                </div>
+            </div>
+      <div id="startApplicationClass">  
+          <div id="contentContainer" class="contentContainer" role="main">
+            <div class="row-fluid">
+              <div class="span12">
+                <div id="landingPageNavContainer" style="display:none;">
+                  <h2 class="HiddenText" id="navHeading">Sections</h2>
+                    <div class="navContainer " role="navigation" aria-labelledby="navHeading">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li class="nav-header divider complete"> <a href="#landingPage"><i class="iconCustom-medkit" aria-hidden="true"></i>My Applications
+                      &amp; Coverage</a> </li>
+                      <li  id="settingsIcon" class="nav-header divider complete"> <a href="#settings"><i class="icon-cogwheel" aria-hidden="true"></i>My Profile</a></li>
+                    </ul>
+                    </div>
+                </div>
+              <div id="CCRlandingPageNavContainer" style="display:none;">
+                  <h2 class="HiddenText" id="navHeading">Sections</h2>
+                    <div class="navContainer " role="navigation" aria-labelledby="navHeading">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li class="nav-header divider complete"> <a href="#CCRLandingPage"><i class="iconCustom-medkit" aria-hidden="true"></i>My Applications
+                      &amp; Coverage</a> </li>
+                      <!--li  id="settingsIcon" class="nav-header divider complete"> <a href="#settings"><i class="icon-cogwheel" aria-hidden="true"></i>My Profile</a></li-->
+                    </ul>
+                    </div>
+                </div>
+                
+                <div id="profileNavContainer" style="display:none;">
+                  <h2 class="HiddenText" id="navHeading">Sections</h2>
+                    <div class="navContainer " role="navigation" aria-labelledby="navHeading">
+                    <ul class="nav nav-pills nav-stacked">
+                                      <li id="myAppCoverageIcon" class="nav-header divider complete">  <a href="#landingPage"><i class="iconCustom-medkit" aria-hidden="true"></i>My Applications
+                      &amp; Coverage</a> </li>
+                                      <li class="nav-header divider complete"> <a href="#settings"><i class="icon-cogwheel" aria-hidden="true"></i> My Profile</a> </li>
+                                      <!--li class="nav-header divider complete inactive"> <a href="#"><i class="icon-envelope" aria-hidden="true"></i> Messages (4)</a> </li-->
+                                    </ul>
+                    </div>
+                </div>
+                
+                                
+                <div id="myProfileContentSection">
+                  <a id="main_content" tabindex="-1" name="main_content"></a>
+                <div id="myProfileNotifictionArea">
+                </div>
+                  <div id="logInTermsAndConditionsPage">
+    
+</div>                  <div id="myProfilePage" style="display: none;">
+</div>                  <div id="myProfileLandingPage" style="display:none">
+</div>                                    <div id="agentBrokerSearchPage" style="display:none">
+</div>                  <div id="agentBrokerNoClientPage" style="display:none">
+</div>                  <div id="agentBrokerQuestionsPage" style="display:none">
+</div>                <div id="agentBrokerQuestionsResultsPage" style="display:none">
+</div>                <div id="agentBrokerNoAssisterQuestionsPage" style="display:none">
+</div>                  <div id="startApplicationPage" style="display:none">
+</div>                  <div id="changeTenantModalPage" style="display:none">
+</div>                  <div id="myProfileModal" style="display:none;"></div>                 <div id="securityQuestionsPasswordConfirm">
+  <!-- Append modal template here -->
+</div>                  <!--contains sections for different messages -->
+<div role="alert" id="saveBlocker" class="blocker" style="display:none;">
+  <div>
+        <h1> Please wait</h1>
+        <img role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-describedby="desc" aria-busy="true" src="images/pleaseWait.gif" alt="" >
+      <!--p id="desc">
+      Please wait while we save your application
+    </p-->
+    <p id="desc" class="HiddenText">
+    Please wait while we update your Marketplace account
+    </p>
+    </div>
+</div>
+
+<div role="alert" id="loginBlocker" class="blocker" style="display:none;">
+  <div>
+        <h1> Please wait</h1>
+        <img role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-describedby="desc" aria-busy="true" src="images/pleaseWait.gif" alt="" >
+      <!--p id="desc">
+      Please wait while we log you into your account
+    </p-->
+    <p id="desc" class="HiddenText">
+    Please wait while we update your Marketplace account
+    </p>
+    </div>
+</div>
+
+<div role="alert" id="emailValidationBlocker" class="blocker" style="display:none;">
+  <div>
+        <h1> Please wait</h1>
+        <img role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-describedby="desc" aria-busy="true" src="images/pleaseWait.gif" alt="" >
+      <!--p id="desc">
+      Please wait while we validate your email
+    </p-->
+    <p id="desc" class="HiddenText">
+    Please wait while we update your Marketplace account
+    </p>
+    </div>
+</div>
+
+<div role="alert" id="profileBlocker" class="blocker" style="display:none;">
+  <div>
+    <h1> Please wait</h1>
+    <img src="images/pleaseWait.gif" alt="" >
+      <p id="desc" class="HiddenText">
+    Please wait while we update your Marketplace account
+    </p>
+  </div>
+</div>
+                <div class="row-fluid">
+  <div class="cardContainer">
+        <div id="commonErrorMessageBlock" class="alert alert-danger" aria-live="polite" style="display:none">
+            <button class="icon-circle_remove close white" data-dismiss="alert" type="button"><span class="HiddenText">Close alert message</span></button>
+            <div class="iconSpan"><i class="iconCustom-exclamation-sign" aria-hidden="true"></i></div>
+            <div class="alertContent" id="commonErrorMessageCollapsibleContent">
+            </div>
+         </div>
+  </div>
+</div>                </div>
+
+              </div>
+            </div>
+          </div><!-- end content container-->
+      </div><!--end inner container -->
+    </div>
+  <!-- begin footer -->
+<div class="footerSection">
+        <div role="contentinfo" id="footer" class="footerContainer">
+            <h2 class="HiddenText">Footer</h2>
+            <div class="footer-bottom">
+                <div class="footer-row">
+                    <div role="navigation" class="row-fluid">
+            <div class="span5 pull-left links">
+                            <ul class="clearfix">
+                                <li><a href="/sitemap/">SITEMAP<span class="HiddenText">opens in a new window</span></a></li>
+                                <li><a href="/glossary/">GLOSSARY<span class="HiddenText">opens in a new window</span></a></li>
+                                <li><a href="/help-center/">CONTACT US<span class="HiddenText">opens in a new window</span></a></li>
+                                <li><a href="/archive/">ARCHIVE <span class="HiddenText">opens in a new window</span></a></li>
+                            </ul>
+                        </div>
+            <div class="pagination-right pull-right links">
+                            <ul class="clearfix">
+                                <li><a href="/accessibility/">ACCESSIBILITY<span class="HiddenText">opens in a new window</span></a></li>
+                                <li><a href="/privacy/">PRIVACY POLICY<span class="HiddenText">opens in a new window</span></a></li>
+                <li><a href="/links-to-other-sites">Links to other sites <span class="HiddenText">opens in a new window</span></a></li>
+                                <li><a target="_blank" href="http://www.hhs.gov/open/recordsandreports/plainwritingact/index.html">PLAIN WRITING <span class="HiddenText">opens in a new window</span></a></li>
+                                <li><a target="_blank" href="http://www.cms.gov/About-CMS/Agency-Information/Aboutwebsite/Help.html">VIEWERS &#38; PLAYERS <span class="HiddenText">opens in a new window</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-row">
+                    <div role="navigation" class="row-fluid">
+                        <div class="span4">
+                            <p class="descriptionText"> <a target="_blank" href="http://www.hhs.gov/" class="logo_HHS"><img src="images/logo_HHS.png" alt="HHS.gov Department of Health and Human Services USA - opens in a new window" /></a>A federal government website managed by the U.S. Centers for Medicare & Medicaid Services. 7500 Security Boulevard, Baltimore, MD 21244</p>
+                        </div>
+                        <div class="span8 pull-right"> <a target="_blank" href="http://www.whitehouse.gov/" 
+              class="logo_whitehouse"><img src="images/logo_WhiteHouse.png" 
+                alt="Whitehouse.gov The White House Washington - opens in a new window"/></a> 
+                <a target="_blank" href="http://www.usa.gov/" class="logo_usagov">
+                  <img src="images/logo_USAgov.png" alt="USA.gov Government made easy - opens in a new window" /></a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ </div>
+<!-- end footer -->   </div>
+  <div class="container-fluid">
+    <div class="bottom-chat-link">
+    <a class="chatLink chat-launcher" id="webchat" role="complementary" href="#">Live Chat<i class="icon-resize_full" aria-hidden="true"></i>
+    </a> 
+  </div>
+</div>
+<div class="chat-iframe-container"> </div>
+
+
+<script type="text/javascript">
+var chatWindow = null;
+var windowFeatures = "width=465,height=452,menubar=0,location=0,resizable=0,scrollbars=0,status=0";
+
+
+function startChat(el){
+    $(el).click(function(e){
+        e.preventDefault();
+        chatWindow = window.open('/chat','WebChat',windowFeatures);
+    })
+}
+
+startChat('#webchat');
+startChat('#chatHelp');
+
+</script></div><!--END MAIN WRAPPER --> 
+<!--Profile-->
+<script type="text/template" id="profileLevel1Template">
+      <h1>My Profile</h1>
+<div>
+  <p class="requiredFormText">All fields are required unless they&#39;re marked optional. Don&#39;t enter any letters with special characters, like accents, tildes, etc. </p>
+  <p>Your profile contains your basic information. You can make changes here.</p>
+  <hr class="grayRule" noshade="noshade" />
+  <div class="sub-step">
+    <div class="section">
+      <div class="page-content">
+        <div class="row-fluid inactiveEditSection" id="nameValidationContainer">
+          <div class="span4">
+            <h2 class="smallHeading">Name</h2>
+          </div>
+          <div class="span6">
+            <div class="inner-constant">
+              <span><%=memberFullName%></span>
+              <div id="isUserVerified" class="gutter10-top"></div>
+            </div>
+            <div class="inner-inconstant" style="display:none;">
+              <div>
+                <label for="myProfileFirstName" class="gutter10-top">First name</label>
+                <input id="myProfileFirstName" type="text" value="<%=memberFirstName%>" data-validate="notBlank EIDMFirstName" autocomplete="off"/>
+              </div>
+              <div>
+                <label for="myProfileMiddleName">Middle</label>
+                <input id="myProfileMiddleName" type="text" value="<%=memberMiddleName%>"/>
+              </div>
+              <div>
+                <label for="myProfileLastName">Last name</label>
+                <input id="myProfileLastName" type="text" value="<%=memberLastName%>" data-validate="notBlank EIDMLastName" autocomplete="off"/>
+              </div>
+              <div id="myProfileSuffixContainer"></div>
+              <p><strong>To change your name you must<br />
+                <a href="#">report a life change.</a></strong></p>
+              <div>
+                <button class="span5 cancel btn">Cancel</button>
+                <button id="nameConfirm" class="span5 save btn btn-primary">Save</button>
+              </div>
+            </div>
+            <div class="notification" id="nameUpdateNotification"></div>
+          </div>
+          <div class="span2" id="idProofMessage"></div>
+        </div>
+        <hr class="grayRule sectionRule thin">
+        <div class="row-fluid inactiveEditSection">
+          <div class="span4">
+            <h2 class="smallHeading">Username</h2>
+          </div>
+          <div class="span6">
+            <div class="inner-constant">
+              <span><%=memberUserName%></span>
+            </div>
+          </div>
+          <div class="span2"></div>
+        </div>
+        <hr class="grayRule sectionRule thin">
+        <div class="row-fluid inactiveEditSection" id="passwordValidationContainer" role="form">
+          <div class="span4">
+            <h2 class="smallHeading" aria-describedby="accountSettings1-feedbackMsg">Password</h2>
+          </div>
+          <div class="span6">
+            <div class="inner-constant">
+              <span>********</span>
+            </div>
+            <div class="inner-inconstant" style="display:none;">
+              <div>
+                <label for="currentPassword">Enter your current password</label>
+                <input id="currentPassword" type="password" data-validate="notBlank EIDMPassword" autocomplete="off"/>
+              </div>
+              <div>
+                <label for="newPassword">Enter your new password</label>
+                <input id="newPassword" type="password" data-validate="notBlank EIDMPassword" autocomplete="off" aria-describedby="accountSettings1-feedbackMsg"/>
+                <p id="accountSettings1-feedbackMsg" class="muted smallText supportText changing"> Your password must contain 8&#45;20 characters&#46; There must be at least 1 upper case letter&#44; 1 lower case letter&#44; and 1 number&#46; It must be different from your last 6 passwords&#46; It can&#39;t contain your username or any of these characters &#61; &#63;&#60;&#62; &#40; &#41; &#8216; &#34; &#47; &#92; &#38; </p>
+              </div>
+              <div>
+                <label for="cnfrmNewPassword">Confirm your new password</label>
+                <input id="cnfrmNewPassword" type="password" data-validate="notBlank EIDMPassword sameEEPassword-newPassword-cnfrmNewPassword" autocomplete="off" aria-describedby="pwd2HelpText"/>
+                <p class="supportText blockElement" id="pwd2HelpText" tabindex="-1">You must enter the same password as the Password field.</p>
+              </div>
+              <div>
+                <button class="span5 cancel btn">Cancel</button>
+                <button  id="passwordConfirm" class="span5 save btn btn-primary">Save</button>
+              </div>
+            </div>
+            <div class="notification" id="passwordUpdateNotification"></div>
+          </div>
+          <div class="span2">
+            <button class="pull-right edit btn btn-xmini btn-leftArrow">Edit<span class="hiddenText">Password</span></button>
+          </div>
+        </div>
+        <hr class="grayRule sectionRule thin">
+        <div class="row-fluid inactiveEditSection" id="emailValidationContainer" role="form">
+          <div class="span4">
+            <h2 class="smallHeading">Email address</h2>
+          </div>
+          <div class="span6">
+            <div class="inner-constant">
+              <p id="updatedEmailDisplay"><%=memberEmail%></p>
+                <!--p class="smallText"><a>I want to have news and updates sent to this email address</a></p-->                                                                                                                  
+                        </div>
+            <div class="inner-inconstant row-fluid" style="display:none;">
+              <label for="emailInputField">Enter your new email address</label>
+              <input id="emailInputField" type="text" value="<%=memberEmail%>" data-validate="notBlank EIDMEmail" autocomplete="off"/>
+                <div class="row-fluid">
+                          <div class="span12">
+                            <div class="custom-checkbox">
+                              <input type="checkbox" id="emailCheckbox" checked/>
+                              <label for="emailCheckbox" class="checked">I want to have news and updates sent to this email address
+                        <span class="instructionalText">optional</span></label>
+                            </div>
+                          </div>
+                        </div>
+                <div class="row-fluid sectionSimple">
+                  <div class="span12">
+                    <p class="inlineElement">You need an email address to sign up. You can get one now for free:</p>
+                    <ul class="inline smallText inlineElement"> <li> <a href="https://mail.google.com/"  target="_blank"><strong>Gmail</strong></a></li><li> <a href="https://login.live.com/"  target="_blank"><strong>Outlook</strong></a></li><li> <a href="https://login.yahoo.com/"  target="_blank"><strong>Yahoo</strong></a></li><li> <a href="https://mail.aol.com/"  target="_blank"><strong>AOL</strong></a></li></ul>
+                  </div>
+                                </div>
+              <div>
+                <button class="span5 cancel btn">Cancel</button>
+                <button  id="emailConfirm" class="span5 save btn btn-primary">Save</button>
+              </div>
+            </div>
+            <div class="notification" id="emailUpdateNotification"></div>
+          </div>
+          <div class="span2">
+            <button class="pull-right edit btn btn-xmini <%=buttonEmailClass%>"><%=emailButton%><span class="hiddenText">Email address</span></button>
+          </div>
+        </div>
+        <hr class="grayRule sectionRule thin">
+        <div class="inactiveEditSection row-fluid" id="primaryPhoneValidationContainer" role="form">
+          <div class="span4">
+            <h2 class="smallHeading">Phone number</h2>
+            <!--p class="muted smallText supportText"> Note about usage.</p-->
+          </div>
+          <div class="span6">
+            <div class="inner-constant">
+                <p id="updatedPhoneNumberDisplay"><%=memberPhoneNumber%></p>
+                <!--p class="smallText"><a>I want to get news and updates sent by text messages to this number</a></p--> 
+            </div>
+            <div class="inner-inconstant" style="display:none;">
+              <label for="primaryPhoneEdit">Please enter your new phone number</label>
+              <input id="primaryPhoneEdit" value="<%=memberPhoneNumber%>" type="text" data-validate="notBlank EIDMPrimaryPhone" autocomplete="off"/>
+              <fieldset>
+                <div class="row-fluid">
+                  <div class="span12">
+                    <div class="custom-checkbox">
+                      <input type="checkbox" id="primaryPhoneCheckbox" checked/>
+                      <label for="primaryPhoneCheckbox" class="checked">I want to get news and updates sent by text messages to this number
+                        <span class="instructionalText">optional</span></label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <div>
+                <button class="span5 cancel btn">Cancel</button>
+                <button id="primaryPhoneConfirm" class="modalBtn span5 save btn btn-primary">Save</button>
+              </div>
+            </div>
+            <div class="notification" id="phoneNumberUpdateNotification"></div>
+          </div>
+          <div class="span2">
+            <button class=" pull-right edit btn btn-xmini <%=buttonPhoneClass%>"><%=phoneNumberButton%><span class="hiddenText">Phone number</span></button>
+          </div>
+        </div>
+        <hr class="grayRule sectionRule thin">
+        <div class="row-fluid inactiveEditSection" id="addressValidationContainer" role="form">
+          <div class="span4">
+            <h2 class="smallHeading">Address</h2>
+          </div>
+          <div class="span6">
+            <div class="inner-constant">
+              <p id="updatedAddressDisplay"> <%=memberAddress%> </p>
+            </div>
+            <div class="inner-inconstant" style="display:none;">
+              <div>
+                <p>Enter your new address</p>
+                <label for="homeAddress1"> Address Line 1 </label>
+                <input id="homeAddress1" value="<%=addressLine1%>" type="text" data-validate="notBlank EIDMAddressLine1 noCommasAndOther1" autocomplete="off"/>
+              </div>
+              <div>
+                <label for="homeAddress2"> Address line 2 </label>
+                <input id="homeAddress2" value="<%=addressLine2%>" type="text" data-validate="EIDMAddressLine2 noCommasAndOther2" autocomplete="off"/>
+              </div>
+              <div>
+                <label for="homeAddressCity"> City </label>
+                <input id="homeAddressCity" value="<%=city%>" type="text" data-validate="notBlank EIDMCity" autocomplete="off"/>
+              </div>
+              <div class="row-fluid">
+                <div class="span6">
+                  <label for="homeAddressState"> State </label>
+                  <div id="homeAddressStateDropDownOptions"></div>
+                </div>
+              </div>
+              <div class="row-fluid">
+                <div class="span6">
+                  <label for="homeAddressZipCode"> ZIP code </label>
+                  <input id="homeAddressZipCode" value="<%=zipCode%>" type="text" class="gutter0 zipcode" data-validate="notBlank EIDMZipCode" autocomplete="off" maxlength="5"/>
+                  <p class="supportText"> XXXXX </p>
+                </div>
+              </div>
+              <div>
+                <button class="span5 cancel btn">Cancel</button>
+                <button id="addressConfirm" class="modalBtn span5 save btn btn-primary">Save</button>
+              </div>
+            </div>
+            <div class="notification" id="addressUpdateNotification"></div>
+          </div>
+          <div class="span2">
+            <button class="pull-right edit btn btn-xmini <%=buttonAddressClass%>"><%=addressButton%><span class="hiddenText">Address</span></button>
+          </div>
+        </div>
+        <hr class="grayRule sectionRule thin">
+        <div class="row-fluid inactiveEditSection" id="stateLiveInContainer" role="form">
+          <div class="span4">
+            <h2 class="smallHeading">State you live in</h2>
+            <!--p class="muted smallText supportText">We will use your State to provide you with available coverage options.</p-->
+          </div>
+          <div class="span6">
+            <div class="inner-constant">
+              <p id="updatedStateDisplay"><%=memberState%></p>
+            </div>
+            <div class="inner-inconstant" style="display:none;">
+              <label for="stateLiveInDropDown">Select your home state</label>
+              
+                <div id="stateDropDownOptions"></div>
+              
+              <div>
+                <button class="span5 cancel btn">Cancel</button>
+                <button id="saveStateLiveIn" class="span5 save btn btn-primary">Save</button>
+              </div>
+            </div>
+            <div class="notification" id="stateUpdateNotification"></div>
+          </div>
+          <div class="span2">
+            <button class="pull-right edit btn btn-xmini btn-leftArrow">Edit<span class="hiddenText">State you live in</span></button>
+          </div>
+        </div>
+        <hr class="grayRule sectionRule thin">
+        <div class="row-fluid inactiveEditSection" id="saveSecurityQuestionsContainer" role="form">
+          <div class="span4">
+            <h2 class="smallHeading">Security questions</h2>
+          </div>
+          <div class="span6">
+            <div class="inner-constant">
+              <ol id="displaySecurityQuestions"></ol>
+            </div>
+            <div class="inner-inconstant" style="display:none;">
+              <div class="row-fluid">
+                <div>
+                  <p>Please update answers to your security questions</p>
+                  <label for="securityqt0">Question  1:</label>
+                  <select id="securityqt0" class="securityQuestions" data-validate="notBlank"></select>
+                </div>
+                <div>
+                  <label for="securityanswer0">Answer 1:</label>
+                  <input id="securityanswer0" type="text" maxlength="30" autocomplete="off" data-validate="notBlank EIDMOutofwalletAnswers" />
+                </div>
+              </div>
+              <div class="row-fluid">
+                <div>
+                  <label for="securityqt1">Question  2:</label>
+                  <select id="securityqt1" class="securityQuestions" data-validate="notBlank" ></select>
+                </div>
+                <div>
+                  <label for="securityanswer1">Answer 2:</label>
+                  <input id="securityanswer1" type="text" maxlength="30" autocomplete="off" data-validate="notBlank EIDMOutofwalletAnswers" />
+                </div>
+              </div>
+              <div class="row-fluid">
+                <div>
+                  <label for="securityqt2">Question  3:</label>
+                  <select id="securityqt2" class="securityQuestions" data-validate="notBlank"></select>
+                </div>
+                <div>
+                  <label for="securityanswer2">Answer 3:</label>
+                  <input id="securityanswer2" type="text" maxlength="30" autocomplete="off" data-validate="notBlank EIDMOutofwalletAnswers" />
+                </div>
+              </div>
+              <div>
+                <button class="span5 cancel btn">Cancel</button>
+                <button id="saveSecurityQuestions" class="modalBtn span5 save btn btn-primary">Save</button>
+              </div>
+            </div>
+            <div class="notification" id="securityQuestionsUpdateNotification"></div>
+          </div>
+          <div class="contentWrap"></div>
+          <div class="span2">
+            <button class=" pull-right edit btn btn-xmini btn-leftArrow">Edit<span class="hiddenText">Security questions</span></button>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+</div></script>
+
+<script type="text/template" id="profileLandingPageTemplate">
+      <div id="CCRLandingHeading" class="row-fluid">
+  <h1 id="landingHeading"><%=heading%></h1>
+   <hr class="grayRule" />
+</div>
+<div id="currentApplicationsHeading" class="row-fluid" style="display:none;">
+  <div class="span8">
+    <h2>View my current applications</h2>  
+  </div>
+  <div class="span4 alignRight padding-top15">
+    <a href="#toStartApplicationScreen"><i class="icon-circle_plus vertical-align padding-right5" aria-hidden="true"></i><strong>Apply for new coverage</strong></a>
+  </div>
+</div>
+
+<div id="currentApplicationsSections" style="display:none;">
+  <div id="currentAppliationsDiv"></div> 
+</div>
+<div id="inactiveApplicationsDiv"></div>
+<hr id="decorativeLine" class="grayRule margin20" style="display:none;"/>
+<div class="row-fluid">
+  <div class="span8">
+    <h2>Apply for new coverage</h2>
+  </div>
+</div>
+<hr id="decorativeLine2" class="grayRule margin20" style="display:none;"/>
+<div class="row-fluid sectionSimple">
+  <div class="span6">
+    <h3 class="subHeading">Individuals &amp; Families</h3>
+    <ul class="sectionList">
+      <li>
+    <a id="toStartApplicationScreen" href="javascript:void(0)">Apply and shop for coverage for me and/or my family</a>
+    <a id="toCCRStateSelect" href="javascript:void(0)" style="display:none;">Apply and shop for coverage for me and/or my family</a>
+    </li>
+    <!--li><p>Become authorized to apply for someone outside of my household</p></li-->
+    </ul>
+  </div>
+
+</div>
+<div class="sectionSimple">
+    <p>If you believe you have a situation that may qualify you as exempt from the requirement to carry health insurance, <a href="/exemptions">you can get more information and download applications here.</a></p>
+</div>
+ 
+    <h3 class="subHeading">Small Business Employers</h3>
+  <div class="gutter25-top">
+  <p><strong>NOTE:</strong> This application is only for use by small business employers looking to provide coverage to their employees through the SHOP program.</p>
+  <p>Right-click the link to the PDF document and select “Save As.” After you have downloaded the PDF document to your computer, open it using Adobe Reader to complete the application. Adobe Reader is required to complete the application and is available as a free download.</p>
+    </div>
+  <div class="row-fluid">
+  <div class="span6">
+    <ul class="sectionList">
+      <li>
+    <a id="SHOPPDFLink" href="/downloads/shop-employer-application.pdf" type="application/pdf">Apply for coverage for my employees (PDF, 2.1MB)</a>
+    </li>
+    
+    </ul>
+  </div>
+
+</div>
+</script>
+
+<script type="text/template" id="landingCurrentApplicationsTemplate">
+      <div id="application<%=index%>" class="narrativeBox">
+    <div class="row-fluid">
+      <div class="span8">
+          <a id="stateLinkToMyAccount<%=index%>" href="#">
+            <%=year%> <%=state%> application for<br />
+          <span class="mediumTextBlock">Individual &amp; Family Coverage</span>
+        </a>
+      </div>
+      <div class="span4 vertMiddle"> 
+        <strong>Status&#58; <span class="warning normal-text"><%=activeAppStatus%></span></strong>  <br/>
+        ID#: <%=id%>  
+      </div>
+    </div>
+ </div></script>
+
+<script type="text/template" id="landingInvalidApplicationsTemplate">
+      <div class="row-fluid sectionSimple">
+  <h2>View inactive applications</h2>
+  <div class="row-fluid">
+    <div class="span6">
+      <select id="applicationSelect">
+        <!--option>Select application</option-->
+      </select>
+      <label class="hiddenText">Label for the select</label>
+    </div>
+    <div class="span6">
+      <button class="btn btn-primary">Go</button>
+    </div>
+  </div>
+</div></script>
+
+<script type="text/template" id="profileLevel2Template">
+      <h1>My Profile</h1>
+<div>
+  <p>Your profile includes the basic information associated with you in our system. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra dictum nisl vitae tincidunt. </p>
+  <hr class="grayRule" noshade="noshade" />
+  <div class="sub-step" id="step1">
+    <div class="section">
+      <div class="page-content pg-profile">
+        <div class="page-header">
+          <h2 class="largeText">Welcome John!</h2>
+          <hr class="grayRule sectionRule thin">
+        </div>
+
+        <div class="row-fluid inactiveEditSection ">
+          <div class="span3">
+            <label for="fullName">Name</label>
+          </div>
+          <div class="span6">
+            <div class="inner-constant">
+              <span>John Phillip Smith, Jr.</span>
+              <p id="fullName2" class="success smallText"> <i class="icon-circle_ok" aria-hidden="true"></i> Identity Verified </p>
+            </div>
+            <div class="inner-inconstant" style="display:none;">
+              <label for="fname" class="gutter10-top">First Name</label>
+              <input id="fname" type="text" />
+              <label for="mname">Middle Name</label>
+              <input id="mname" type="text" />
+              <label for="lname">Last Name</label>
+              <input id="lname" type="text" />
+              <label for="suffix">Suffix</label>
+              <select id="suffix" >
+                <option>Select...</option>
+              </select>
+              <p><strong>To change your name you must <br />
+                <a href="#">report a life change here</a></strong></p>
+              <div>
+                <button class="span5 cancel btn">Cancel</button>
+                <button class="span5 save btn btn-primary">Save</button>
+              </div>
+            </div>
+          </div>
+          <div class="span3">
+            <p class="smallText">To update your name please call 1-888-xxx-xxxx</p>
+          </div>
+        </div>
+        <hr class="grayRule sectionRule thin">
+        <div class="row-fluid inactiveEditSection authorizationModule">
+          <div class="span3">
+            <label for="username">Username</label>
+          </div>
+          <div class="span6">
+            <div class="inner-constant">
+              <span>jsmith123</span>
+            </div>
+            
+          </div>
+          <div class="span3">
+            
+          </div>
+        </div>
+        <hr class="grayRule sectionRule thin">
+        <div class="row-fluid inactiveEditSection">
+          <div class="span3">
+            <label for="password" aria-describedby="accountSettings1-feedbackMsg">Password</label>
+            <p id="accountSettings1-feedbackMsg" class="muted smallText supportText changing"> Must contain 6-20 characters, at least 1 letter and 1 number, and no spaces. </p>
+          </div>
+          <div class="span6">
+            <div class="inner-constant">
+              <span>******</span>
+            </div>
+            <div class="inner-inconstant" style="display:none;">
+              <label for="currentPassword">Please enter your current password</label>
+              <input id="currentPassword" type="password" />
+              <label for="newPassword">Please enter your new password</label>
+              <input id="newPassword" type="password" />
+              <label for="cnfrmNewPassword">Please confirm your new password</label>
+              <input id="cnfrmNewPassword" type="password" />
+              <div>
+                <button class="span5 cancel btn">Cancel</button>
+                <button class="span5 save btn btn-primary">Save</button>
+              </div>
+            </div>
+          </div>
+          <div class="span3">
+            <button class="pull-right edit btn btn-xmini btn-leftArrow">Edit</button>
+          </div>
+        </div>
+        <hr class="grayRule sectionRule thin">
+        <div class="row-fluid inactiveEditSection authorizationModule">
+          <div class="span3">
+            <label for="email">Primary Email</label>
+            <p class="muted smallText supportText"> We will use the email for essential things like resetting password.</p>
+          </div>
+          <div class="span6">
+            <div class="inner-constant">
+              <span>Johnsmith@email.com</span>
+          
+                <p class="smallText"> <i class="icon-circle_remove" aria-hidden="true"></i> Not Verified - <a href="#">resend verification email</a> </p>
+                <p class="smallText"> <i class="icon-circle_ok" aria-hidden="true"></i> Subscribed to news &amp; updates </p>
+      
+            </div>
+            <div class="inner-inconstant row-fluid" style="display:none;">
+              <label for="emailInputField">Please enter your new email address</label>
+              <input id="emailInputField" type="text" />
+              <fieldset>
+                <legend>
+                <p><strong>Email subscriptions</strong></p>
+                <p>Topics:</p>
+                </legend>
+                <div class="row-fluid">
+                  <div class="span12">
+                    <input id="topic01" type="checkbox">
+                    <label for="topic01">Topic 1</label>
+                  </div>
+                </div>
+                <div class="row-fluid">
+                  <div class="span12">
+                    <input id="topic02" type="checkbox">
+                    <label for="topic02">Topic 1</label>
+                  </div>
+                </div>
+                <div class="row-fluid">
+                  <div class="span12">
+                    <input id="topic03" type="checkbox">
+                    <label for="topic03">Topic 1</label>
+                  </div>
+                </div>
+                <div class="row-fluid">
+                  <div class="span12">
+                    <input id="topic04" type="checkbox">
+                    <label for="topic04">Topic 1</label>
+                  </div>
+                </div>
+              </fieldset>
+              <div>
+                <button class="span5 cancel btn">Cancel</button>
+                <button class="span5 save btn btn-primary">Save</button>
+              </div>
+            </div>
+          </div>
+          <div class="span3">
+            <button class="pull-right edit btn btn-xmini btn-leftArrow">Edit</button>
+          </div>
+        </div>
+        <hr class="grayRule sectionRule thin">
+        <div class="inactiveEditSection row-fluid">
+          <div class="span3">
+            <label for="primaryPhone">Primary Phone</label>
+            <p class="muted smallText supportText"> Note about usage.</p>
+          </div>
+          <div class="span6">
+            <div class="inner-constant">
+              <span>123-345-5678</span>
+              <p class="smallText"><a>Get text updates to this number</a></p> </div>
+            <div class="inner-inconstant" style="display:none;">
+              <label for="primaryPhoneEdit">Please enter your new primary phone number</label>
+              <input id="primaryPhoneEdit" type="text" />
+              <fieldset>
+                <legend>
+                <p><strong>Text subscriptions</strong></p>
+                <p>Topics:</p>
+                </legend>
+                <div class="row-fluid">
+                  <div class="span12">
+                    <input id="txttopic01" type="checkbox">
+                    <label for="txttopic01">Topic 1</label>
+                  </div>
+                </div>
+                <div class="row-fluid">
+                  <div class="span12">
+                    <input id="txttopic02" type="checkbox">
+                    <label for="txttopic02">Topic 1</label>
+                  </div>
+                </div>
+                <div class="row-fluid">
+                  <div class="span12">
+                    <input id="txttopic03" type="checkbox">
+                    <label for="txttopic03">Topic 1</label>
+                  </div>
+                </div>
+                <div class="row-fluid">
+                  <div class="span12">
+                    <input id="txttopic04" type="checkbox">
+                    <label for="txttopic04">Topic 1</label>
+                  </div>
+                </div>
+              </fieldset>
+              <div>
+                <button class="span4 cancel btn">Cancel</button>
+                <button class="modalBtn span4 save btn btn-primary">Save</button>
+              </div>
+            </div>
+          </div>
+          <div class="span3">
+            <button class=" pull-right edit btn btn-xmini btn-leftArrow">Edit</button>
+          </div>
+        </div>
+        <hr class="grayRule sectionRule thin">
+        <div class="row-fluid inactiveEditSection">
+          <div class="span3">
+            <label>Home Address</label>
+          </div>
+          <div class="span6">
+            <div class="inner-constant">
+              <span> None on record </span>
+            </div>
+            <div class="inner-inconstant" style="display:none;">
+              <label for="businessAddress1"> Address line 1 </label>
+              <input id="businessAddress1" type="text">
+              <label for="businessAddress2"> Address line 2 </label>
+              <input id="businessAddress2" type="text">
+              <label for="businessAddressCity"> City </label>
+              <input id="businessAddressCity" type="text">
+              <div class="row-fluid">
+                <div class="span6">
+                  <label for="businessAddressState"> State </label>
+                  <select id="businessAddressState">
+                    <option>Virginia</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row-fluid">
+                <div class="span6">
+                  <label for="businessAddressZipCode"> Zip Code </label>
+                  <input id="businessAddressZipCode" type="text" class="gutter0">
+                  <p class="supportText"> XXXXX-XXXX </p>
+                </div>
+              </div>
+              <div>
+                <button class="span5 cancel btn">Cancel</button>
+                <button class="modalBtn span5 save btn btn-primary">Save</button>
+              </div>
+            </div>
+          </div>
+          <div class="span3">
+            <button class=" pull-right edit btn btn-xmini btn-leftArrow">Edit</button>
+          </div>
+        </div>
+        <hr class="grayRule sectionRule thin">
+        <div class="row-fluid inactiveEditSection authorizationModule">
+          <div class="span3">
+            <label for="statelive">State you live in</label>
+          </div>
+          <div class="span6">
+            <div class="inner-constant">
+              <span>Michigan</span>
+            </div>
+            <div class="inner-inconstant" style="display:none;">
+              <label for="ddStates">Please confirm your home state</label>
+              <select id="ddStates" >
+                <option>Michigan</option>
+              </select>
+              <div>
+                <button class="span5 cancel btn">Cancel</button>
+                <button class="span5 save btn btn-primary">Save</button>
+              </div>
+            </div>
+          </div>
+          <div class="span3">
+            <button class="pull-right edit btn btn-xmini btn-leftArrow">Edit</button>
+          </div>
+        </div>
+        <hr class="grayRule sectionRule thin">
+        <div class="row-fluid inactiveEditSection authorizationModule">
+          <div class="span3">
+            <label>Security Question</label>
+          </div>
+          <div class="span6">
+            <div class="inner-constant">
+              <ol>
+                <li>
+                  <label for="questsec1">What is you mother's maiden name?</label>
+                  <input id="questsec1" type="text" value="*******" readonly/>
+                </li>
+                <li>
+                  <label for="questsec2">What street did you live on in third 
+                    grade?</label>
+                  <input id="questsec2" type="text" value="*******" readonly/>
+                </li>
+                <li>
+                  <label for="questsec3">In what city/town was your first job?3. In what city/town was your first job?</label>
+                  <input id="questsec3" type="text" value="*******" readonly/>
+                </li>
+              </ol>
+            </div>
+            <div class="inner-inconstant" style="display:none;">
+              <div class="row-fluid">
+                <label for="securityqt01">Question 1:</label>
+                <select id="securityqt01" >
+                  <option>What is you mother's maiden name?</option>
+                </select>
+                <label for="securityanswer01">Answer 1:</label>
+                <input id="securityanswer01" type="text" />
+              </div>
+              <div class="row-fluid sectionSimple">
+                <label for="securityqt02">Question 2:</label>
+                <select id="securityqt02" >
+                  <option>What street did you live on in third grade?</option>
+                </select>
+                <label for="securityanswer02">Answer 2:</label>
+                <input id="securityanswer02" type="text" />
+              </div>
+              <div class="row-fluid">
+                <label for="securityqt03">Question 3:</label>
+                <select id="securityqt03" >
+                  <option>In what city/town was your first job?</option>
+                </select>
+                <label for="securityanswer03">Answer 3:</label>
+                <input id="securityanswer03" type="text" />
+              </div>
+              <div>
+                <button class="span5 cancel btn">Cancel</button>
+                <button class="modalBtn span5 save btn btn-primary">Save</button>
+              </div>
+            </div>
+          </div>
+          <div class="contentWrap"></div>
+          <div class="span3">
+            <button class=" pull-right edit btn btn-xmini btn-leftArrow">Edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></script>
+
+<script type="text/template" id="updateSecurityQuestionsPasswordModalTemplate">
+      <div class="modalSteps">
+  <div id="modal" class="modalStep activeModalStep">
+    <div class="row-fluid">
+      <div class="span12">
+        <fieldset>
+          <legend>To finalize the update of your security questions, please enter your password.</legend>
+        </fieldset>
+      </div>
+    </div>
+    <div class="row-fluid  sectionSimple" id="securityQuestionsPasswordContainer">
+      <div class="span4">
+        <label for="securityQsPassword">Password</label>
+        <input id="securityQsPassword" width="50" type="password" autocomplete="off" data-validate="notBlank EIDMPassword" aria-describedby="securityQsPassword-feedbackMsg" >
+      </div>
+    </div>
+  </div>
+  <div class="ui-dialog-buttonpane ui-helper-clearfix">
+    <div class="ui-dialog-buttonset">
+      <button id="confirmSecurityQuestionsPassword" class="btn btn-primary modal-next" type="button" role="button" aria-disabled="false"><span class="ui-button-text">Submit</span></button>
+    </div>
+  </div>
+</div></script>
+
+<script type="text/template" id="profileDisplaySecurityQuestionTemplate">
+      <li>
+  <label class="updatedSecurityQuestionsDisplay" for="questsec<%=index%>"><%=question%></label>
+  <input id="questsec<%=index%>" type="text" value="*******" readonly disabled/>
+</li></script>
+
+<script type="text/template" id="profileSecurityQuestionTemplate">
+      <div class="span6">
+  <p <%if(index <3){%>class="divHeight"<%}%>>
+  <strong>Question <%=index%>:</br>
+    <span id="securityQuestionLabelDiv<%=index%>"><%=question%></span></strong></p>
+    
+  <label for="<%=inputId%><%=index%>">Answer <%=index%>:</label>
+    <input type="text" id="<%=inputId%><%=index%>" maxlength="30" autocomplete="off" data-validate="notBlank EIDMOutofwalletAnswers" aria-describedby="<%=inputId%><%=index%>-feedbackMsg"/>
+</div>
+
+</script>
+
+<script type="text/template" id="profileSecurityQuestionsContainerTemplate">
+      <div class="modalSteps">
+  <div id="modal" class="modalStep activeModalStep">
+    <p><%=descriptionText%></p>
+        <div class="row-fluid sectionSimple" id="modalUpdateContentContainer" action="#">
+      <div class="span12">
+        <div id="<%=containerID%>">
+          <div class="row-fluid"></div>
+          <div class="row-fluid sectionSimple"></div>
+        </div>
+      </div>
+        </div>
+  </div>
+</div>
+<div class="ui-dialog-buttonpane ui-helper-clearfix">
+  <div class="ui-dialog-buttonset">
+    <button class="btn btn-primary modal-next" id="<%=eventIDTrigger%>" type="button" role="button" aria-disabled="false"><span class="ui-button-text">Submit</span></button>
+  </div>
+</div></script>
+
+<script type="text/template" id="profileSuccesUpdatingTemplate">
+      <p class="success" aria-live="polite">
+  Success&#33; Your changes have been saved&#46;
+</p></script>
+
+<script type="text/template" id="profileErrorUpdatingTemplate">
+      <p class="warning" aria-live="assertive">
+  <i class="iconCustom-warning-sign" aria-hidden="true"></i>
+  Important: <%=message%> 
+</p></script>
+
+<script type="text/template" id="profileSubscribeTemplate">
+      <p aria-live="polite">
+  <i class="icon-circle_ok success vertical-align" aria-hidden="true"></i>Subscribed to news & updates<br/>
+    <!--<a href="#">Update subscription</a>-->
+</p></script>
+
+<script type="text/template" id="profileModalCouldNotProcessRequestTemplate">
+      <div class="modalSteps">
+  <div id="modal" class="modalStep activeModalStep" style="overflow:hidden;">
+        <div class="row-fluid sectionSimple" id="modalUpdateContentContainer" action="#">
+      <div class="span12">
+        <div class="alert alert-error">
+          <div class="iconSpan"><i class="iconCustom-warning-sign" aria-hidden="true"></i></div>
+          <div class="alertContent" aria-live="assertive">
+            <p class="alertHeading">The Marketplace could not process your request&#46;</p>
+          </div>
+        </div>
+      </div>
+        </div>
+  </div>
+</div>
+<div class="ui-dialog-buttonpane ui-helper-clearfix">
+  <div class="ui-dialog-buttonset">
+    <button class="cancel btn returnToProfile">Cancel</button>
+  </div>
+</div>
+</script>
+<script type="text/template" id="profileTermsAndConditionsTemplate">
+      <h1 class="HiddenText">Marketplace Account Registration - Log In - Terms &#38; Conditions</h1>
+<div class="section sectionSimple"> 
+  <div class="page-content">
+      <h2>Terms & Conditions</h2>
+      <p>So that <a href="https://www.healthcare.gov/">HealthCare.gov</a>
+      remains accurate and available to you and all other visitors, we monitor network traffic to identify unauthorized attempts to upload or change information or otherwise cause damage to the web service. Use of this system constitutes consent to such monitoring and auditing. Unauthorized attempts to upload information and/or change information on this web site are strictly prohibited and are subject to prosecution under the Computer Fraud and Abuse Act of 1986 and Title 18 U.S.C. Sec.1001 and 1030.</p>
+      <!--<p>To continue, you must accept the terms and conditions. If you decline, your login will automatically be cancelled.</p>
+      <ul>
+        <li>You have no reasonable expectation of privacy regarding any communication or data transiting or stored on this information system.</li>
+        <li>At any time, and for any lawful Government purpose, the government may monitor, intercept, and search and seize any communication or data transiting or stored on this information system.</li>
+      </ul>
+      <p>Any communication or data transiting or stored on this information system may be disclosed or used for any lawful Government purpose.</p>--> 
+      <p><strong>To continue, you must accept the terms and conditions. If you decline, your login will automatically be cancelled.</strong></p>
+  </div>
+  <div class="ui-dialog-buttonpane-custom ui-helper-clearfix">
+    <div  class="ui-dialog-buttonset">
+      <button id="termsAndConditionsDecline" class="btn btn-secondary">Decline</button>
+      <button id="termsAndConditionsAccept" class="btn btn-primary">I accept</button>
+    </div>
+  </div>
+</div>  
+</script>
+
+<script type="text/template" id="landingStartApplicationTemplate">
+      <div class="row-fluid">
+    <div class="span12">
+        <h1 class="guidingHeading largeHeading"><%=displayedStateName%> application for individuals &amp; families</h1>
+    </div>
+</div>
+<hr class="guideSectionRule" noshade />
+<div class="row-fluid">
+    <div class="span12">
+        <h2> You can apply for any of these people on this same application&#44; even if they already have health insurance now&#58;</h2>
+        <ul>
+            <li>Yourself</li>
+            <li>Other family members</li>
+            <li>Anyone on your same federal income tax return &#40;if you file one&#41;</li>
+        </ul>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span12">
+        <h2> You may need&#58;</h2>
+        <ul>
+            <li>Names&#44; birth dates&#44; and income information for your family</li>
+            <li>Social Security numbers &#40;if they&#39;re available&#41; for the people who want coverage</li>
+        </ul>
+    </div>
+</div>
+<div id="appInSameTenantMessageRegion" class="row-fluid" style="display:none;">
+  <div class="alert alert-error" aria-live="polite">
+    <p class="alertHeading">
+      Important: You can only have one application per state.
+    </p>
+  </div>
+</div>
+<div id="appUnsupportedTenantMessageRegion" class="row-fluid" style="display:none;">
+  <div class="alert alert-error" aria-live="polite">
+    <p class="alertHeading">
+      Important: The currently selected state is not supported.  Please select a different state.
+    </p>
+  </div>
+</div>
+<div class="row-fluid subSectionSimple">
+    <div class="span5">
+        <button id="indvLink" class="btn btn-primary btn-large btn-block">NEXT</button>
+    </div>
+</div>
+<div class="row-fluid subSectionSimple">
+    <div class="span12">
+        <p><%=residentText%> <a href="javascript:void(0)" id="openChangeTenantModal">Choose a different state.</a></p>
+    </div>
+</div>
+</script>
+
+<script type="text/template" id="landingChangeTenantModalTemplate">
+      <div class="modalSteps">
+    <p class="ui-hidden-accessible">you are in step modal</p>
+    <div class="modalStep activeModalStep" id="changeTenantStateValidationContainer">
+        <p>Coverage through the Marketplace is state-specific. Individuals and families must apply through the state where they live.</p>
+        <div class="row-fluid">
+            <div class="span6">
+                <label for="state">Select your state </label>
+                <div id="tenantStateOptions"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui-dialog-buttonpane ui-helper-clearfix">
+    <div class="ui-dialog-buttonset">
+        <button id="tenantStateModalClose" class="btn btn-secondary btn-large " type="button" role="button" aria-disabled="false">Cancel</button>
+            <button id="tenantStateModalSave" class="btn btn-primary btn-large" type="button" role="button" aria-disabled="false">Save </button>
+      </div>
+</div></script>
+
+<script type="text/template" id="identityNotVerifiedTemplate">
+      <p id="fullName2" class="warning smallText"><i class="iconCustom-warning-sign" aria-hidden="true"></i>Identity wasn&#39;t verified - <a href="javascript:void(0)" class="idProofNow" class="idProofNow">Verify now</a></p>
+</script>
+
+<script type="text/template" id="identitVerificationPendingTemplate">
+      <p id="fullName2" class="warning smallText"><i class="iconCustom-warning-sign" aria-hidden="true"></i>Identity verification pending</p>
+</script>
+
+<script type="text/template" id="identityVerifiedTemplate">
+      <p id="fullName2" class="success smallText"><i class="iconCustom-ok-sign" aria-hidden="true"></i>Identity verified</p>
+</script>
+
+<script type="text/template" id="identityUnderESDReviewTemplate">
+      <p class="muted smallText supportText changing">Verification under review</p></script>
+
+<script type="text/template" id="identityUnderESDReviewNeedMoreDocsTemplate">
+      <p class="muted smallText supportText changing">The documents you provided weren&#39;t enough to prove your identity&#46; <a href="">. Click here to upload additional documents.</a></p></script>
+
+<script type="text/template" id="identitytoUpdateCallTemplate">
+      <p class="muted smallText supportText changing">To change your name you must call 1-800-XXX-XXXX</p></script>
+
+<script type="text/template" id="regularNotificationTemplate">
+      <div class="alert" aria-live="polite">
+  <button class="icon-circle_remove close" data-dismiss="alert" type="button"><span class="HiddenText">Close alert message</span></button>
+  <p class="alertHeading"><%=subject%>. <%=message%></p>
+</div>
+</script>
+
+
+<!-- common -->
+<script type="text/template" id="suffixDropDownUSTemplate">
+  <label class="form_label" for="<%=forToUse%>">
+   <%if(labelToUse != null){%>
+        <%if(isRequired) {%>
+             <span class="required">*</span>
+          <%}%>
+      <%=labelToUse%>
+      <% }%>
+<!-- leave label tag open, it will be closed in the templates -->       <span class="instructionalText">optional</span>
+  </label> <!-- closing label tag from common label template -->
+  <select id="<%=idToUse%>"
+        <%if(nameToUse !=null){%>
+           name="<%=nameToUse%>"
+        <%}%> 
+        >
+    <option value="">Select...</option>
+    <option value="Jr">Jr&#46;</option>
+    <option value="Sr">Sr.</option>
+    <option value="III">III</option>
+    <option value="IV">IV</option>
+  </select>
+
+</script>
+
+<script type="text/template" id="suffixDropDownOptionsTemplate">
+  <option value="">Select...</option>
+<option value="Jr">Jr&#46;</option>
+<option value="Sr">Sr.</option>
+<option value="III">III</option>
+<option value="IV">IV</option>
+</script>
+
+<script type="text/template" id="stateNonAbbreviatedDropDownOptionsTemplate">
+     <select id="<%=idToUse%>">
+  <option value="">Select...</option>
+    <option value="Alabama">Alabama</option>  
+    <option value="Alaska">Alaska</option>  
+    <option value="Arizona">Arizona</option>
+    <option value="Arkansas">Arkansas</option>
+    <option value="California">California</option>
+    <option value="Colorado">Colorado</option>
+    <option value="Connecticut">Connecticut</option>
+    <option value="Delaware">Delaware</option>
+    <option value="District of Columbia">District of Columbia</option>
+    <option value="Florida">Florida</option>
+    <option value="Georgia">Georgia</option>  
+    <option value="Hawaii">Hawaii</option>
+    <option value="Idaho">Idaho</option>
+    <option value="Illinois">Illinois</option>
+    <option value="Indiana">Indiana</option>
+    <option value="Iowa">Iowa</option>
+    <option value="Kansas">Kansas</option>
+    <option value="Kentucky">Kentucky</option>
+    <option value="Louisiana">Louisiana</option>
+    <option value="Maine">Maine</option>
+    <option value="Maryland">Maryland</option>
+    <option value="Massachusetts">Massachusetts</option>
+    <option value="Michigan">Michigan</option>
+    <option value="Minnesota">Minnesota</option>
+    <option value="Mississippi">Mississippi</option>
+    <option value="Missouri">Missouri</option>
+    <option value="Montana">Montana</option>
+    <option value="Nebraska">Nebraska</option>
+    <option value="Nevada">Nevada</option>
+    <option value="New Hampshire">New Hampshire</option>
+    <option value="New Jersey">New Jersey</option>
+    <option value="New Mexico">New Mexico</option>  
+    <option value="New York">New York</option>
+    <option value="North Carolina">North Carolina</option>
+    <option value="North Dakota">North Dakota</option>
+    <option value="Ohio">Ohio</option>
+    <option value="Oklahoma">Oklahoma</option>
+    <option value="Oregon">Oregon</option>
+    <option value="Pennsylvania">Pennsylvania</option>
+    <option value="Rhode Island">Rhode Island</option>
+    <option value="South Carolina">South Carolina</option>
+    <option value="South Dakota">South Dakota</option>
+    <option value="Tennessee">Tennessee</option>
+    <option value="Texas">Texas</option>
+    <option value="Utah">Utah</option>
+    <option value="Vermont">Vermont</option>
+    <option value="Virginia">Virginia</option>
+    <option value="Washington">Washington</option>
+    <option value="West Virginia">West Virginia</option>
+    <option value="Wisconsin">Wisconsin</option>
+    <option value="Wyoming">Wyoming</option>
+</select></script>
+
+<script type="text/template" id="stateNonAbbreviatedDropDownOptionsTemplateFFM">
+         <select id="<%=idToUse%>">
+  <option value="">Select...</option>
+    <option value="AL">Alabama</option> 
+    <option value="AK">Alaska</option>  
+    <option value="AZ">Arizona</option>
+    <option value="AR">Arkansas</option>
+    <option value="DE">Delaware</option>
+    <option value="FL">Florida</option>
+    <option value="GA">Georgia</option>
+  <option value="ID">Idaho</option>
+    <option value="IL">Illinois</option>
+    <option value="IN">Indiana</option>
+    <option value="IA">Iowa</option>
+    <option value="KS">Kansas</option>
+    <option value="LA">Louisiana</option>
+    <option value="ME">Maine</option>
+    <option value="MI">Michigan</option>
+    <option value="MS">Mississippi</option>
+    <option value="MO">Missouri</option>
+    <option value="MT">Montana</option>
+    <option value="NE">Nebraska</option>
+    <option value="NH">New Hampshire</option>
+    <option value="NJ">New Jersey</option>
+  <option value="NM">New Mexico</option>
+    <option value="NC">North Carolina</option>
+    <option value="ND">North Dakota</option>
+    <option value="OH">Ohio</option>
+    <option value="OK">Oklahoma</option>
+    <option value="PA">Pennsylvania</option>
+    <option value="SC">South Carolina</option>
+    <option value="SD">South Dakota</option>
+    <option value="TN">Tennessee</option>
+    <option value="TX">Texas</option>
+  <option value="UT">Utah</option>
+    <option value="VA">Virginia</option>
+    <option value="WV">West Virginia</option>
+    <option value="WI">Wisconsin</option>
+    <option value="WY">Wyoming</option>
+</select></script>
+
+<script type="text/template" id="applicationErrorMessageTemplate">
+  <div>
+  <span class="hiddenText">Application ID&#58; <%=applicationId%> &nbsp; &nbsp; Date&#58; <%=errorDateTime%></span><span class="smallText" ><%=responseMessages%></span><br/><br/><span class="smallText" >Error ID:</span><%=errorID%>
+</div></script>
+
+<script type="text/template" id="timeoutErrorTemplate">
+  <p class="warning" aria-live="assertive">
+  <i class="iconCustom-warning-sign" aria-hidden="true"></i>There was an unexpected error &#45; Please try again later&#46;
+</p></script>
+
+
+
+<script type="text/javascript">
+if($("#logInPage").length == 0) {
+$.ajax(
+  {
+  url:"/ee-rest/global/en_US/DirectEnrollment/getSecureRedirectInfo", 
+    type:"GET",
+    contentType:"application/json",
+    dataType:"json",
+    success:function(response)
+    {
+      agentBrokerInfo = response;
+      //fetch the url and go back to the portal
+    if(!isEmpty(response ))
+    {
+      //modify the
+      makeDirectEnrollmentUIChanges();
+    
+      var directEnrollmentKeepAliveURL= response["Keep Alive URL"]; 
+      if(!isEmpty(directEnrollmentKeepAliveURL))
+      {
+          window.setInterval( function() { updateDirectEnrollmentKeepAliveUrl(directEnrollmentKeepAliveURL)} , 300000);
+      }
+     }
+    },
+    error:function(response)
+    {
+      return null;
+    } 
+  }); 
+  }
+  hideShowDropDown();
+</script>
+
+
+  </body>
+</html>

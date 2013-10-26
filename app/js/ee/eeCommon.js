@@ -1821,3 +1821,12 @@ function removeError(inputID) {
 	$('#'+inputID).removeClass( 'errorField' );
 	$('#'+inputID+'-feedbackMsg').remove();
 }
+
+function hideShowDropDown() {
+  $("#dLabel1", ".userActionList").on("click", function(a) {
+    if (($("#landingPageMenuLink").css("display") === "none" && $("#helpProfile").css("display") === "none") || $("#landingPageMenuLink").css("display") === "none") {
+      $('[data-toggle="dropdown"]', ".userActionList").parent().removeClass("open");
+      a.stopPropagation()
+    }
+  })
+};
