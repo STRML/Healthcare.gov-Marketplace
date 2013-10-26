@@ -1581,7 +1581,7 @@ function runAffix() {
     var targs = ['.utilitySection', '.subNav', '.overlayBox'];
 
     //run if affixloaded not defined
-    if(!affixloaded){
+    if(typeof affixloaded === 'undefined' || !affixloaded){
 
         //store number to append to leftNav class
         affixLength = 0;
