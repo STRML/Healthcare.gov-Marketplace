@@ -1,5 +1,7 @@
 'use strict';
 
+var path = require('path');
+
 module.exports = function(grunt){
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   var settings = require('./lib/settings');
@@ -19,7 +21,14 @@ module.exports = function(grunt){
     useminPrepare: {
       html: 'app/individual.html',
       options: {
-        dest: 'dist'
+        dest: 'dist',
+        flow: {
+          steps: {
+            js: ['uglifyjs'],
+            css: ['concat', 'cssmin']
+          },
+          post: {}
+        }
       }
     },
     usemin: {
@@ -27,6 +36,16 @@ module.exports = function(grunt){
       css: ['dist/css/**/*.css'],
       options: {
         dirs: ['dist']
+      }
+    },
+    uglify: {
+      options: {
+        sourceMap: function(name) {
+          return name + '.map';
+        },
+        sourceMappingURL: function(name) {
+          return '/js/' + path.basename(name) + '.map';
+        }
       }
     },
     copy: {

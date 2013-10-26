@@ -3,12 +3,14 @@
   "version": "0.0.1",
   "description": "Minified Files for Healthcare.gov Marketplace",
   "dependencies": {
-    "express": "~3.4.0"
+    "express": "~3.4.0",
+    "request": "~2.27.0",
+    "lodash": "latest"
   },
   "devDependencies": {
     "grunt-cli": "~0.1.9",
     "grunt": "~0.4.1",
-    "grunt-usemin": "~0.1.12",
+    "grunt-usemin": "~2.0.0",
     "grunt-contrib-jshint": "~0.6.4",
     "grunt-contrib-cssmin": "~0.6.2",
     "grunt-contrib-copy": "~0.4.1",
