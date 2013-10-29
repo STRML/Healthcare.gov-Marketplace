@@ -29,6 +29,9 @@ to post issues and bugs.
 This repository attempts to be a working fork of the marketplace. You should be able to run this
 on a local web server and access healthcare.gov in the same way.
 
+As of this time, the login page and much of the basic application will function correctly from
+your local machine, making this repository great for testing and bugfixes.
+
 
 What This Isn't
 ---------------
@@ -71,7 +74,7 @@ TODO
 
 [Open Issues](https://github.com/STRML/Healthcare.gov-Marketplace/issues)
 * ~~Redirect API calls to their actual destination so this fork works~~
-* Rewrite incoming redirects so we don't get moved back to healthcare.gov on login.
+* ~~Rewrite incoming redirects so we don't get moved back to healthcare.gov on login.~~
 * Add any missing JS/CSS from other sections of the site
 * Add unit tests and TravisCI integration
 * Pass JSHint (good luck)
