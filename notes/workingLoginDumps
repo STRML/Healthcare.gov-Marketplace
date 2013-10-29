@@ -1,0 +1,286 @@
+POST /oam/server/authentication?type=english HTTP/1.1
+Host: eidm.cms.gov
+Connection: keep-alive
+Content-Length: 104
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Origin: https://www.healthcare.gov
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.26 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+DNT: 1
+Referer: https://www.healthcare.gov/marketplace/global/en_US/registration
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+Cookie: OAM_JSESSIONID=Vd8XSWTNsjYL2nnsYyV0Hb61NmtVnRCLSNWkfBF9lLs8cJQbpghQ!290637071; OAMAuthnCookie_eidm.cms.gov:443=...; OAM_REQ_COUNT=VERSION_4~1
+
+
+HTTP/1.1 302 Moved Temporarily
+Server: Oracle-Application-Server-11g
+Location: https://eidm.cms.gov/successffmeng.html
+X-ORACLE-DMS-ECID: 004uSoven8j2bMl5Sv_Aic00026Z0000Fp
+X-Powered-By: Servlet/2.5 JSP/2.1
+Content-Type: text/plain
+Content-Language: en
+Expires: Mon, 28 Oct 2013 13:39:45 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Mon, 28 Oct 2013 13:39:45 GMT
+Connection: close
+Vary: Accept-Encoding
+Set-Cookie: OAM_ID=VERSION_4~pzW/m+j/8DYwcxmbMLs5kw==~rdhCTdrEhfm9Tg8wwwweIe7Z4Kng0feO5wf6O3ZOlDSKlCxAkKZpQBIWIx1pD4ACRFzsEIcOSbc6BovMelSJQqFtbvVAweMS7EE9tEtZjluVmbzQUSP3+embcRk2E+/uhKvphTehoJPw6FryP9IDgcAn/jwJojjD1oN0ZLCmGGxI85UQcZNFe0eyl2c0qXeeSdoTXEpgEGJyOrYVDHPyhBLMQj9ovyX4Ogb4ja+lqXuy8GubGs0h3Og==; path=/; secure; HttpOnly
+
+
+GET /successffmeng.html HTTP/1.1
+Host: eidm.cms.gov
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.26 Safari/537.36
+DNT: 1
+Referer: https://www.healthcare.gov/marketplace/global/en_US/registration
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+Cookie: OAM_JSESSIONID=eejYL2nnsYyV0Hb61NmtVnRCLSNWkfBF9lLs8cJQbpghQ!290637071; OAMAuthnCookie_eidm.cms.gov:443=...; OAM_REQ_COUNT=VERSION_4~1; OAM_ID=VERSION_4~pzW/m+j/8DYwcxmbMLs5kw==~rdhCTdrEhfm9Tg8GPHZC10l2IdUF0jBGhHftccIe7Z4Kng0feO5wf6O3ZOlDSKlCxAkKZpQBIWIx1pD4ACRFzsEIcOSbc6BovMelSJQqFtbvVAweMS7EE9tEtZjluVmbzQUSP3+embcRk2E+/uhKvphTe0eyl2c0qXhxJxfcy5ejHbCRhSdoTXEpgEGJyOrYVDHPyhBLMQj9ovyX4Ogb4ja+lqXuy8GubGs0h3Og==
+
+HTTP/1.1 302 Moved Temporarily
+Server: Oracle-Application-Server-11g
+Location: https://eidm.cms.gov:443/oam/server/obrareq.cgi?encquery%3D0krbl7t7Qfewfe9OMgniabKHeDBLsZercRpfcX8AtAy7UkdaAPLGW32%2FCT0qa3Rm4QEL40pUS%2FTaU72v8J%2FAIOIXz%2FruLun5B%2FC%2BmTEqOQ3A1B2aVLcKQWqwqqYJeQOPzWP4C1L8xCOoQFhrQN3b6H8VrAukPG417g5VWtz7F93T335EuOZcuCqJYo0dcu0ftxvfOAWeZ0T0kY3Oq8rqn%2BMfx1dWn8%3D%20agentid%3DWebgate_IDM_11g%20ver%3D1
+Content-Length: 630
+Content-Type: text/html; charset=iso-8859-1
+Expires: Mon, 28 Oct 2013 13:39:46 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Mon, 28 Oct 2013 13:39:46 GMT
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: OAMRequestContext_eidm.cms.gov:443_375362=7SbKebo/vKypVObAmb8iSQ==;max-age=300; httponly; secure; path=/
+
+GET /oam/server/obrareq.cgi?encquery%3D0krbl7tddgCqEsHDmvkP9OMgniabKHeDBLsZercRpfcX8AtAy7UkdaAPLGW32%2FCT0qa3Rm4QEL40pUS%2FTaU72v8J%2FAIOIXz%2FruLun5B%2FC%2Bm3o6O%2BRKLa8kiEXamkcR1q8KddoMUnF4E6%2FTEqOQ3A1B2aVLcKQWqwqqYJeQOPzWP4C1L8xCOoQFhrQN3b6H8VrAukPG417g5VWtz7F93T335EuOZcuCqJYo0dcu0ftxvfOAWeZ0T0kY3Oq8rqn%2BMfx1dWn8%3D%20agentid%3DWebgate_IDM_11g%20ver%3D1 HTTP/1.1
+Host: eidm.cms.gov
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.26 Safari/537.36
+DNT: 1
+Referer: https://www.healthcare.gov/marketplace/global/en_US/registration
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;
+Cookie: OAM_JSESSIONID=Vd8XSWTNsjYL2nnsYyV0Hb61NmtVnRCLSNWkfBF9lLs8cJQbpghQ!290637071; OAMAuthnCookie_eidm.cms.gov:443=m...; OAM_REQ_COUNT=VERSION_4~1; OAM_ID=VERSION_4~pzW/m+j/8DYwcxmbMLs5kw==~...; OAMRequestContext_eidm.cms.gov:443_375362=7SbKebo/vKypVObAmb8iSQ==
+
+
+HTTP/1.1 302 Moved Temporarily
+Server: Oracle-Application-Server-11g
+Location: https://eidm.cms.gov/obrar.cgi?encreply=%2FxE0qItkG93UZRT86zGOZASLojakSkV2AhCagNUSezdY3FbAxDL82rl18b9E1QBITSwh5jQXzYY7gnNykhHbENvGo1O1ajVVV7jzW7lVAIeeQ3%2BpkB5DPTc6CAMzbdiZogtWxIZKHOoB1NUOqP%2BppVpGMCCoKr9qrHqiCyzk8kyfi5L8qXf1fSZVRdwAF2qXo4wP7j72XhTTF4ZzOgnRK9KNfCnBkCmo9uZ3KS2nzR%2BTv6U6a4fTisR4CjDMuDeuJRRTt7ySngnFyEw2e7nR90zMvz%2BJ0A%2BvBxTe7wM73n7o%2BwiTLCkaG7fkrmhE5ua%2FodRRM1TkxM9HCQ7yjL%2Ffqc4aUO2oGpPsRMd29W%2FV%2FuJznTjDC5mrHuPr3PYlUfdtffiMw9CluhrAs019byzbU1GbPavvShRSxGvCx4xMPGTl8lldPEy9qHa5KoAs2SDUyIGY%2BzClvhbURmnIBjDSTid0dvXfD99OvxxWtAoxJOkwVennIfGqYE%3D
+X-ORACLE-DMS-ECID: 004uSovlF1H2bMl5Sv_Aic00026Z0000Fs
+X-Powered-By: Servlet/2.5 JSP/2.1
+Content-Type: text/plain
+Content-Language: en
+Expires: Mon, 28 Oct 2013 13:39:47 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Mon, 28 Oct 2013 13:39:47 GMT
+Connection: close
+Vary: Accept-Encoding
+Set-Cookie: OAM_ID=VERSION_4~7zRxd5jbOoX+t3tf1MWZxg==~f2qJtYO3/vHr7jEs96gfZguXf2CKZmAq+rlV0WJjLZOBL3czXaHoKBKnsXEeD0rn2NqSOhbKBTzeWbnk8hbv9eEad0wPCXY8SLJQGblJPfCLtE7dQOspBth6qN5fwl7I5DjQm9DaJoapoo4qchG0d2jGNrnIXKAWffRcR6G3YNPGMjd16ixvZeWgDLy3vd81fBy9cKHUwkrbb18lqlCv2DWy7zhuIzY0VR+DO4Sm97a6Pr9z3nAv4qbZgJDAUx2CbuHeDwk0UYofnb37yvdJoQ==; path=/; secure; HttpOnly
+Set-Cookie: OAM_REQ_0=invalid; path=/; secure; HttpOnly
+
+GET /obrar.cgi?encreply=%2FxE0qItkG7zpwYLojakSkV2AhCagNUSezdY3FbAxDL82rl18b9E1QBITSwh5jQXzYY7gnNykhHbENvGo1O1ajVVV7jzW7lVAIeeQ3%2BpkB5DPTc6CAMzbdiZogtWxIZK3kzW5G9OWnOrTIHehr%2BAPGagMBHU4uuL8HSkLUfC%2BjmpuYwqH5iOSMhlTltYkF5EOnVmy7uX0gWl27o960KYKHXp03zFXnGKfao962jn2UV2mhP1k%2Bi4wBrKxVv%2BorBGx228LzBz%2BRJ9sSOPplqrPr8lYS8mku5e2p55oOVW1USVrgSIAL5HaJRgJRunnBkiA86sH0qosE1i0iRO980RMuDeuJRRTt7ySngnFyEw2e7nR90zMvz%2BJ0A%2BvBxTe7wM73n7o%2BwiTLCkaG7fkrmhE5ua%2FodRRM1TkxM9HCQ7yjL%2Ffqc4aUO2oGpPsRMd29W%2FV%2FuJznTjDC5mrHuPr3PYlUfdtffiMw9CluhrAs019byzbU1GbPavvShRSxGvCx4xMPGTl8lldPEy9qHa5KoAs2SDUyIGY%2BzClvhbURmnIBjDSTid0dvXfD99OvxxWtAoxJOkwVennIfGqYE%3D HTTP/1.1
+Host: eidm.cms.gov
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.26 Safari/537.36
+DNT: 1
+Referer: https://www.healthcare.gov/marketplace/global/en_US/registration
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+Cookie: OAM_JSESSIONID=jYL2nnsYyV0Hb61NmtVnRCLSNWkfBF9lLs8cJQbpghQ!290637071; OAMAuthnCookie_eidm.cms.gov:443=...; OAM_REQ_COUNT=VERSION_4~1; OAMRequestContext_eidm.cms.gov:443_375362=7SbKebo/vKypVObAmb8iSQ==; OAM_ID=VERSION_4~7zRxd5jbOoX+t3tf1MWZxg==~f2qJtYO3/vHr7jEs96gfZguXf2CKZmAq+rlV0WJjLZOBL3czXaHoKBKn...chG0d2jGNrnIXKAWffRcR6G3YNPGMjd16ixvZeWgDLy3vd81fBy9cKHUwkrbb18lqlCv2DWy7zhuIzY0VR+DO4Sm97a6Pr9z3nAv4qbZgJDAUx2CbuHeDwk0UYofnb37yvdJoQ==; OAM_REQ_0=invalid
+
+HTTP/1.1 302 Moved Temporarily
+Server: Oracle-Application-Server-11g
+Location: /successffmeng.html
+Content-Length: 230
+Content-Type: text/html; charset=iso-8859-1
+Expires: Mon, 28 Oct 2013 13:39:47 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Mon, 28 Oct 2013 13:39:47 GMT
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: OAMRequestContext_eidm.cms.gov:443_375362=;expires=thursday, 01-jan-1970 01:00:00 gmt; httponly; secure; path=/
+Set-Cookie: OAMAuthnCookie_eidm.cms.gov:443=...;httponly; secure; path=/
+
+GET /successffmeng.html HTTP/1.1
+Host: eidm.cms.gov
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.26 Safari/537.36
+DNT: 1
+Referer: https://www.healthcare.gov/marketplace/global/en_US/registration
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+Cookie: OAM_JSESSIONID=V0Hb61NmtVnRCLSNWkfBF9lLs8cJQbpghQ!290637071; OAM_REQ_COUNT=VERSION_4~1; OAM_ID=VERSION_4~7zRxd5jbOoX+t3tf1MWZxg==~f2qJtYO3/vHr7jEs96gfZguXf2CKZmAq+rlV0WJjLZOBL3czXaHoKBKnsXEeD0rn...qN5fwl7I5DjQm9DaJoapoo4qchG0d2jGNrnIXKAWffRcR6G3YNPGMjd16ixvZeWgDLy3vd81fBy9cKHUwkrbb18lqlCv2DWy7zhuIzY0VR+DO4Sm97a6Pr9z3nAv4qbZgJDAUx2CbuHeDwk0UYofnb37yvdJoQ==; OAM_REQ_0=invalid; OAMAuthnCookie_eidm.cms.gov:443=...
+
+HTTP/1.1 200 OK
+Server: Oracle-Application-Server-11g
+Last-Modified: Fri, 11 Oct 2013 21:00:11 GMT
+ETag: "3404f8-113-4e87d67732cc0"
+Accept-Ranges: bytes
+Content-Length: 275
+Content-Type: text/html
+Content-Language: en
+Expires: Mon, 28 Oct 2013 13:39:48 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Mon, 28 Oct 2013 13:39:48 GMT
+Connection: keep-alive
+Vary: Accept-Encoding
+
+GET /marketplace/auth/userprofile HTTP/1.1
+Host: www.healthcare.gov
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.26 Safari/537.36
+DNT: 1
+Referer: https://eidm.cms.gov/successffmeng.html
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+Cookie: JSESSIONID=F3DEC85E222C7B273574951E67A29D2A.red-ui-ap73; ObSSOCookie=...; _chartbeat2=eaxftrhzyr7d6ziq.1382752322396.1382967112454.101; _chartbeat_uuniq=1; akaau=1382968136~id=72d8b223018b300cac6e3a7ee7dbdbe9; _ga=GA1.2.1243303356.1382752321; __utma=168641214.1243303356.1382752321.1382752321.1382967112.2; __utmb=168641214.14.10.1382967112; __utmc=168641214; __utmz=168641214.1382752321.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmv=168641214.|9=Account%20Holder=true=1; mp_d2445876dbbe322d83ad2c4a104692c7_mixpanel=%7B%22distinct_id%22%3A%20%22141f275fb41892-0d9353221-6a1a2772-1fa400-141f275fb425cb%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.healthcare.gov%2Fmarketplace%2Fglobal%2Fen_US%2Flogout%3F%22%2C%22%24initial_referring_domain%22%3A%20%22www.healthcare.gov%22%7D; PRUM_EPISODES=s=1382967575786&r=https%3A//www.healthcare.gov/marketplace/global/en_US/registration
+
+HTTP/1.1 302 Moved Temporarily
+Location: https://eidm.cms.gov:443/oam/server/obrareq.cgi?wh%3Dffmee_eng%20wu%3D%2Fmarketplace%2Fauth%2Fuserprofile%20wo%3D1%20rh%3Dhttps%3A%2F%2Fwww.healthcare.gov%20ru%3D%252Fmarketplace%252Fauth%252Fuserprofile
+Content-Length: 387
+Content-Type: text/html; charset=iso-8859-1
+Expires: Mon, 28 Oct 2013 13:39:49 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Mon, 28 Oct 2013 13:39:49 GMT
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: ObSSOCookie=loggedoutcontinue; path=/; domain=.healthcare.gov;
+X-Frame-Options: SAMEORIGIN
+Access-Control-Allow-Origin: *
+
+GET /oam/server/obrareq.cgi?wh%3Dffmee_eng%20wu%3D%2Fmarketplace%2Fauth%2Fuserprofile%20wo%3D1%20rh%3Dhttps%3A%2F%2Fwww.healthcare.gov%20ru%3D%252Fmarketplace%252Fauth%252Fuserprofile HTTP/1.1
+Host: eidm.cms.gov
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.26 Safari/537.36
+DNT: 1
+Referer: https://eidm.cms.gov/successffmeng.html
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+Cookie: OAM_JSESSIONID=Vd8XSWTNsjYL2nnsYyV0Hb61NmtVnRCLSNWkfBF9lLs8cJQbpghQ!290637071; OAM_REQ_COUNT=VERSION_4~1; OAM_ID=VERSION_4~7zRxd5jbOoX+t3tf1MWZxg==~f2qJtYO3/vHr7jEs96gfZguXf2CKZmAq+rlV0WJjLZOBL3czXaHoKBKnsXEeD0rn2NqSOhbKBTzeWbnk8hbv9eEad0wPCXY8SLJQGblJPfCLtE7dQOspBth6qN5fwl7I5DjQm9DaJoapoo4qchG0d2jGNrnIXKAWffRcR6G3YNPGMjd16ixvZeWgDLy3vd81fBy9cKHUwkrbb18lqlCv2DWy7zhuIzY0VR+DO4Sm97a6Pr9z3nAv4qbZgJDAUx2CbuHeDwk0UYofnb37yvdJoQ==; OAM_REQ_0=invalid; OAMAuthnCookie_eidm.cms.gov:443=...
+
+HTTP/1.1 302 Moved Temporarily
+Server: Oracle-Application-Server-11g
+Location: https://www.healthcare.gov/obrar.cgi?cookie=59hq6aMemdos4SRRMC36exjMceWnYSDXfqRcGbGYrwgxblY6aYb7HnDDMTw9iI%2FLC6c9mk6D%2FhNHyBKRon7E%2FhC4%2FMSUU877pRh23keVOOMkPfAyJn4NjFEtR1zIH7gZAe8TdxPZmH5z%2Bj%2FpKqvkTpkjhkAbewdY9yoJvDwmjZPPWEJNGPUi8Hm4S66bIcJcCCZqGKkVwjm3PCvlkErAiL3TF6daJm5tckRBbZ7JY3qbOKgaFsgPWCp5Wq%2BONXJEeD%2F%2Fi628whki%2BVh1whxGzTufyYzX0UU%2B98AY2iGaNfUmrDxBHhzC3%2BMacop7QEKtCXOfCjMc0X70EXT56htn145L6kEFVB0ntPM%2BkpwITL4wT%2BFN8xJ6gnyUnrCXJfByAryKlidy1%2Fek%2Bmfs269Vb0yfmv7xSqcnd8tVC6jc4BpCBWO78D1YKt0%2FbPTDMI3VLfDGzxumSxY2iuUc0IhUJA%3D%3D%20redirectto=%252Fmarketplace%252Fauth%252Fuserprofile%20ssoCookie=httponly
+X-ORACLE-DMS-ECID: 004uSovvao12bMl5Svo2yc00028z0001Oz
+X-Powered-By: Servlet/2.5 JSP/2.1
+Content-Type: text/plain
+Content-Language: en
+Expires: Mon, 28 Oct 2013 13:39:49 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Mon, 28 Oct 2013 13:39:49 GMT
+Connection: close
+Vary: Accept-Encoding
+Set-Cookie: OAM_ID=VERSION_4~+n+de+gUxAJNg44Ew1Grng==~wd4i5ILo91z590/YAIksYsR2gTkSvtBjJpoFvG1RXmiBZqZUa6Yc+lX8ku5FiolqWKwiNmDy4ZVlswWB7sgdyXcq6kXcZYLyR6BZEiiyOKoUzXynSPS4D+byCWvN3Yk/CtaRrxfstYRQJQQL0H7vshHXY0pd/7dx8sH8UTKY9aVeWhdKZd7qI3mGnG+OFM6+Mqu7S0+/HR0ULLa0Md381HIila8I5rWCv3t8wzGnYLNnENBv8vdE0v3WC0iTOC+JyCKNxsFQdN0livaZK8IphQ==; path=/; secure; HttpOnly
+Set-Cookie: OAM_REQ_0=invalid; path=/; secure; HttpOnly
+
+GET /obrar.cgi?cookie=59hq6aMemdos4SRRMC36exjMceWnYSDXfqRcGbGYrwgxblY6aYb7HnDDMTw9iI%2FLC6c9mk6D%2FhNHyBKRon7E%2FhC4%2FMSUU877pRh23keVOOMkPfAyJn4NjFEtR1zIH7gZAe8TdxPZmH5z%2Bj%2FpKqvkTpkjhk...tckRBbZ7JY3qbOKgaFsgPWCp5Wq%2BONXJEeD%2F%2Fi628whki%2BVh1whxGzTufyYzX0UU%2B98AY2iGaNfUmrDxBHhzC3%2BMacop7QEKtCXOfCjMc0X70EXT56htn145L6kEFVB0ntPM%2BkpwITL4wT%2BFN8xJ6gnyUnrCXJfByAryKlidy1%2Fek%2Bmfs269Vb0yfmv7xSqcnd8tVC6jc4BpCBWO78D1YKt0%2FbPTDMI3VLfDGzxumSxY2iuUc0IhUJA%3D%3D%20redirectto=%252Fmarketplace%252Fauth%252Fuserprofile%20ssoCookie=httponly HTTP/1.1
+Host: www.healthcare.gov
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.26 Safari/537.36
+DNT: 1
+Referer: https://eidm.cms.gov/successffmeng.html
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+Cookie: _chartbeat2=eaxftrhzyr7d6ziq.1382752322396.1382967112454.101; _chartbeat_uuniq=1; akaau=1382968136~id=72d8b223018b300cac6e3a7ee7dbdbe9; _ga=GA1.2.1243303356.1382752321; __utma=168641214.1243303356.1382752321.1382752321.1382967112.2; __utmb=168641214.14.10.1382967112; __utmc=168641214; __utmz=168641214.1382752321.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmv=168641214.|9=Account%20Holder=true=1; mp_d2445876dbbe322d83ad2c4a104692c7_mixpanel=%7B%22distinct_id%22%3A%20%22141f275fb41892-0d9353221-6a1a2772-1fa400-141f275fb425cb%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.healthcare.gov%2Fmarketplace%2Fglobal%2Fen_US%2Flogout%3F%22%2C%22%24initial_referring_domain%22%3A%20%22www.healthcare.gov%22%7D; PRUM_EPISODES=s=1382967575786&r=https%3A//www.healthcare.gov/marketplace/global/en_US/registration; ObSSOCookie=loggedoutcontinue
+
+HTTP/1.1 302 Moved Temporarily
+Server: Apache
+Location: /marketplace/auth/userprofile
+Content-Length: 213
+Content-Type: text/html; charset=iso-8859-1
+Expires: Mon, 28 Oct 2013 13:39:50 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Mon, 28 Oct 2013 13:39:50 GMT
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: ObSSOCookie=...; httponly; path=/; domain=.healthcare.gov;
+X-Frame-Options: SAMEORIGIN
+Access-Control-Allow-Origin: *
+
+GET /marketplace/auth/userprofile HTTP/1.1
+Host: www.healthcare.gov
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.26 Safari/537.36
+DNT: 1
+Referer: https://eidm.cms.gov/successffmeng.html
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+Cookie: JSESSIONID=F3DEC85E222C7B273574951E67A29D2A.red-ui-ap73; _chartbeat2=eaxftrhzyr7d6ziq.1382752322396.1382967112454.101; _chartbeat_uuniq=1; akaau=1382968136~id=72d8b223018b300cac6e3a7ee7dbdbe9; _ga=GA1.2.1243303356.1382752321; __utma=168641214.1243303356.1382752321.1382752321.1382967112.2; __utmb=168641214.14.10.1382967112; __utmc=168641214; __utmz=168641214.1382752321.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmv=168641214.|9=Account%20Holder=true=1; mp_d2445876dbbe322d83ad2c4a104692c7_mixpanel=%7B%22distinct_id%22%3A%20%22141f275fb41892-0d9353221-6a1a2772-1fa400-141f275fb425cb%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.healthcare.gov%2Fmarketplace%2Fglobal%2Fen_US%2Flogout%3F%22%2C%22%24initial_referring_domain%22%3A%20%22www.healthcare.gov%22%7D; PRUM_EPISODES=s=1382967575786&r=https%3A//www.healthcare.gov/marketplace/global/en_US/registration; ObSSOCookie=...
+
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Encoding: gzip
+Content-Type: text/html
+Content-Length: 4603
+X-Server: WS01
+Vary: Accept-Encoding
+Expires: Mon, 28 Oct 2013 13:39:51 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Mon, 28 Oct 2013 13:39:51 GMT
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+Access-Control-Allow-Origin: *
+
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta http-equiv="Content-Type" content="application/x-www-form-urlencoded; charset=iso-8859-1" />
+
+<script src="/marketplace/global/en_US/js/jquery.min.js"></script>
+<script src="/marketplace/global/en_US/js/jquery.browser.js"></script>
+
+<script type="text/javascript">
+
+var eeuiauthURL = "/marketplace/auth/Layer7Servlet";
+var eerestauthURL = "/ee-rest/auth/Layer7Servlet";
+
+
+// Call EE-UI-Auth Session
+  function callEE_UIAuthSession() {
+    $.ajax({
+        type: 'POST',
+      url: eeuiauthURL,
+        data: {"actionId":"pingMe","Authorization":"SAML ..."},
+        success: callEE_RESTAuthSession(),
+        contentType:"application/x-www-form-urlencoded; charset=iso-8859-1",
+        async:false
+    });   
+  }
+  
+// Call EE-REST-Auth Session
+  function callEE_RESTAuthSession() {
+    $.ajax({
+        type: 'POST',
+        url: eerestauthURL,
+        data: {"actionId":"pingMe","Authorization":"SAML ..."},
+        success: call_DummySession(),
+        contentType:"application/x-www-form-urlencoded; charset=iso-8859-1",
+        async:false
+    });   
+  }
+
+  function call_DummySession(){
+  }
+
+  callEE_UIAuthSession();
+  window.location.href="/myProfile";
+</script>
+
