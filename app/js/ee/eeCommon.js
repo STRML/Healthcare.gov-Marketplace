@@ -7,7 +7,7 @@ function toggleLanguageURL() {
 	var eeURLpathArray = window.location.pathname.split( '/' );
 	var eeLang = eeURLpathArray[3];
 	var eeAuthLang = eeURLpathArray[4];
-	
+
 	if(eeLang === 'en_US' || eeAuthLang === 'en_US')
 	{
 		var url = window.location;
@@ -21,7 +21,7 @@ function toggleLanguageURL() {
 
 	if(eeLang === 'es_MX' || eeAuthLang === 'es_MX')
 	{
-		
+
 		var urlSP = window.location;
 		urlSP = urlSP.toString();
 		urlSP = urlSP.replace("es_MX","en_US");
@@ -35,9 +35,9 @@ function toggleLanguageURL() {
 
 // Changes the language attribute on the HTML element
 // Assumes lang attribute is a string.
-function changeLanguage (lang) 
+function changeLanguage (lang)
 {
-	if (!isEmpty(lang) && typeof lang === 'string' ) 
+	if (!isEmpty(lang) && typeof lang === 'string' )
 	{
 		if(lang === "es_MX")
 		{
@@ -53,7 +53,7 @@ function determinePath() {
 	//for URL Re-write for Marketplace in Prod
 		var pathArray = window.location.pathname.split( '/' );
 		var eePath = "/" + pathArray[1];
-		
+
 	return eePath;
 }
 
@@ -94,7 +94,7 @@ function redirectApplicationPath(app) {
    default:
 		window.location.href(determinePath() + tenantId + "/" + locale + "/registration");
 		break;
-	} 
+	}
 
 }
 
@@ -143,7 +143,7 @@ function roundDollarAmountUp(amountStr) {
 	if (isEmpty(amountStr)) {
 		return "";
 	}
-	if (amountStr.indexOf('.') !== -1) 
+	if (amountStr.indexOf('.') !== -1)
 	{
 		var decimalValue = amountStr.substring(amountStr.indexOf('.') + 1);
 		var valueToAdd = 0;
@@ -155,7 +155,7 @@ function roundDollarAmountUp(amountStr) {
 		var value = parseInt(amountStr,10) + valueToAdd;
 		return ""+value;
 	}
-	else 
+	else
 	{
 		amountStr = amountStr.replace(/[^\d]/g, '');
 		return amountStr;
@@ -217,12 +217,12 @@ function blockUIForProfile()
 function blockUIHelper(id)
 {
 	$.blockUI(
-	{ 
+	{
 		message: $('#'+id),
 		showOverlay: true,
 		// timeout :500, this would be an automatic timeout
 		css: { backgroundColor: '#000',border:'none', color: '#fff', padding:'10', opacity:'0.6' }
-	}); 
+	});
 
 }
 
@@ -231,7 +231,7 @@ function blockUIHelper(id)
 function showError(model, errors)
 {
 	var index ='';
-	
+
 	//INDEX will be not used it if is empty string, null, undefined.
 	if (model.index !== null)
 	{
@@ -239,9 +239,9 @@ function showError(model, errors)
 	}
 	var keys = _.keys(errors);
 	var namespaces = model.namespace; //preserve context of 'this' inside the loop
-	var resources = model.resourceBundle; 
+	var resources = model.resourceBundle;
 	var pageName = this.pageName; //view has pageName
-	
+
 	//we will loop around all attributes and we will see ALL errors, not just the first one
 	 _.each(keys, function(attribute)
 	{
@@ -254,10 +254,10 @@ function showError(model, errors)
 				attributeError = "maxLength";
 			}
 			var $errorElem = $('#'+attribute +'' + index+'Error');
-		
+
 			var errorMsg = resources[namespaces + ".shared.validation." + attributeError];
-			
-			if (errorMsg || (errorMsg = "{0} error")) 
+
+			if (errorMsg || (errorMsg = "{0} error"))
 			{
 				var fieldLabel = resources[namespaces + "." + pageName + "." + attribute];
 				if (fieldLabel || (fieldLabel = "Field")) {
@@ -265,7 +265,7 @@ function showError(model, errors)
 						errorMsg = errorMsg.format(fieldLabel, model.preservedValidate[attribute].minlength);
 					} else if (attributeError === "maxLength") {
 						errorMsg = errorMsg.format(fieldLabel, model.preservedValidate[attribute].maxlength);
-					} 
+					}
 					// Temporary until someone else can show me a better way to feed in the ranges
 					else if (attributeError === "eeRegex") {
 						if(attribute === "AlienNumber" || attribute === "CardNumber"){
@@ -292,14 +292,14 @@ function showError(model, errors)
 					}
 					console.log('errorElem= ' + $('#'+attribute +'' + index+'Error'));
 				}
-				
-				
-			} else 
+
+
+			} else
 			{
 				errorMsg ='ERROR';
 				console.log("Error message key not found.");
 			}
-			
+
 			$errorElem.empty();
 			$errorElem.append(errorMsg);
 			$errorElem.show();
@@ -307,26 +307,26 @@ function showError(model, errors)
 	});
 }
 
-//used for conditional validations 
+//used for conditional validations
 function showErrorMessage(attribute, attributeError, thisModel)
 {
-	var thisResources =  thisModel.resourceBundle; 
+	var thisResources =  thisModel.resourceBundle;
 	var thisNamespaces = thisModel.namespace;
 	var thisPageName = thisModel.pageName;
-	
+
 	var index ='';
-	
+
 	//INDEX will be not used it if is empty string, null, undefined.
 	// The isEmpty method protects against accidental matching of 0 to null and empty string.
 	if(!isEmpty(thisModel.index))
 	{
 		index = thisModel.index;
 	}
-	
+
 	var errorId = '#'+ attribute + index + "Error";
 	var errorMsg = thisResources[thisNamespaces + ".shared.validation." + attributeError];
-	
-	if (errorMsg || (errorMsg = "{0} error")) 
+
+	if (errorMsg || (errorMsg = "{0} error"))
 	{
 		var fieldLabel = thisResources[thisNamespaces + "." + thisPageName + "." + attribute];
 		if (fieldLabel || (fieldLabel = "Field")) {
@@ -339,8 +339,8 @@ function showErrorMessage(attribute, attributeError, thisModel)
 			}
 			console.log('errorId= ' + errorId);
 		}
-		
-	} else 
+
+	} else
 	{
 		errorMsg ='ERROR';
 		console.log("Error message key not found.");
@@ -348,7 +348,7 @@ function showErrorMessage(attribute, attributeError, thisModel)
 	$(errorId).empty();
 	$(errorId).append(errorMsg);
 	$(errorId).show();
-	
+
 }
 
 //gets url from route
@@ -386,13 +386,13 @@ function parseSSN(ssn)
 	//var ssnFormat2 = /^\d{9}$/;
 
 	var ssnArray = [];
-	
+
 	if(!isEmpty(ssn))
 	{
 		var ssnPart1 = "";
 		var ssnPart2 = "";
 		var ssnPart3 = "";
-		
+
 		//assuming the ssn format will be either 111-11-1111 or 111111111
 		if(ssnFormat1.test(ssn)) { //111-11-1111
 			ssnPart1 = ssn.substring(0,3);
@@ -403,7 +403,7 @@ function parseSSN(ssn)
 			ssnPart2 = ssn.substring(3,5);
 			ssnPart3 = ssn.substring(5);
 		}
-		
+
 		ssnArray.push(ssnPart1);
 		ssnArray.push(ssnPart2);
 		ssnArray.push(ssnPart3);
@@ -423,7 +423,7 @@ function validateSSN(ssn)
 	var ssnPart1 = ssn.substring(0,ssn.indexOf('-'));
 	var ssnPart2 = ssn.substring(ssn.indexOf('-')+1,ssn.lastIndexOf('-'));
 	var ssnPart3 = ssn.substring(ssn.lastIndexOf('-')+1);
-	
+
 	//ssn cannot start with 000, or 9
 	//9-5 removing 666
 	//  All, per Brandon we need to remove the 666 field validation on SSN because that is a rule only in EIDM prod and they use 666 for test
@@ -431,35 +431,35 @@ function validateSSN(ssn)
 	{
 		return false;
 	}
-	
+
 	//ssn cannot have 00 in second part
 	if (ssnPart2 === "00")
 	{
 		return false;
 	}
-	
+
 	//ssn cannot have 0000 in third part
 	if (ssnPart3 === "0000")
 	{
 		return false;
 	}
-	
-	
+
+
 	var fullSSN = (ssnPart1 + ssnPart2 + ssnPart3).toString().trim();
-	
+
 	// SSN must be 9 chars
 	if (fullSSN.length !== 9) {
 	    return false;
 	}
-	
+
 	//ssn cannot be the same digit (i.e. 111-11-1111), and must not contain anything other than digits
 	var firstDigit = fullSSN.substring(0,1);
 	var regExChecker = new RegExp('[' + firstDigit + ']{9}|[\D]');
-	
+
 	if (regExChecker.test(fullSSN)) {
 		return false;
 	}
-	
+
 	return true;
 }
 
@@ -470,7 +470,7 @@ function initPopupwindow(id, display, resize, w, h, modal)
 {
 	//destroys the dialog
 	 $("#"+id).dialog("destroy");
-	
+
 	 //initializes the dialog
 	 $("#"+id).dialog({
          autoOpen: display,
@@ -489,7 +489,7 @@ function initPopupwindow(id, display, resize, w, h, modal)
 //h= height
 //s= show the modal when initialized true or false
 function initPopupwindowModal(id, el, w, h, s)
-{	
+{
   $('#'+id).modal({
 	   appendTo : "#"+el, //append to whatever EL it goes into
 	   persist : false, //persist- to have the data hang out here or NOT
@@ -518,7 +518,7 @@ assumes that the id passed in is actually a checkbox input*/
 function isCheckboxChecked(id)
 {
 	var checked = false;
-	
+
 	if($('#'+id+':checked').length>0)
 	{
 		checked = true;
@@ -538,7 +538,7 @@ function isElementVisible(id) {
 }
 
 // Toggle element's visibility.  Requires the id of the element to toggle
-// and whether to 'show' or 'hide' the element. Will toggle both css 
+// and whether to 'show' or 'hide' the element. Will toggle both css
 // visibility and the aria-hidden attribute.
 function toggleVisibility(id, option) {
 	if (option === 'show') {
@@ -569,7 +569,7 @@ function getIndexFromEventObjRemoveYesNo(event)
 }
 
 //grabs the id from the event. Offset is basically the length of the id when the id is
-// elementId<Index>  example: personName1   offset = 10, index= 1 
+// elementId<Index>  example: personName1   offset = 10, index= 1
 function getIndexFromEvent(event, offset)
 {
 	var id = getIdFromEvent(event);
@@ -629,7 +629,7 @@ function getIndexFromIdRemoveYesNo(id)
 {
 	var index = getIndexFromId(id);
 	//we have the Yes/No at the end
-	var yesIndex = index.indexOf('Yes'); 
+	var yesIndex = index.indexOf('Yes');
 	if(yesIndex !== -1)
 	{
 		index =index.substring(0, yesIndex);
@@ -673,15 +673,15 @@ function getLearnMoreTemplate()
 
 
 //sets up the learn more section for the given section where you want to place it (tempalteId) and the particular id
-function setLearnMoreTemplate (templateId, divId) 
-{           
+function setLearnMoreTemplate (templateId, divId)
+{
     //TODO: move this to a global?
     var learnMoreMasterTemplate = getLearnMoreTemplate();
     $('#' + templateId+"LearnMore").empty();
     $('#' + templateId+"LearnMore").append(learnMoreMasterTemplate ({
           "idToUse" : divId
     }));
-    
+
 	initPopupwindowModal(templateId, divId, 600, 350, false);
 }
 
@@ -689,12 +689,12 @@ function setLearnMoreTemplate (templateId, divId)
 //num refers to the index from the loop where this function is being called.
 function setLearnMoreTemplateDynamic (templateId, divId, index) {
 	var learnMoreMasterTemplate =_.template($('#learnMoreTemplate').html());
-	
+
 	$('#' + templateId+"LearnMore" + index).empty();
 	$('#' + templateId+"LearnMore" + index).append(learnMoreMasterTemplate ({
 		"idToUse" : divId
 	}));
-	    
+
 	initPopupwindowModal(templateId, divId, 600, 350, false);
 }
 
@@ -712,18 +712,18 @@ function toggleRadioButton (event)
 	//determine whether Yes or No was selected
 	var target = event.target;
 	target = target.id.toString();
-			
+
 	//extracts substring before occurrence of "Yes"
 	var id = target.substring(0, target.lastIndexOf("Yes"));
 	var isYes = true;
 	if (isEmpty(id))
 	{
 		isYes = false;
-				
+
 		//extracts substring before occurence of "No"
 		id = target.substring(0, target.lastIndexOf("No"));
 	}
-			
+
 	// "Y" not found, "No" selected
 	if (isYes === false) {
 		$("#" + id + "Yes").prop("checked", false);
@@ -739,7 +739,7 @@ function toggleRadioGroup (event)
 {
 	// Method designed to toggle off all radio buttons in a div other than one just selected
 	// Works with any number of radio buttons as long as they are enclosed in a div with an id
-	
+
 	// This will fix radio buttons not being selected properly in IE7
 	if($.browser.msie  && parseInt($.browser.version, 10) === 7) {
 		$(this).click(function () {
@@ -747,7 +747,7 @@ function toggleRadioGroup (event)
 			this.focus();
 		});
 	}
-	
+
 	var target = event.target.id;
 	var targetID = "#" + target;
 	var parentID = $('#' + target).closest('div').attr('id');
@@ -763,10 +763,10 @@ function toggleCustomRadioGroup (event)
 	// so long as the radio buttons are properly enclosed in a fieldset. The fieldset does
 	// not need an id to reference it. Any radio buttons that still have a div with id will
 	// still function as intended (it does not matter if the parent is a fieldset or div).
-	
+
 	// NOTE: You must have applied the customInput class to the desired radio buttons using the
 	// customInput method in order for this method to work.
-	
+
 	// This will fix radio buttons not being selected properly in IE7
 	if($.browser.msie  && parseInt($.browser.version, 10) === 7) {
 		$(this).click(function () {
@@ -774,7 +774,7 @@ function toggleCustomRadioGroup (event)
 			this.focus();
 		});
 	}
-	
+
 	var target = getIdFromEvent(event);
 	var radioGroup = $('#' + target).parent().parent();
 	$(radioGroup).find('input').prop('checked', false);
@@ -787,10 +787,10 @@ function toggleCustomRadioGroupByFieldset (event)
 {
 	// Method designed to toggle off all radio buttons in a div other than one just selected
 	// Works with any number of radio buttons.
-	// This is a variant of toggleCustomRadioGroup that defines the radio group by the 
+	// This is a variant of toggleCustomRadioGroup that defines the radio group by the
 	// fieldset it is inside. This helps in cases when the radio buttons are not all within
 	// the selected input's grandparent element
-	
+
 	// This will fix radio buttons not being selected properly in IE7
 	if($.browser.msie  && parseInt($.browser.version, 10) === 7) {
 		$(this).click(function () {
@@ -798,7 +798,7 @@ function toggleCustomRadioGroupByFieldset (event)
 			this.focus();
 		});
 	}
-	
+
 	var target = getIdFromEvent(event);
 	var radioGroup = $('#' + target).closest('fieldset');
 	$(radioGroup).find('input').prop('checked', false);
@@ -814,7 +814,7 @@ function removeCustomInputClassGroup (id)
 
 	// NOTE: You must have applied the customInput class to the desired radio buttons using the
 	// customInput method in order for this method to work.
-	
+
 	// This will fix radio buttons not being selected properly in IE7
 	if($.browser.msie  && parseInt($.browser.version, 10) === 7) {
 		$(this).click(function () {
@@ -838,7 +838,7 @@ function removeCustomInputClass (id)
 			this.focus();
 		});
 	}
-	
+
 	$('[for=' + id + ']').removeClass('checked');
 	$('#' + id).removeClass('checked');
 }
@@ -853,7 +853,7 @@ function addCustomInputClass (id)
 			this.focus();
 		});
 	}
-	
+
 	$('[for=' + id + ']').addClass('checked');
 	$('#' + id).addClass('checked');
 }
@@ -863,7 +863,7 @@ function createCustomLabel(context, resources, keyBefore, memberList, keyAfter)
 	// Method takes a list of designated application members (memberList), and "sandwiches" them between two resource
 	// bundles (keyBefore & keyAfter) to generate a statement/question that has the correct placement of commas and "or"
 	// for all members, no matter how many there are.
-	
+
 	// Temporary empty check until validation is in place
 	var members = [];
 	var firstName;
@@ -895,7 +895,7 @@ function createCustomLabel(context, resources, keyBefore, memberList, keyAfter)
 		    	label += " or ";
 		    }
 	    }
-	}	
+	}
 	label += " ";
 	label += resources["ffe.ee." + context + "." + keyAfter];
 	return label;
@@ -905,7 +905,7 @@ function createNameLabel(memberList)
 {
 	// Method called by createCustomLabel to generate the names of the application members from the list and appends a suffix if present
 	var name = memberList.member.personName.firstName + " " + memberList.member.personName.lastName;
-	
+
 	if (!isEmpty(memberList.member.personName.suffixName)){
 		name += " " + memberList.member.personName.suffixName;
 	}
@@ -965,7 +965,7 @@ function getLanguageText(attribute)
 				break;
 			case "7":
 				languageText = "Other";
-				break;	
+				break;
 		}
 	}
 	return languageText;
@@ -983,7 +983,7 @@ function childDobCheck(childDob, parentDob)
 		childDob = childDobMonth + "/" + childDobDay + "/" + childDobYear;
 		childDob = new Date(childDob);
 		parentDob = new Date(parentDob);
-		
+
 		if(childDob > parentDob){
 			valid = true;
 		}
@@ -1009,21 +1009,21 @@ function getAppMemberFullName(applicationMember)
 
  jQuery.download = function(url, data, method){
     	//url and data options required
-    	if( url && data ){ 
+    	if( url && data ){
     		//data can be string of parameters or array/object
     		data = typeof data === 'string' ? data : jQuery.param(data);
     		//split params into form inputs
     		var inputs = '';
-    		jQuery.each(data.split('&'), function(){ 
+    		jQuery.each(data.split('&'), function(){
     			var pair = this.split('=');
-    			inputs+='<input type="hidden" name="'+ pair[0] +'" value="'+ pair[1] +'" />'; 
+    			inputs+='<input type="hidden" name="'+ pair[0] +'" value="'+ pair[1] +'" />';
     		});
     		//send request
     		jQuery('<form action="'+ url +'" method="'+ (method||'post') +'">'+inputs+'</form>')
     		.appendTo('body').submit().remove();
     	}
-    };	
-	
+    };
+
 //clones the object passed in
 function cloneObject(sourceObject)
 {
@@ -1035,11 +1035,11 @@ function filterCriteriaString(arrayOfSelectedCriteria)
 	var returnString = "";
 	for (var i = 0; i < arrayOfSelectedCriteria.length; i++)
 	{
-		if (i === arrayOfSelectedCriteria.length - 1) 
+		if (i === arrayOfSelectedCriteria.length - 1)
 		{
 			returnString += arrayOfSelectedCriteria[i];
 		}
-		else 
+		else
 		{
 			returnString += arrayOfSelectedCriteria[i];
 			returnString += "|";
@@ -1059,10 +1059,10 @@ function unbindFromAll(view) {
     view.bindings = [];
 }
 
-function dispose (view) 
+function dispose (view)
 {
-    view.unbindFromAll(); // this will unbind all events that this view has bound to 
-    view.unbind(); // this will unbind all listeners to events from this view. This is probably not necessary 
+    view.unbindFromAll(); // this will unbind all events that this view has bound to
+    view.unbind(); // this will unbind all listeners to events from this view. This is probably not necessary
     //because this view will be garbage collected.
     view.remove(); // uses the default Backbone.View.remove() method which removes this.el from the DOM and removes DOM events.
 }
@@ -1109,10 +1109,10 @@ function showCommonErrorMessage(model, xhr){
 			sysMessages = sysMessages.substring(0, (sysMessages.length - 2));//remove ending }]
 			sysMessages = sysMessages.replace(/"/g, ""); //remove all \"
 			var firstMessage="";
-			
+
 			var sysMessagesArray = sysMessages.split(",");
 			if(!isEmpty(sysMessagesArray) && sysMessagesArray.length > 0) {
-				
+
 				for( var i = 0 ; i < sysMessagesArray.length; i++){
 					var message = sysMessagesArray[i];
 					if(message.indexOf("OK_200") === -1) {
@@ -1123,7 +1123,7 @@ function showCommonErrorMessage(model, xhr){
 						if( updatedSysMessages !== "") {
 							updatedSysMessages += "<br/>";
 						}
-						
+
 						updatedSysMessages += resources[exceptionResourcePrefix + message];
 						if(isEmpty(firstMessage))
 						{
@@ -1137,9 +1137,9 @@ function showCommonErrorMessage(model, xhr){
 			displayMessage = updatedSysMessages;
 		}
 	}
-	
+
 	//TODO Add code here that if displayMessage is a hub error 500.100 through 500.108 to display custom Hub error message
-	
+
 	$('#commonErrorMessageText').append(displayMessage);
 	$('#commonErrorMessageBlock').show();
 	var errorMessageTemplate = _.template($('#applicationErrorMessageTemplate').html());
@@ -1154,7 +1154,7 @@ function showCommonErrorMessage(model, xhr){
 }
 
 
-function trimUnneededHTMLTags(response) 
+function trimUnneededHTMLTags(response)
 {
 	response = response.replace('<HTML>','');
 	response = response.replace('<HEAD>','');
@@ -1162,23 +1162,23 @@ function trimUnneededHTMLTags(response)
 	response = response.replace('<BODY>','');
 	response = response.replace('</BODY>','');
 	response = response.replace('</HTML>','');
-	
+
 	response = response.replace('<html>','');
 	response = response.replace('<head>','');
 	response = response.replace('</head>','');
 	response = response.replace('<body>','');
 	response = response.replace('</body>','');
 	response = response.replace('</html>','');
-	
+
 	return response;
 }
 
 // Method to add a hyphen in a zip code if it is over 5 digits (after the 5th digit for 9 digit zip codes)
-function hyphenCheckerZip (event) 
+function hyphenCheckerZip (event)
 {
 	var target = getIdFromEvent(event);
 	var checkLength = $("#" + target).val().length;
-	
+
 	if (checkLength > 5 && !/[\-]/g.test($('#' + target).val())) {
 		$('#' + target).val($('#' + target).val().slice(0, 5) + '-' + $('#' + target).val().substring(5));
 	}
@@ -1232,7 +1232,7 @@ function getTypeOfESIInsuranceFromCode(iType)
 	var insuranceName="";
 	if(iType === "4")
 		{
-		insuranceName="Employer Sponsored"; 
+		insuranceName="Employer Sponsored";
 		}
 	else if(iType === "6")
 		{
@@ -1262,8 +1262,8 @@ function getTypeOfESIInsuranceFromCode(iType)
 		{
 		insuranceName='Peace Corps';
 		}
-	
-	return insuranceName;	
+
+	return insuranceName;
 }
 
 function preventDisplayingNullValue(value)
@@ -1280,7 +1280,7 @@ function preventDisplayingNullValue(value)
 
 function convertToStringYesNo(value)
 {
-	if (isEmpty(value)) 
+	if (isEmpty(value))
 		{
 		return "Not Determined";
 		}
@@ -1327,11 +1327,11 @@ function convertArrayToCommaDelimitedString(arrayOfValues)
 	var returnString = "";
 	for (var i = 0; i < arrayOfValues.length; i++)
 	{
-		if (i === arrayOfValues.length - 1) 
+		if (i === arrayOfValues.length - 1)
 		{
 			returnString += arrayOfValues[i];
 		}
-		else 
+		else
 		{
 			returnString += arrayOfValues[i];
 			returnString += ",";
@@ -1392,7 +1392,7 @@ function isMemberInAgeRange (member, lowerLimit, equalToLowerLimit, upperLimit, 
 	if (!isEmpty(member))
 	{
 		var memberAge = getMemberAge(member);
-		
+
 		if (equalToLowerLimit === true && equalToUpperLimit === true)
 		{
 			if (memberAge >= lowerLimit && memberAge <= upperLimit)
@@ -1421,7 +1421,7 @@ function isMemberInAgeRange (member, lowerLimit, equalToLowerLimit, upperLimit, 
 				memberIsInRange = true;
 			}
 		}
-		
+
 		return memberIsInRange;
 	}
 	else
@@ -1433,7 +1433,7 @@ function isMemberInAgeRange (member, lowerLimit, equalToLowerLimit, upperLimit, 
 //isMemberInAgeRange helper methods
 //constants are located in eeConstants.js
 function isMemberAgeInRangeForFosterCare (member)
-{	
+{
 	if (!isEmpty(member))
 	{
 		return isMemberInAgeRange(member, MINIMUM_FOSTER_CARE_AGE, true, MAXIMUM_FOSTER_CARE_AGE, false);
@@ -1460,7 +1460,7 @@ function isMemberAgeInRangeForStudent (member)
 {
 	if (!isEmpty(member))
 	{
-		return isMemberInAgeRange(member, MINIMUM_STUDENT_AGE, true, MAXIMIM_STUDENT_AGE, false);
+		return isMemberInAgeRange(member, MINIMUM_STUDENT_AGE, true, MAXIMUM_STUDENT_AGE, false);
 	}
 	else
 	{
@@ -1472,10 +1472,10 @@ function applyIncomeFormatting(thisPassed)
 {
 	$(thisPassed).formatCurrency(
 	{
-		colorize: true, 
-		negativeFormat: '-%s%n', 
-		roundToDecimalPlace: 2 
-	});	
+		colorize: true,
+		negativeFormat: '-%s%n',
+		roundToDecimalPlace: 2
+	});
 }
 
 function applyIncomeFormattingForId(id)
@@ -1499,10 +1499,10 @@ function applyIncomeFormattingHelper(typeOfSelector, idOrClass)
 	{
 		$(selector).formatCurrency(
 		{
-			colorize: true, 
-			negativeFormat: '-%s%n', 
-			roundToDecimalPlace: 2 
-		});	
+			colorize: true,
+			negativeFormat: '-%s%n',
+			roundToDecimalPlace: 2
+		});
 	});
 }
 
@@ -1544,9 +1544,9 @@ function getSubstringAfterOffset(originalString, offset)
 {
 	var offsetLength = offset.length;
 	var newString = originalString.substring(offsetLength);
-	
+
 	//TODO: add some error checking, don't have time right now
-	
+
 	return newString;
 }
 
@@ -1558,18 +1558,18 @@ function getTwoIndexesFromId (originalString, offset)
 	var indexString = getSubstringAfterOffset(originalString, offset);
 	var firstIndex = indexString.substr(0, indexString.indexOf("_"));
 	var secondIndex = indexString.substring(indexString.lastIndexOf("_")+1);
-	
+
 	firstIndex = parseInt(firstIndex, 10);
 	secondIndex = parseInt(secondIndex,10);
-	
+
 	//TODO: add MORE error checkind, don't have time right now
 	if (isNaN(firstIndex) || isNaN(secondIndex))
 	{
 		return null;
 	}
-	
+
 	var indexArray = [firstIndex, secondIndex];
-	
+
 	return indexArray;
 }
 
@@ -1596,27 +1596,27 @@ function runAffix() {
 
         });
 
-        affixloaded = true; //update flag variable 
+        affixloaded = true; //update flag variable
 
     }
-	
+
 	if ($('#leftNav').length > 0) {
 		var left_nav_top = $('#leftNav').offset().top;
 		var y, height, articleHeight, footerTop;
 		height = $('#leftNav').height();
 		articleHeight = $('.cardsContainer').height();
-		 
-		/* 
+
+		/*
 			only run affix on #leftNav if following condition is met
 			runAffix can be call anytime page height will be altered by dynamic content
 		*/
 
 		if(  $('[class^="navContainer"]').length > 0 ) {
 			if (height < articleHeight){
-			  $('#leftNav').affix({offset: {top: 60}}).addClass("affixRows" + affixLength ); //run affix and apply css class for leftNav postioning; 
-			} 
-			
-			if ($(window).width() < 1000) 
+			  $('#leftNav').affix({offset: {top: 60}}).addClass("affixRows" + affixLength ); //run affix and apply css class for leftNav postioning;
+			}
+
+			if ($(window).width() < 1000)
 			{
 				//$('#leftNav').removeClass('affix');
 				$('#leftNav').addClass('vertical-fix');
@@ -1628,30 +1628,30 @@ function runAffix() {
 				});
 			}
 		}
-		
-		if ($('#footer').length > 0) {	
+
+		if ($('#footer').length > 0) {
 			$(window).on('scroll', function ()
 			{
 				y = $(this).scrollTop();
 				footerTop = $('#footer').offset().top;
-				
-				if ((y >= left_nav_top && height < articleHeight) || $('#leftNav').hasClass('affix')) 
+
+				if ((y >= left_nav_top && height < articleHeight) || $('#leftNav').hasClass('affix'))
 				{
 					//$('#leftNav').addClass('fixed');
-					
+
 					if (y > footerTop - height) {
 						$('#leftNav').addClass('fixed-bottom');
 						$('#leftNav').css('top', 'auto');
-					} 
+					}
 					else {
 						$('#leftNav').removeClass('fixed-bottom');
 					}
-				} 
+				}
 				else {
 					$('#leftNav').removeClass('fixed');
 					$('#leftNav').css('top', 'auto');
 				}
-			}); 
+			});
 		}
 	}
 }
@@ -1670,25 +1670,25 @@ setTimeout(runAffix, 100);
  */
 function priorityCodeToName(taskPriorityStatus) {
 	if (taskPriorityStatus === "1")
-	{	
+	{
 		return "Very High";
-	}	
+	}
 	else if (taskPriorityStatus === "2")
 	{
 		return "High";
-	}	
+	}
 	else if (taskPriorityStatus === "3")
 	{
 		return "Medium";
-	}	
+	}
 	else if (taskPriorityStatus === "4")
 	{
 		return "Low";
-	}	
+	}
 	else
 	{
 		return "Lowest";
-	}	
+	}
 }
 
 /**
@@ -1697,7 +1697,7 @@ function priorityCodeToName(taskPriorityStatus) {
  * @returns {String} The priority type code
  */
 function priorityNameToCode(taskPriorityStatus) {
-	if (taskPriorityStatus === "Very High") {	
+	if (taskPriorityStatus === "Very High") {
 		return "1";
 	} else if (taskPriorityStatus === "High") {
 		return "2";
@@ -1716,7 +1716,7 @@ function priorityNameToCode(taskPriorityStatus) {
 //hide the user menu options that are NOT logout
 function hideUserMenuOptions()
 {
-	//if terms and conditions are NOT agreed 
+	//if terms and conditions are NOT agreed
 	$('#landingPageMenuLink').hide();
 	$('#helpProfile').hide();
 }
@@ -1732,7 +1732,7 @@ function showUserMenuOptions()
 {
 	$('#landingPageMenuLink').show();
 	$('#helpProfile').show();
-	
+
 }
 
 function setTitleFromResource(strTitle) {
@@ -1744,10 +1744,10 @@ function setTitleFromResource(strTitle) {
     document.title = strTitle;
 }
 /**
- * takes an array of id for inputs and checks them for required values 
+ * takes an array of id for inputs and checks them for required values
  * @param requiredFields
  * @returns {Boolean}
- */	
+ */
 function checkForAllExpectedValues( requiredFields ) {
 	var success = true;
 	for( var i = 0; i < requiredFields.length; i++ )
@@ -1798,7 +1798,7 @@ function setErrorOnEmpty(inputID,message) {
 	return true;
 }
 function setError(inputID,message) {
-	$('#'+inputID).addClass( 'errorField' );		
+	$('#'+inputID).addClass( 'errorField' );
 	$('#'+inputID+'-feedbackMsg').remove();
 	$('#'+inputID).parent().append( '<span id="' + inputID + '-feedbackMsg" class="feedbackMsg error" tabindex="-1">' + message + '</span>' );
 }
