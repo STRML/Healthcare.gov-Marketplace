@@ -5593,6 +5593,7 @@ $(function($) {
       lastName: {id: '#registrationThreeStepLastName', type: 'text'},
       suffix: {id: '#registrationSignUpStep1Suffix', type: 'select'},
       email: {id: '#registrationThreeStepEmailUpdates', type: 'text'},
+      emailConfirm: {id: '#emailConfirm', type: 'text'},
       stateLivedIn: {id: '#registrationStateStep1SignUp', type: 'select'},
       subscriptionTrigger: {id: '#registrationStepOneCheckbox', type: 'checkbox'}
     },
