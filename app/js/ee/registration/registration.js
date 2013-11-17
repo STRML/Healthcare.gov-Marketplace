@@ -5586,6 +5586,18 @@ $(function($) {
     // Variable through which the view can access the resource bundle. 
     resources: resources,
 
+    // Mapping of data names to ids on the form.
+    dataMap: {
+      firstName: {id: '#registrationThreeStepFirstName', type: 'text'},
+      middleName: {id: '#registrationThreeStepMiddleName', type: 'text'},
+      lastName: {id: '#registrationThreeStepLastName', type: 'text'},
+      suffix: {id: '#registrationSignUpStep1Suffix', type: 'select'},
+      email: {id: '#registrationThreeStepEmailUpdates', type: 'text'},
+      emailConfirm: {id: '#emailConfirm', type: 'text'},
+      stateLivedIn: {id: '#registrationStateStep1SignUp', type: 'select'},
+      subscriptionTrigger: {id: '#registrationStepOneCheckbox', type: 'checkbox'}
+    },
+
     // Initialize is always called first when the prototype constructor ("new")
     // is called
     initialize: function() {
@@ -5658,12 +5670,41 @@ $(function($) {
         }
       }
 
+      // See if we have data from Next/Back
+      var isPopulated = this.populateAllSavedData();
+
       //Direct enrollment, pre populate
-      if (!isEmpty(agentBrokerSAMLToken)) {
+      if (!isPopulated && !isEmpty(agentBrokerSAMLToken)) {
         this.delayedValuePopulation();
       }
 
       this.initializeValidation();
+    },
+
+    populateAllSavedData: function() {
+      var foundData = false, value, model = this.createLiteAccountModel;
+      $.each(this.dataMap, function(dataname,data) {
+        value = model.get(dataname);
+        switch(data.type) {
+          case 'text':
+          case 'select':
+            if (value != null && value != '') {
+              $(data.id).val(value);
+              foundData = true;
+            }
+            break;
+          case 'checkbox':
+            if (typeof value == 'boolean') {
+              foundData = true;
+              if (value) 
+                $(data.id).attr('checked','checked');
+              else
+                $(data.id).removeAttr('checked');
+            }
+            break;
+        }
+      });
+      return foundData;
     },
 
     delayedValuePopulation: function() {
@@ -5725,34 +5766,26 @@ $(function($) {
     },
 
     setModelInfo: function() {
-      this.createLiteAccountModel.set({
-        'firstName': $.trim($('#registrationThreeStepFirstName').val())
+      var value, model = this.createLiteAccountModel,
+        allData = {};
+      $.each(this.dataMap, function(dataname,data) {
+        switch(data.type) {
+          case 'text':
+          case 'select':
+            value = $(data.id).val();
+            break;
+          case 'checkbox':
+            value = $(data.id).is(":checked");
+            break;
+          default:
+            value = null;
+            break;
+        }
+        if (value != null) {
+          allData[dataname] = value;
+        }
       });
-      this.createLiteAccountModel.set({
-        'middleName': $.trim($('#registrationThreeStepMiddleName').val())
-      });
-      this.createLiteAccountModel.set({
-        'lastName': $.trim($('#registrationThreeStepLastName').val())
-      });
-      this.createLiteAccountModel.set({
-        'suffix': $('#registrationSignUpStep1Suffix').val()
-      });
-      this.createLiteAccountModel.set({
-        'email': $.trim($('#registrationThreeStepEmailUpdates').val())
-      });
-      this.createLiteAccountModel.set({
-        'stateLivedIn': $.trim($('#registrationStateStep1SignUp').val())
-      });
-
-      if ($('#registrationStepOneCheckbox').is(":checked") === true) {
-        this.createLiteAccountModel.set({
-          'subscriptionTrigger': true
-        });
-      } else {
-        this.createLiteAccountModel.set({
-          'subscriptionTrigger': false
-        });
-      }
+      this.createLiteAccountModel.set(allData);
     },
 
     closeModel: function() {
